@@ -1,0 +1,14 @@
+The general idea is that the scope is effectively the same content as the
+current website.
+
+Thus, the total list of content includes:
+- Links to our socials: Instagram, YouTube, Linkedin, email, Linktree.
+- The invite to the discord.
+- A button to subscribe via email to recieve notifications about blog posts.
+- Who the executive team is, including headshots of the entire team.
+- A "Home page".
+- An "About" page. The content of this page is a writeup to be written by the
+  Co-Chairs.
+- A "Blog" page, which is a feed of posts. Clicking on any posts brings the user
+  to the page for that post.
+- Replace the graphic on the homepage.
