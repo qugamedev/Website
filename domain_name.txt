@@ -1,2 +1,6 @@
 domain name registrar for us is GoDaddy. to login, sign in with google using
 qugamedev@clubs.queensu.ca.
+
+this is for the domain qgdc.ca.
+
+the website hosted ~13 years ago is using DreamHost.com.
