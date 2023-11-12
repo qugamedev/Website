@@ -1,0 +1,7 @@
+AWS EC2 has a free tier. We get 750 hours of Linux and Windows t2.micro instances (t3.micro for the regions in which t2.micro is unavailable),
+each month for one year. This plan is locked to use only EC2 Micro instances.
+
+Pricing estimate for AWS EC2 Savings Plan:
+Instance name   Savings Plans rate   Savings over On-Demand   On-Demand rate   Region   Operating system   Tenancy
+t2.micro	$0.0087	32%	$0.0128	Canada (Central)	Linux	Shared
+t4g.small	$0.0127	31%	$0.0184	Canada (Central)	Linux	Shared
