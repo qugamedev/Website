@@ -1,5 +1,31 @@
+import React, { useLayoutEffect, useState } from 'react';
+
+import {
+  BrowseRouter as Router,
+  Routes,
+  Route,
+  Link,
+} from 'react-router-dom';
+
+
+// Pages
+import Home from './Pages/Home.js';
+import About from './Pages/About.js';
+import Blog from './Pages/Blog.js';
+
 function App() {
-  return <h1 className='text-3xl font-bold underline text-center'>Game Dev Club!</h1>;
+  return (
+
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home/>}/>
+        <Route path = "/home" element={<Home/>}/>
+        <Route path="/" element={<About/>}/>
+        <Route path="/" element={<Blog/>}/>
+      </Routes>
+    </Router>
+
+  )
 }
 
 export default App;
