@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useState } from 'react';
 
 import {
-  BrowseRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
   Link,
@@ -9,9 +9,9 @@ import {
 
 
 // Pages
-import Home from './Pages/Home.js';
-import About from './Pages/About.js';
-import Blog from './Pages/Blog.js';
+import Home from './components/Home.js';
+import About from './components/About.js';
+import Blog from './components/Blog.js';
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route path = "/home" element={<Home/>}/>
-        <Route path="/" element={<About/>}/>
-        <Route path="/" element={<Blog/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/blog" element={<Blog/>}/>
       </Routes>
     </Router>
 
