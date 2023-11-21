@@ -72,6 +72,17 @@ app.post("/api/blogs/create", (req, res) => {
     }) 
 })
 
+app.delete("/api/blogs/delete/:id", (req, res) => {
+    const id = req.params.id;
+    db.query("DELETE FROM blogs WHERE id = ?", id, (err, result)=> {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Internal server error: Could not delete.")
+        }
+            res.send(result);
+    })
+})
+
 app.listen(PORT, ()=>{
     console.log("Up and running.");
 });

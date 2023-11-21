@@ -84,6 +84,20 @@ const Edit = ()=> {
         }
     }
 
+    const deleteBlog = (ID) => {
+        fetch(`http://localhost:3002/api/blogs/delete/${ID}`, {
+            method: "DELETE"
+        })
+        .then (response => {
+            console.log(response);
+            alert("Deleted blog post.");
+            window.location.reload();
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
+
     return(
         <div className="holder">
             <a className="editButton" href="/">BACK</a>
@@ -93,6 +107,7 @@ const Edit = ()=> {
                     <div className="box">
                         <h1>{props.id}. {props.title} </h1>
                         <button className="button" onClick={()=>{handleEditClick(props)}}>Edit</button>
+                        <button className="button" onClick={()=>{deleteBlog(props.id)}}>Delete</button>
                     </div>
                 );
             })}
