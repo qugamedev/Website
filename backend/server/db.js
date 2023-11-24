@@ -2,6 +2,8 @@ const mysql = require('mysql');
 
 require('dotenv').config()
 
+
+// ENSURE THAT YOU CREATE A .ENV FILE!
 const db = mysql.createConnection({
     host: "rlm.zuofx.xyz",
     user: "huy",
