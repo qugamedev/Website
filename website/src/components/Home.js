@@ -30,7 +30,7 @@ function Home() {
     <div className='bg-dark-colour text-white '>
       {/* { WELCOME PAGE} */}
       <section style={topContainerStyle} className='relative '>
-        <Header />
+       
         <div className='container pl-20 pt-36 '>
           <div className=''>
             <h1 className='text-8xl font-bold'>
