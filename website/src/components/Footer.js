@@ -92,7 +92,7 @@ function Footer() {
                 className='Subscribe'
                 style={{ textAlign: "center", color: "white", fontSize: 20, fontFamily: "Inter", fontWeight: "700", wordWrap: "break-word" }}
               >
-                <button>Subscibe</button>
+                <button>Subscribe</button>
               </div>
             </div>
           </div>
