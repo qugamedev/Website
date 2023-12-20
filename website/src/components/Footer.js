@@ -7,17 +7,16 @@ function Footer() {
         <div
           className='Frame2'
           style={{
-            width: 1440,
-            paddingTop: 20,
-            paddingBottom: 20,
+            padding: 20,
             background: "#212121",
             justifyContent: "center",
             alignItems: "center",
             gap: 20,
             display: "inline-flex",
+            flexWrap: "wrap" 
           }}
         >
-          <div className='Frame6' style={{ height: 99, justifyContent: "center", alignItems: "center", gap: 41, display: "flex" }}>
+          <div className='Frame6' style={{ justifyContent: "center", alignItems: "center", gap: 41, display: "flex" }}>
             <div
               className='QugamedevClubsQueensuCa'
               style={{ textAlign: "center", color: "white", fontSize: 24, fontFamily: "Inter", fontWeight: "700", wordWrap: "break-word" }}
@@ -51,7 +50,7 @@ function Footer() {
               </svg>
             </div>
           </div>
-          <div className='Frame7' style={{ height: 74, justifyContent: "center", alignItems: "center", gap: 15, display: "flex" }}>
+          <div className='Frame7' style={{ ustifyContent: "center", alignItems: "center", gap: 15, display: "flex" }}>
             <div
               className='Frame5'
               style={{
