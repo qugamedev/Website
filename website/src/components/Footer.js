@@ -71,7 +71,7 @@ function Footer() {
                 className='TypeYourEmail'
                 style={{ textAlign: "center", color: "#C1C1C1", fontSize: 20, fontFamily: "Inter", fontWeight: "700", wordWrap: "break-word" }}
               >
-                <input placeholder='Type your email...'></input>
+                <input style={{width: 173, background: "inherit"}}  placeholder='Type your email...'></input>
               </div>
             </div>
             <div
