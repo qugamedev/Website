@@ -56,7 +56,7 @@ function Footer() {
             <div
               className='Frame5'
               style={{
-                padding: 25,
+                padding: 20,
                 borderRadius: 10,
                 overflow: "hidden",
                 border: "5px black solid",
