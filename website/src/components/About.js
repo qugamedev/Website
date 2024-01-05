@@ -29,8 +29,25 @@ return (
     {/* END LEFT ARC */}
 
     {/* BEGIN PAGE TEXT */}
-    <div style={{padding:52, display: 'flex',flexDirection: 'column', gap: 30  }}>
+    <div style={{padding:52, display: 'flex',flexDirection: 'column', gap: 30 }}>
       
+       <div
+          className='Frame4'
+          style={{
+            overflow: "hidden", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 10, display: "inline-flex",
+          }}
+        >
+        <div
+          className='Subscribe'
+          style={{ padding: 25,
+            width: "fit-content",
+            background: "black", borderRadius: 10, textAlign: "center", color: "white", fontSize: 20,
+            fontFamily: "Inter", fontWeight: "700", wordWrap: "break-word" }}
+        >
+          <button>Become a Member</button>
+        </div>
+      </div>
+
       <div> {/** vertical container. */}
         <div className="WhatIsQgdc" style={{color: 'white', fontSize: 60, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>
           What is QGDC?
@@ -75,6 +92,22 @@ return (
         </div>
       </div>
 
+      <div
+        className='Frame4'
+        style={{
+          overflow: "hidden", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 10, display: "inline-flex",
+        }}
+      >
+        <div
+          className='Subscribe'
+          style={{ padding: 25,
+            width: "fit-content",
+            background: "black", borderRadius: 10, textAlign: "center", color: "white", fontSize: 20,
+            fontFamily: "Inter", fontWeight: "700", wordWrap: "break-word" }}
+        >
+          <button>Become a Member</button>
+        </div>
+      </div>
 
     </div>
     {/* END PAGE TEXT */}
