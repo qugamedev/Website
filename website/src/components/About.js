@@ -29,14 +29,17 @@ return (
     {/* END LEFT ARC */}
 
     {/* BEGIN PAGE TEXT */}
-    <div style={{padding:52}}>
-      <div className="WhatIsQgdc" style={{color: 'white', fontSize: 60, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>
-        What is QGDC?
-      </div>
-  
-      <div className="lorem1" 
-      style={{width: 865, color: 'white', fontSize: 32, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>
-        The Queen's Game Development Club is the best of all time.
+    <div style={{padding:52, display: 'flex',flexDirection: 'column', gap: 30  }}>
+      
+      <div> {/** vertical container. */}
+        <div className="WhatIsQgdc" style={{color: 'white', fontSize: 60, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>
+          What is QGDC?
+        </div>
+    
+        <div className="lorem1" 
+        style={{width: 865, color: 'white', fontSize: 32, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>
+          The Queen's Game Development Club is the best of all time.
+        </div>
       </div>
 
       <div style={{display: 'flex',  background: '#212121',position: 'relative', justifyContent: "flex-end",flexDirection: 'row' }}>
@@ -54,22 +57,25 @@ return (
         </div>
       </div>
 
-      <div className="WhyYouShouldJoinUs"
-        style={{ color: 'white', fontSize: 60, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>
-          Why you should join us.
-      </div>
-
-      <div className="Frame12" 
-      style={{width: 844, paddingTop: 4, paddingBottom: 4,  justifyContent: 'flex-start', alignItems: 'flex-start', gap: 129, display: 'inline-flex'}}>
-        <div className="lorem3" 
-          style={{width: 819, color: 'white', fontSize: 32, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>
-          Joining our club is an opportunity to push the limits of your technical knowledge. 
-          We aren't shy, and we'll bring the best out of you. Not only do we host technical workshops, 
-          and invite industry veterans for speaker series, but we care! We will look at your games with a discerning eye,
-          together with you, and help you to craft every pixel. And, unlike no other initiative on Queen's Campus, 
-          the QGDC is the proud operator of the QGDC Gamedev Team, where you get the opportunity to join a team of bright individuals in building a complete game.
+      <div> {/** vertical container. */}
+        <div className="WhyYouShouldJoinUs"
+          style={{ color: 'white', fontSize: 60, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}>
+            Why you should join us.
+        </div>
+        <div className="Frame12" 
+        style={{width: 844, paddingTop: 4, paddingBottom: 4,  justifyContent: 'flex-start', alignItems: 'flex-start', gap: 129, display: 'inline-flex'}}>
+          <div className="lorem3" 
+            style={{width: 819, color: 'white', fontSize: 32, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word'}}>
+            Joining our club is an opportunity to push the limits of your technical knowledge. 
+            We aren't shy, and we'll bring the best out of you. Not only do we host technical workshops, 
+            and invite industry veterans for speaker series, but we care! We will look at your games with a discerning eye,
+            together with you, and help you to craft every pixel. And, unlike no other initiative on Queen's Campus, 
+            the QGDC is the proud operator of the QGDC Gamedev Team, where you get the opportunity to join a team of bright individuals in building a complete game.
+          </div>
         </div>
       </div>
+
+
     </div>
     {/* END PAGE TEXT */}
  
