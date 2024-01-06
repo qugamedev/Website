@@ -43,7 +43,7 @@ return (
       <div style={{width: "734.692px",
         height: "587.586px",
         position: 'absolute',
-        top: 250,
+        top: 800,
         flexShrink: 0
         }}>
         <img src={right_arc}   />
