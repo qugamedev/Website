@@ -1,5 +1,8 @@
 import React from "react";
 
+import discord_logo from "../assets/images/discord_logo.svg";
+
+
 function Footer() {
   return (
     <div className='Footer' style={{ width: "100%", zIndex: 1, position: "relative" }}>
@@ -27,6 +30,14 @@ function Footer() {
             
             {/* BEGIN SOCIALS FRAME */}
             <div className='Frame8' style={{ justifyContent: "center", alignItems: "center", gap: 20, display: "flex" }}>
+              
+              {/* Discord */}
+              <a href="https://discord.gg/uGTPhR3a" target="_blank">
+                <div className='Vector' style={{ width: 50, height: 50 }}>              
+                  <img src={discord_logo} />
+                </div>
+              </a>
+              
               {/* Instagram */}
               <a href="https://www.instagram.com/qugamedev/" target="_blank">
                 <div className='Vector' style={{ width: 50, height: 50 }}>              
