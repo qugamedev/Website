@@ -108,7 +108,7 @@ function Footer() {
             paddingBottom: 20,
           }}
         >
-          © 2023 Queen's University Game Development Club
+          © 2024 Queen's University Game Development Club
         </p>
       </div>{" "}
       {/*end flex*/}
