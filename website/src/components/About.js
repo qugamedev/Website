@@ -91,12 +91,20 @@ return (
 
       <div> {/** vertical container. */}
         <div className="WhatIsQgdc" style={{color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-          What is QGDC?
+          What is the QGDC?
         </div>
-    
         <div className="lorem1" 
         style={{maxWidth: 865, color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
-          The Queen's Game Development Club is the best of all time.
+          
+           The Queen's Game Development Club is a hub for individuals passionate
+           about video game creation. We foster and facilitate students of
+           diverse skill to come together to collaborate, learn, and jointly
+           develop video games. Our approach is deeply rooted in practical
+           experience, with a strong emphasis on in-person activities that fuel
+           creativity and teamwork. Alongside these interactive sessions, QGDC
+           offers a vibrant, digital forum-like environment, fostering a culture
+           of open discussion, constructive feedback, and tailored advice.
+
         </div>
       </div>
 
@@ -108,9 +116,10 @@ return (
           </div>
           <div className="lorem2" 
             style={{maxWidth: 776,  textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
-            We are committed to cultivating a vibrant community of game developers at Queen's University.
-            Our mission is to connect like-minded students by offering a platform for collaboration and by
-            facilitating valuable educational and professional development opportunities within the field of game development.
+            Our mission is to facilitate and foster deep connections among our members,
+            creating a collaborative and inclusive environment where aspiring game developers can unite, share, and innovate.
+            We are dedicated to nurturing the growth of our members' skills, providing resources, mentorship, and
+            opportunities that enable them to transform their creative visions into gaming realities.
           </div>
         </div>
       </div>
