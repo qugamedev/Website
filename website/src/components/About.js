@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect,  useMemo  } from 'react';
 
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
-
+import discord_logo from "../assets/images/discord_logo.svg";
 
 import right_arc from "../assets/images/right arc.svg";
 import right_arc2 from "../assets/images/right arc 2.svg";
@@ -175,8 +175,8 @@ return (
       <div> {/** vertical container. */}
         <div className="WhyYouShouldJoinUs"
           style={{ color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-            Why you should <button style={{color: "#B66cff"}}>
-              join us.</button>
+            Why you should <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" style={{color: "#B66cff"}}>
+              join us.</a>
         </div>
         <div className="lorem3" 
           style={{maxWidth: 819, color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
