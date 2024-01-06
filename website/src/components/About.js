@@ -145,7 +145,7 @@ return (
           style={{ padding: 25,
             width: "fit-content",
             background: "black", borderRadius: 10, textAlign: "center", color: "white", fontSize: 20,
-            fontFamily: "Inter", fontWeight: "700", wordWrap: "break-word" }}
+            fontFamily: "Lexend Deca", fontWeight: "700", wordWrap: "break-word" }}
         >
           <button>Become a Member</button>
         </div>
