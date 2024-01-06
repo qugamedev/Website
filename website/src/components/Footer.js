@@ -4,6 +4,7 @@ function Footer() {
   return (
     <div className='Footer' style={{ width: "100%", zIndex: 1, position: "relative" }}>
       <div style={{ display: "flex", background: "#212121", alignItems: "center", flexDirection: "column" }}>
+        
         <div
           className='Frame2'
           style={{
@@ -65,6 +66,9 @@ function Footer() {
             {/* END SOCIALS FRAME */}
 
           </div>
+          
+          {/* EMAIL SUBSCRIBE STUFF */}
+          {/*
           <div className='Frame7' style={{ ustifyContent: "center", alignItems: "center", gap: 15, display: "flex" }}>
             <div
               className='Frame5'
@@ -109,7 +113,12 @@ function Footer() {
               </div>
             </div>
           </div>
+          */}
+          {/* EMAIL SUBSCRIBE STUFF */}
+
+
         </div>
+
         <p
           style={{
             color: "white",
