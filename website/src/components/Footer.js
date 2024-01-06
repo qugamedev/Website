@@ -19,7 +19,7 @@ function Footer() {
           <div className='Frame6' style={{ justifyContent: "center", alignItems: "center", gap: 20, display: "flex" }}>
             <div
               className='QugamedevClubsQueensuCa'
-              style={{ textAlign: "center", color: "white", fontSize: 24, fontFamily: "Inter", fontWeight: "700", wordWrap: "break-word" }}
+              style={{ textAlign: "center", color: "white", fontSize: 24, fontFamily: "Lexend Deca", fontWeight: "700", wordWrap: "break-word" }}
             >
               qugamedev@clubs.queensu.ca
             </div>
@@ -69,7 +69,7 @@ function Footer() {
             >
               <div
                 className='TypeYourEmail'
-                style={{ textAlign: "center", color: "#C1C1C1", fontSize: 20, fontFamily: "Inter", fontWeight: "700", wordWrap: "break-word" }}
+                style={{ textAlign: "center", color: "#C1C1C1", fontSize: 20, fontFamily: "Lexend Deca", fontWeight: "700", wordWrap: "break-word" }}
               >
                 <input style={{width: 173, background: "inherit"}}  placeholder='Type your email...'></input>
               </div>
@@ -90,7 +90,7 @@ function Footer() {
             >
               <div
                 className='Subscribe'
-                style={{ textAlign: "center", color: "white", fontSize: 20, fontFamily: "Inter", fontWeight: "700", wordWrap: "break-word" }}
+                style={{ textAlign: "center", color: "white", fontSize: 20, fontFamily: "Lexend Deca", fontWeight: "700", wordWrap: "break-word" }}
               >
                 <button>Subscribe</button>
               </div>
@@ -102,7 +102,7 @@ function Footer() {
             color: "white",
             textAlign: "center",
             fontSize: 12,
-            fontFamily: "Inter",
+            fontFamily: "Lexend Deca",
             fontWeight: "700",
             wordWrap: "break-word",
             paddingBottom: 20,
