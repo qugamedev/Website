@@ -87,7 +87,8 @@ return (
     {/* END BACKGROUND ELEMENTS */}
 
     {/* BEGIN PAGE TEXT */}
-    <div style={{padding:52, paddingTop:283, display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative" }}>
+    <div className="about_content"  style={{padding:52, paddingTop:283, display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
+      }}>
 
       <div> {/** vertical container. */}
         <div className="WhatIsQgdc" style={{color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
@@ -127,7 +128,8 @@ return (
       <div> {/** vertical container. */}
         <div className="WhyYouShouldJoinUs"
           style={{ color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-            Why you should join us.
+            Why you should <button style={{color: "#B66cff"}}>
+              join us.</button>
         </div>
         <div className="lorem3" 
           style={{maxWidth: 819, color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
@@ -136,18 +138,6 @@ return (
           and invite industry veterans for speaker series, but we care! We will look at your games with a discerning eye,
           together with you, and help you to craft every pixel. And, like no other initiative on Queen's Campus, 
           the QGDC is the proud operator of the QGDC Gamedev Team, where you get the opportunity to join a team of bright individuals in building a complete game.
-        </div>
-      </div>
-
-      <div className='Frame4' style={{ overflow: "hidden", flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 10, display: "inline-flex", }} >
-        <div
-          className='Subscribe'
-          style={{ padding: 25,
-            width: "fit-content",
-            background: "black", borderRadius: 10, textAlign: "center", color: "white", fontSize: 20,
-            fontFamily: "Lexend Deca", fontWeight: "700", wordWrap: "break-word" }}
-        >
-          <button>Become a Member</button>
         </div>
       </div>
 
