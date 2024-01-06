@@ -1,7 +1,46 @@
-import React from "react";
+import React, { useRef, useState, useEffect,  useMemo  } from 'react';
+
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+import * as THREE from 'three';
+
 
 import right_arc from "../assets/images/right arc.svg";
 import right_arc2 from "../assets/images/right arc 2.svg";
+
+function SpinningCube() {
+  const cubeRef = useRef();
+
+  useFrame(() => {
+    cubeRef.current.rotation.x += 0.01;
+   // cubeRef.current.rotation.y += 0.01;
+  });
+
+  return (
+    <mesh ref={cubeRef}>
+      <boxGeometry args={[2, 2, 2]} />
+      <meshStandardMaterial attach="material" color="orange" />
+    </mesh>
+  );
+}
+
+function Torus() {
+  const torusRef = useRef();
+
+  useFrame(() => {
+    // Rotate the torus for some basic animation
+    torusRef.current.rotation.x += 0.01;
+   // torusRef.current.rotation.y += 0.02;
+  });
+
+  return (
+    <mesh ref={torusRef}>
+      <torusGeometry args={[1, 0.4, 16, 100]} />
+      <meshBasicMaterial color="#B66cff" wireframe />
+    </mesh>
+  );
+}
+
+ 
 
 function About() {
 return (
@@ -16,6 +55,14 @@ return (
       height: "100%",
       zIndex: 0
     }}>
+      
+      { /* Three.js Canvas */ }
+      <Canvas style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, width: '100%', height: '100%' }}>
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} />
+        <Torus />
+      </Canvas>
+
       {/* BEGIN LEFT ARC */}
       <div style={{display: 'flex', position: 'absolute', top:0, right: 0, justifyContent: "flex-end",flexDirection: 'row' }}>
         <div className="LeftArc" style={{width: 396, height: 1201, position: 'relative',   transformOrigin: '0 0'}}>
