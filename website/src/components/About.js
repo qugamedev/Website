@@ -164,10 +164,13 @@ return (
           </div>
           <div className="lorem2" 
             style={{maxWidth: 776,  textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
-            Our mission is to facilitate and foster deep connections among our members,
-            creating a collaborative and inclusive environment where aspiring game developers can unite, share, and innovate.
-            We are dedicated to nurturing the growth of our members' skills, providing resources, mentorship, and
-            opportunities that enable them to transform their creative visions into gaming realities.
+            
+            Our mission is to facilitate and foster deep connections among our
+            members, creating a collaborative and inclusive environment where
+            aspiring game developers can unite, share, and innovate. Our goal is
+            to empower each member to develop new skills and ultimately
+            contribute to the ever-evolving world of game development.
+          
           </div>
         </div>
       </div>
