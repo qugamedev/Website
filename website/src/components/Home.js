@@ -16,7 +16,7 @@ function Home() {
     backgroundImage: `url(${topGraphics})`,
     backgroundSize: "cover", // Cover the entire size of the container
     backgroundRepeat: "no-repeat", // Do not repeat the image
-    backgroundPosition: "center center", // Center the image in the container both vertically and horizontally
+    backgroundPosition: "top",
     minHeight: "100vh", // Minimum height of 100% of the viewport height
   };
 
@@ -24,14 +24,13 @@ function Home() {
     backgroundImage: `url(${bottomGraphics})`,
     backgroundSize: "100% auto", // Set the width to 100% and scale the height automatically
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center bottom", // Center horizontally and align to the bottom
+    backgroundPosition: "center",
   };
   return (
     <div className='bg-dark-colour text-white '>
       {/* { WELCOME PAGE} */}
       <section style={topContainerStyle} className='relative '>
-       
-        <div className='container pl-20 pt-36 '>
+        <div className='container pl-20 pt-64 '>
           <div className=''>
             <h1 className='text-8xl font-bold'>
               Queen’s Game <br /> Development Club
@@ -67,13 +66,14 @@ function Home() {
       </section>
       {/* { Community =) } */}
 
-      <section style={bottomContainerStyle} className='relative h- text-center py-20'>
-        {/* Community text and Discord logo */}
-        <div className='flex flex-col items-center justify-center'>
-          <h2 className='text-5xl text-pink-500 font-bold mb-4'>Come Join Our Community</h2>
-          <img src={discord_logo} alt='Discord' className='w-44 h-44 mb-4' />
-          <p className='text-2xl text-white mb-4'>on Discord</p>
+      <section style={bottomContainerStyle} className='relative pb-60 pt-60 text-center '>
+        <div className='flex flex-col items-center justify-center  font-bold text-5xl'>
+          <h2 className=' text-white mb-4'>Come Join Our Community</h2>
+          <img src={discord_logo} alt='Discord' className='w-80 mb-4' />
+          <p className=' text-white mb-4'>on Discord</p>
         </div>
+        <img src={right_triangle} className='absolute top-0 left-0' style={{ transform: "scaleY(-1)" }} alt='Bottom Left Image' />
+        <img src={left_triangle} className='absolute top-0 right-0' style={{ transform: "scaleY(-1)" }} alt='Bottom Right Image' />
       </section>
     </div>
   );
