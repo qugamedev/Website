@@ -1,5 +1,6 @@
 import React from "react";
 import graphics from "../assets/images/middle_graphics.svg";
+import gamejamIMG from "../assets/images/gamejam.png";
 
 function Blog() {
   const ContainerStyle = {
@@ -13,7 +14,7 @@ function Blog() {
   return (
     <section style={ContainerStyle} className='flex justify-center bg-dark-colour text-white'>
       <div className='pt-96 mr-10 ml-10 max-w-7xl m-auto flex-col justify-start items-start  inline-flex'>
-        <div className='flex-col justify-start items-center gap-10 flex'>
+        <div className='flex-col bg-custom-purple rounded-lg p-10 m-10 justify-start items-center gap-10 flex'>
           <div className=" text-center text-white text-3xl font-normal font-['Inter']">November 22, 2023</div>
           <div className=" text-center text-white text-5xl font-bold font-['Inter'] underline">News: Godot Wild Jam</div>
           <div className=" text-white text-3xl font-normal font-['Inter']">
@@ -22,17 +23,17 @@ function Blog() {
             up here:…
           </div>
         </div>
-        <div className='flex-col justify-start items-center gap-10 flex'>
+        <div className='flex-col bg-custom-purple rounded-lg p-10 m-10 justify-start items-center gap-10 flex'>
           <div className=" text-center text-white text-3xl font-normal font-['Inter']">October 10, 2022</div>
           <div className=" text-center text-white text-5xl font-bold font-['Inter'] underline">News: Berklee College of Music Game/Music Jam</div>
-          <img className=' h-96' src='https://via.placeholder.com/1049x590' />
+          <img className=' h-96' src={gamejamIMG} alt='this is an image' />
           <div className=" text-white text-3xl font-normal font-['Inter']">
             Game Audio Workshop from the Berklee College of Music is inviting North American college students to participate in the fourth annual game
             development and audio event, Game/Music Jam ’23! Their game jam is unique in that they connect game developers with game composers from
             Berklee College of Music and other colleges to create games and…
           </div>
         </div>
-        <div className='flex-col justify-start items-center gap-10 flex'>
+        <div className='flex-col  bg-custom-purple rounded-lg p-10 m-10 justify-start items-center  gap-10 flex'>
           <div className=" text-center text-white text-3xl font-normal font-['Inter']">July 22, 2022</div>
           <div className=" text-center text-white text-5xl font-bold font-['Inter'] underline">Our first game jam</div>
           <div className=" text-white text-3xl font-normal font-['Inter']">

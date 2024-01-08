@@ -1,19 +1,16 @@
 import React from "react";
-import topGraphics from "../assets/images/top_graphics.svg";
-import bottomGraphics from "../assets/images/bottom_graphics.svg";
 import right_triangle from "../assets/images/right_triangle.svg";
 import left_triangle from "../assets/images/left_triangle.svg";
 import discord_logo from "../assets/images/discord_logo.svg";
+import home_graphics from "../assets/images/home_graphics.svg";
 
 import Header from "./Header.js";
 
 import Person from "./Person";
 
-// Assuming the Header component is already created as per your previous messages.
-
 function Home() {
   const topContainerStyle = {
-    backgroundImage: `url(${topGraphics})`,
+    backgroundImage: `url(${home_graphics})`,
     backgroundSize: "cover", // Cover the entire size of the container
     backgroundRepeat: "no-repeat", // Do not repeat the image
     backgroundPosition: "top",
@@ -21,10 +18,11 @@ function Home() {
   };
 
   const bottomContainerStyle = {
-    backgroundImage: `url(${bottomGraphics})`,
-    backgroundSize: "100% auto", // Set the width to 100% and scale the height automatically
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
+    backgroundImage: `url(${home_graphics})`,
+    backgroundSize: "cover", // Cover the entire size of the container
+    backgroundRepeat: "no-repeat", // Do not repeat the image
+    backgroundPosition: "bottom",
+    minHeight: "100vh", // Minimum height of 100% of the viewport height
   };
   return (
     <div className='bg-dark-colour text-white '>
@@ -45,23 +43,25 @@ function Home() {
       </section>
 
       {/* { Leader Ship} */}
-      <section className='container mx-auto p-10'>
-        <h2 className='text-white text-6xl font-bold text-center mb-10'>Leadership</h2>
-        <div className='flex justify-center'>
-          <div className='grid grid-cols-2 gap-8'>
-            <Person name='Noah Cabral' title='Co-Chair' />
-            <Person name='Jaysall Bedi' title='Co-Chair' />
+      <section className='w-full border-red-600 border-4 bg-custom-purple'>
+        <div className='  max-w-8xl border-solid-600 border-4  mx-auto p-10'>
+          <h2 className='text-white sm:text-6xl text-3xl font-bold text-center mb-10'>Leadership</h2>
+          <div className='flex justify-center'>
+            <div className='grid grid-cols-2 justify-items-center'>
+              <Person name='Noah Cabral' title='Co-Chair' />
+              <Person name='Jaysall Bedi' title='Co-Chair' />
+            </div>
           </div>
-        </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center'>
-          <Person name='Matthew Susko' title='Web Designer' />
-          <Person name='Daniel Dousek' title='Frontend Developer' />
-          <Person name='Huy Minh Truong' title='Backend Developer' />
-          <Person name='Connor Borneman' title='Events Director' />
-          <Person name='Lillie Amos' title='Videographer' />
-          <Person name='Alyssa Zhao' title='Graphic Designer' />
-          <Person name='Eric Schwar' title='Marketing Director' />
-          <Person name='Annika Tran' title='Finance Director' />
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  justify-items-center'>
+            <Person name='Matthew Susko' title='Web Designer' />
+            <Person name='Daniel Dousek' title='Frontend Developer' />
+            <Person name='Huy Minh Truong' title='Backend Developer' />
+            <Person name='Connor Borneman' title='Events Director' />
+            <Person name='Lillie Amos' title='Videographer' />
+            <Person name='Alyssa Zhao' title='Graphic Designer' />
+            <Person name='Eric Schwar' title='Marketing Director' />
+            <Person name='Annika Tran' title='Finance Director' />
+          </div>
         </div>
       </section>
       {/* { Community =) } */}

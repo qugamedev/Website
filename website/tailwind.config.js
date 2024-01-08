@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        "dark-colour": "#212121", // This is a custom name for your color
+        "dark-colour": "#212121",
+        "custom-purple": "#8263DC", // This is a custom name for your color
       },
     },
   },
