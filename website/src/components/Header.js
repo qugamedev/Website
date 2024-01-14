@@ -10,7 +10,7 @@ function Header() {
       <div className='flex items-center justify-between p-4'>
         {/* logo */}
         <div className='flex items-center space-x-4'>
-          <img src={logo} alt='Logo' className='w-27 h-24' />
+        <Link to='/'><img src={logo} alt='Logo' className='w-27 h-24' /></Link>
           {/* links for large screens */}
           <div className='hidden md:flex space-x-4'>
             <Link to='/' className='text-2xl font-bold hover:text-gray-300'>
