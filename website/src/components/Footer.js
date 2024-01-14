@@ -25,7 +25,7 @@ function Footer() {
               className='QugamedevClubsQueensuCa'
               style={{ textAlign: "center", color: "white", fontSize: 24, fontFamily: "Lexend Deca", fontWeight: "700", wordWrap: "break-word" }}
             >
-              qugamedev@clubs.queensu.ca
+              <a href="mailto:qugamedev@clubs.queensu.ca">qugamedev@clubs.queensu.ca</a>
             </div>
             
             {/* BEGIN SOCIALS FRAME */}
