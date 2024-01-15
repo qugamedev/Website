@@ -4,6 +4,12 @@ import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
 import discord_logo from "../assets/images/discord_logo.svg";
 
+import { MeshBasicMaterial } from 'three';
+
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
+
+import qgdc_model from '../assets/qgdc.obj'
+
 import right_arc from "../assets/images/right arc.svg";
 import right_arc2 from "../assets/images/right arc 2.svg";
 
@@ -40,6 +46,29 @@ function Torus() {
   );
 }
 
+function Model() {
+  const obj = useLoader(OBJLoader, qgdc_model);
+  const ref = useRef();
+
+  useFrame(() => {
+    if (ref.current) {
+      ref.current.rotation.y += 0.01;
+    }
+  });
+
+  const material = new MeshBasicMaterial({
+    color: '#B66cff',
+    wireframe: true
+  });
+
+  obj.traverse((child) => {
+    if (child.isMesh) {
+      child.material = material;
+    }
+  });
+
+  return <primitive object={obj} ref={ref} />;
+}
  
 
 function About() {
@@ -60,7 +89,7 @@ return (
       <Canvas style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, width: '100%', height: '100%' }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
-        <Torus />
+        <Model />
       </Canvas>
 
       {/* BEGIN LEFT ARC */}
