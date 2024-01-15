@@ -134,11 +134,11 @@ return (
     {/* END BACKGROUND ELEMENTS */}
 
     {/* BEGIN PAGE TEXT */}
-    <div className="about_content"  style={{padding:52, paddingTop:283, display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
+    <div className="about_content"  style={{padding:52, paddingTop:350, display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
       }}>
 
       <div> {/** vertical container. */}
-        <div className="WhatIsQgdc" style={{color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
+        <div className="WhatIsQgdc" style={{color: 'white', fontSize: 50, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
           What is the QGDC?
         </div>
         <div className="lorem1" 
@@ -159,7 +159,7 @@ return (
       <div style={{display: 'flex', position: 'relative', justifyContent: "flex-end",flexDirection: 'row' }}>
         <div> {/** vertical container. */}
           <div className="WhatSOurGoal"
-            style={{ textAlign: 'right', color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
+            style={{ textAlign: 'right', color: 'white', fontSize: 50, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
               What's our Goal?
           </div>
           <div className="lorem2" 
@@ -177,7 +177,7 @@ return (
 
       <div> {/** vertical container. */}
         <div className="WhyYouShouldJoinUs"
-          style={{ color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
+          style={{ color: 'white', fontSize: 50, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
             Why you should <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" style={{color: "#B66cff"}}>
               join us.</a>
         </div>

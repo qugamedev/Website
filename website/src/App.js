@@ -11,10 +11,26 @@ import Blog from "./components/Blog.js";
 // Components
 import Footer from "./components/Footer.js";
 
+// Assets
+import logo from "./assets/images/qgdc_logo.png";
+
 function App() {
+  var singlePage = false;
   return (
     <Router>
-      <Header></Header>
+      { 
+      (singlePage) ?
+      <Header></Header> : (
+        <div className='absolute top-0 left-0 w-full bg-gradient-to-b from-black to-transparent text-white z-10'>
+          <div className='flex items-center justify-center p-10'>
+            <div className='flex items-center space-x-4'>
+              <img src={logo} alt='Logo' className='w-67 h-60' />
+              <div style={{fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700'}}>Queen's <br></br> Game Dev <br></br> Club</div>
+            </div>
+          </div>          
+        </div>
+      )}
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
