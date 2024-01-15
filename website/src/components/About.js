@@ -209,7 +209,7 @@ return (
         <div className="lorem3" 
           style={{maxWidth: 819, color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>  
 
-          Come on out to our regular club meetups to chill, chat, and make games; 
+          Come on out to our regular club meetups to chat and make games; 
           or, if you're super ambitious, we're here to inspire and prepare you to
           join one of our gamedev teams - they ship games every year!        
                   
