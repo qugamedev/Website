@@ -5,7 +5,11 @@ module.exports = {
     extend: {
       backgroundColor: {
         "dark-colour": "#212121",
-        "custom-purple": "#8263DC", // This is a custom name for your color
+        "custom-purple": "#8263DC", 
+      },
+      fontFamily: {
+        brick: ['"NT Brick Sans"', "sans-serif"], 
+        archivo: ['"Archivo Black"', "sans-serif"], 
       },
     },
   },
