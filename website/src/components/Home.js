@@ -28,6 +28,7 @@ function Home() {
     backgroundImage: `url(${top_graphic_items})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
+    backgroundSize: "100%, auto",
   };
 
   //Background image at the bottom
@@ -48,7 +49,7 @@ function Home() {
           </p>
         </div>
         <img src={right_triangle} className='absolute bottom-0 left-0' alt='Bottom Left Image' />
-        <img src={left_triangle} className='absolute bottom-0 right-0' alt='Bottom Right Image' />
+        <img src={left_triangle} className='absolute bottom-0 right-0 scale-y-[-1]' alt='Bottom Right Image' />
       </section>
 
       {/* { Leader Ship} */}
@@ -58,7 +59,7 @@ function Home() {
           <div className='flex justify-center'>
             <div className='grid grid-cols-2 justify-items-center'>
               <Person name='Noah Cabral' title='Co-Chair' image={Noah} />
-              <Person name='Jaysall Bedi' title='Co-Chair' />
+              <Person name='Jaysall Bedi' title='Co-Chair' image={Jaysall} />
             </div>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>
@@ -81,8 +82,8 @@ function Home() {
           <img src={discord_logo} alt='Discord' className='mb-4  w-36 sm:w-56 md:w-80' />
           <p className='mb-4 '>on Discord</p>
         </div>
-        <img src={right_triangle} className='absolute top-0 left-0' style={{ transform: "scaleY(-1)" }} alt='Bottom Left Image' />
-        <img src={left_triangle} className='absolute top-0 right-0' style={{ transform: "scaleY(-1)" }} alt='Bottom Right Image' />
+        <img src={right_triangle} className='absolute top-0 left-0 z-10' style={{ transform: "scaleY(-1)" }} alt='Bottom Left Image' />
+        <img src={left_triangle} className='absolute top-0 right-0' alt='Bottom Right Image' />
       </section>
     </div>
   );
