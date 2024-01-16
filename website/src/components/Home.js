@@ -3,6 +3,7 @@ import right_triangle from "../assets/images/right_triangle.svg";
 import left_triangle from "../assets/images/left_triangle.svg";
 import discord_logo from "../assets/images/discord_logo.svg";
 import home_graphics from "../assets/images/home_graphics.svg";
+import top_graphic_items from "../assets/images/home_top_graphic_items.svg";
 
 import Header from "./Header.js";
 
@@ -10,11 +11,10 @@ import Person from "./Person";
 
 function Home() {
   const topContainerStyle = {
-    backgroundImage: `url(${home_graphics})`,
-    backgroundSize: "cover", // Cover the entire size of the container
-    backgroundRepeat: "no-repeat", // Do not repeat the image
-    backgroundPosition: "top",
-    minHeight: "100vh", // Minimum height of 100% of the viewport height
+    backgroundImage: `url(${top_graphic_items})`,
+    backgroundSize: "contain", // Scale the image to fit the content box
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center center", // Center the background image
   };
 
   const bottomContainerStyle = {
