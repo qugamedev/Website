@@ -1,22 +1,36 @@
 import React from "react";
+
+// Assests
 import right_triangle from "../assets/images/right_triangle.svg";
 import left_triangle from "../assets/images/left_triangle.svg";
-import discord_logo from "../assets/images/discord_logo.svg";
+import discord_logo from "../assets/images/logos/discord_logo.svg";
 import home_graphics from "../assets/images/home_graphics.svg";
 import top_graphic_items from "../assets/images/home_top_graphic_items.svg";
 import home_arcs from "../assets/images/home_arcs.svg";
 
-import Header from "./Header.js";
+// Headshots
+import Noah from "../assets/images/headshots/noah.JPG";
+import Jaysall from "../assets/images/headshots/jaysall.jpg";
+import Daniel from "../assets/images/headshots/daniel.png";
+import Lillie from "../assets/images/headshots/lillie.JPG";
+import Eric from "../assets/images/headshots/eric.JPG";
+import Alyssa from "../assets/images/headshots/alyssa.JPG";
+import Annika from "../assets/images/headshots/annika.JPG";
+import Huy from "../assets/images/headshots/huy.JPG";
+import Matthew from "../assets/images/headshots/matthew.png";
+import Conner from "../assets/images/headshots/conner.JPG";
 
 import Person from "./Person";
 
 function Home() {
+  // Background image at the top
   const topContainerStyle = {
     backgroundImage: `url(${top_graphic_items})`,
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center", // Center the background image
+    backgroundPosition: "center center",
   };
 
+  //Background image at the bottom
   const bottomContainerStyle = {
     backgroundImage: `url(${home_graphics})`,
     backgroundRepeat: "no-repeat", // Do not repeat the image
@@ -43,19 +57,19 @@ function Home() {
           <h2 className='mb-10 text-3xl font-bold text-center text-white sm:text-6xl font-brick'>Leadership</h2>
           <div className='flex justify-center'>
             <div className='grid grid-cols-2 justify-items-center'>
-              <Person name='Noah Cabral' title='Co-Chair' />
+              <Person name='Noah Cabral' title='Co-Chair' image={Noah} />
               <Person name='Jaysall Bedi' title='Co-Chair' />
             </div>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>
-            <Person name='Matthew Susko' title='Web Designer' />
-            <Person name='Daniel Dousek' title='Frontend Developer' />
-            <Person name='Huy Minh Truong' title='Backend Developer' />
-            <Person name='Connor Borneman' title='Events Director' />
-            <Person name='Lillie Amos' title='Videographer' />
-            <Person name='Alyssa Zhao' title='Graphic Designer' />
-            <Person name='Eric Schwar' title='Marketing Director' />
-            <Person name='Annika Tran' title='Finance Director' />
+            <Person name='Matthew Susko' title='Web Designer' image={Matthew} />
+            <Person name='Daniel Dousek' title='Frontend Developer' image={Daniel} />
+            <Person name='Huy Minh Truong' title='Backend Developer' image={Huy} />
+            <Person name='Connor Borneman' title='Events Director' image={Conner} />
+            <Person name='Lillie Amos' title='Videographer' image={Lillie} />
+            <Person name='Alyssa Zhao' title='Graphic Designer' image={Alyssa} />
+            <Person name='Eric Schwar' title='Marketing Director' image={Eric} />
+            <Person name='Annika Tran' title='Finance Director' image={Annika} />
           </div>
         </div>
       </section>

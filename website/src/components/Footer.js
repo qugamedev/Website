@@ -1,83 +1,52 @@
 import React from "react";
-
-import discord_logo from "../assets/images/discord_logo.svg";
-
+import discord_logo from "../assets/images/logos/discord_logo.svg";
+import instagram_logo from "../assets/images/logos/instagram_logo.svg";
+import youtube_logo from "../assets/images/logos/youtube_logo.svg";
+import linkedin_logo from "../assets/images/logos/linkedin_logo.svg";
 
 function Footer() {
   return (
-    <div className='Footer' style={{ width: "100%", zIndex: 1, position: "relative" }}>
-      <div style={{ display: "flex", background: "#212121", alignItems: "center", flexDirection: "column" }}>
-        
-        <div
-          className='Frame2'
-          style={{
-            padding: 20,
-            background: "#212121",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: 20,
-            display: "inline-flex",
-            flexWrap: "wrap" 
-          }}
-        >
-          <div className='Frame6' style={{ justifyContent: "center", alignItems: "center", gap: 20, display: "flex" }}>
-            <div
-              className='QugamedevClubsQueensuCa'
-              style={{ textAlign: "center", color: "white", fontSize: 24, fontFamily: "Lexend Deca", fontWeight: "700", wordWrap: "break-word" }}
-            >
-              <a href="mailto:qugamedev@clubs.queensu.ca">qugamedev@clubs.queensu.ca</a>
+    <div className='w-full relative z-1'>
+      <div className='flex flex-col items-center bg-dark-colour px-4 lg:px-8'>
+        <div className='flex  items-center justify-center gap-5 p-5 '>
+          <div className='flex flex-col  md:flex-row items-center justify-center md:gap-5'>
+            <div className='text-center  text-white text-lg md:text-2xl font-bold break-words mb-2 md:mb-0'>
+              <a href='mailto:qugamedev@clubs.queensu.ca'>qugamedev@clubs.queensu.ca</a>
             </div>
-            
+
             {/* BEGIN SOCIALS FRAME */}
-            <div className='Frame8' style={{ justifyContent: "center", alignItems: "center", gap: 20, display: "flex" }}>
-              
+            <div className='flex items-center justify-center gap-5'>
               {/* Discord */}
-              <a href="https://discord.gg/uGTPhR3a" target="_blank">
-                <div className='Vector' style={{ width: 50, height: 50 }}>              
-                  <img src={discord_logo} />
+              <a href='https://discord.gg/uGTPhR3a' target='_blank' rel='noopener noreferrer'>
+                <div className='w-10 h-10 sm:w-12 sm:h-12'>
+                  <img src={discord_logo} alt='Discord' />
                 </div>
               </a>
-              
+
               {/* Instagram */}
-              <a href="https://www.instagram.com/qugamedev/" target="_blank">
-                <div className='Vector' style={{ width: 50, height: 50 }}>              
-                  <svg xmlns='http://www.w3.org/2000/svg' width='51' height='50' viewBox='0 0 51 50' fill='none'>
-                    <path
-                      d='M28.07 0.00307588C29.8943 -0.00392443 31.7185 0.0144102 33.5422 0.0580742L34.0272 0.0755735C34.5872 0.0955728 35.1397 0.120572 35.8071 0.150571C38.467 0.275567 40.2819 0.695553 41.8743 1.31303C43.5242 1.94801 44.9142 2.80798 46.3041 4.19793C47.575 5.44691 48.5585 6.95771 49.1864 8.62528C49.8039 10.2177 50.2239 12.0352 50.3489 14.6951C50.3789 15.3601 50.4039 15.915 50.4239 16.475L50.4389 16.96C50.4833 18.7829 50.5025 20.6064 50.4964 22.4298L50.4989 24.2948V27.5696C50.505 29.3939 50.4859 31.2182 50.4414 33.042L50.4264 33.5269C50.4064 34.0869 50.3814 34.6394 50.3514 35.3069C50.2264 37.9668 49.8014 39.7817 49.1864 41.3742C48.5606 43.0435 47.5768 44.5556 46.3041 45.804C45.0541 47.0748 43.5425 48.0583 41.8743 48.6864C40.2819 49.3039 38.467 49.7239 35.8071 49.8489C35.1397 49.8789 34.5872 49.9039 34.0272 49.9239L33.5422 49.9389C31.7185 49.9833 29.8943 50.0025 28.07 49.9964L26.2051 49.9989H22.9328C21.1085 50.005 19.2843 49.9859 17.4606 49.9414L16.9756 49.9264C16.3822 49.9049 15.7888 49.8799 15.1957 49.8514C12.5358 49.7264 10.7209 49.3014 9.126 48.6864C7.45779 48.0598 5.94676 47.076 4.69873 45.804C3.42641 44.5548 2.4419 43.043 1.81388 41.3742C1.19641 39.7817 0.776428 37.9668 0.651435 35.3069C0.623593 34.7137 0.598594 34.1204 0.576439 33.5269L0.563939 33.042C0.517851 31.2182 0.497016 29.3939 0.501442 27.5696V22.4298C0.494465 20.6064 0.5128 18.7829 0.55644 16.96L0.573939 16.475C0.593938 15.915 0.618936 15.3601 0.648935 14.6951C0.773928 12.0327 1.19391 10.2202 1.81138 8.62528C2.43977 6.95689 3.4262 5.4465 4.70123 4.20043C5.9484 2.92736 7.45849 1.94194 9.126 1.31303C10.7209 0.695553 12.5333 0.275567 15.1957 0.150571L16.9756 0.0755735L17.4606 0.0630743C19.2834 0.0170079 21.1069 -0.003827 22.9303 0.00057615L28.07 0.00307588ZM25.5002 12.5027C23.844 12.4792 22.1997 12.7852 20.6628 13.4028C19.126 14.0204 17.7272 14.9373 16.5477 16.1002C15.3683 17.2631 14.4317 18.6488 13.7925 20.1768C13.1532 21.7048 12.824 23.3446 12.824 25.001C12.824 26.6573 13.1532 28.2971 13.7925 29.8252C14.4317 31.3532 15.3683 32.7389 16.5477 33.9018C17.7272 35.0647 19.126 35.9816 20.6628 36.5992C22.1997 37.2168 23.844 37.5227 25.5002 37.4993C28.8152 37.4993 31.9945 36.1824 34.3385 33.8383C36.6826 31.4941 37.9995 28.3148 37.9995 24.9997C37.9995 21.6846 36.6826 18.5053 34.3385 16.1612C31.9945 13.8171 28.8152 12.5027 25.5002 12.5027ZM25.5002 17.5025C26.4964 17.4841 27.4863 17.6645 28.412 18.033C29.3377 18.4015 30.1808 18.9508 30.8918 19.6488C31.6029 20.3468 32.1678 21.1794 32.5534 22.0982C32.9391 23.0169 33.1378 24.0033 33.1379 24.9997C33.1381 25.9961 32.9397 26.9826 32.5544 27.9014C32.169 28.8203 31.6045 29.6532 30.8936 30.3514C30.1828 31.0496 29.3399 31.5992 28.4143 31.968C27.4887 32.3368 26.4989 32.5175 25.5027 32.4995C23.5136 32.4995 21.6061 31.7093 20.1996 30.3028C18.7932 28.8964 18.003 26.9888 18.003 24.9997C18.003 23.0107 18.7932 21.1031 20.1996 19.6966C21.6061 18.2901 23.5136 17.5 25.5027 17.5L25.5002 17.5025ZM38.6245 8.75278C37.818 8.78506 37.0553 9.12814 36.4961 9.71017C35.9369 10.2922 35.6246 11.068 35.6246 11.8752C35.6246 12.6823 35.9369 13.4581 36.4961 14.0402C37.0553 14.6222 37.818 14.9653 38.6245 14.9976C39.4532 14.9976 40.2481 14.6683 40.8341 14.0823C41.4201 13.4963 41.7493 12.7014 41.7493 11.8727C41.7493 11.0439 41.4201 10.2491 40.8341 9.66304C40.2481 9.07701 39.4532 8.74778 38.6245 8.74778V8.75278Z'
-                      fill='#A85FBA'
-                    />
-                  </svg>
+              <a href='https://www.instagram.com/qugamedev/' target='_blank' rel='noopener noreferrer'>
+                <div className='w-10 h-10 sm:w-12 sm:h-12'>
+                  <img src={instagram_logo} alt='Instagram' />
                 </div>
               </a>
+
               {/* YouTube */}
-              <a href="https://www.youtube.com/@queensgamedevelopmentclub" target="_blank">
-                <div className='Vector' style={{ width: 62, height: 48 }}>
-                  <svg xmlns='http://www.w3.org/2000/svg' width='63' height='48' viewBox='0 0 63 48' fill='none'>
-                    <path
-                      fillRule='evenodd'
-                      clipRule='evenodd'
-                      d='M31.5 0C34.1505 0 36.8692 0.0660003 39.5042 0.174L42.6166 0.318L45.5957 0.489L48.3857 0.672L50.9339 0.864C53.6992 1.06883 56.3014 2.21084 58.2825 4.08912C60.2637 5.9674 61.4969 8.46162 61.7653 11.133L61.8893 12.408L62.1218 15.138C62.3388 17.967 62.5 21.051 62.5 24C62.5 26.949 62.3388 30.033 62.1218 32.862L61.8893 35.592C61.849 36.03 61.8087 36.453 61.7653 36.867C61.4968 39.5389 60.2631 42.0335 58.2814 43.9118C56.2996 45.7901 53.6967 46.9318 50.9308 47.136L48.3888 47.325L45.5988 47.511L42.6166 47.682L39.5042 47.826C36.8377 47.9381 34.169 47.9961 31.5 48C28.831 47.9961 26.1623 47.9381 23.4958 47.826L20.3834 47.682L17.4043 47.511L14.6143 47.325L12.0661 47.136C9.30075 46.9312 6.69861 45.7892 4.71747 43.9109C2.73632 42.0326 1.50308 39.5384 1.2347 36.867L1.1107 35.592L0.8782 32.862C0.641166 29.9134 0.515016 26.9575 0.5 24C0.5 21.051 0.6612 17.967 0.8782 15.138L1.1107 12.408C1.151 11.97 1.1913 11.547 1.2347 11.133C1.50298 8.46209 2.73577 5.96825 4.71628 4.09003C6.6968 2.21181 9.2982 1.06951 12.063 0.864L14.6081 0.672L17.3981 0.489L20.3803 0.318L23.4927 0.174C26.1602 0.0618988 28.8299 0.00388586 31.5 0ZM25.3 16.725V31.275C25.3 32.661 26.85 33.525 28.09 32.835L41.11 25.56C41.3933 25.4022 41.6286 25.1749 41.7923 24.901C41.9559 24.6271 42.0421 24.3164 42.0421 24C42.0421 23.6836 41.9559 23.3729 41.7923 23.099C41.6286 22.8251 41.3933 22.5978 41.11 22.44L28.09 15.168C27.8072 15.01 27.4863 14.9268 27.1597 14.9268C26.8331 14.9269 26.5123 15.0102 26.2295 15.1683C25.9467 15.3264 25.7119 15.5538 25.5487 15.8276C25.3856 16.1014 25.2998 16.4119 25.3 16.728V16.725Z'
-                      fill='#FA1C23'
-                    />
-                  </svg>
+              <a href='https://www.youtube.com/@queensgamedevelopmentclub' target='_blank' rel='noopener noreferrer'>
+                <div className='w-[54px] h-[40px]   sm:w-[62px] sm:h-[48px]'>
+                  <img src={youtube_logo} alt='Youtube' />
                 </div>
               </a>
-              {/* Linkedin */}
-              <a href="https://ca.linkedin.com/company/qgdc" target="">
-                <div className='Vector' style={{ width: 49, height: 48 }}>
-                  <svg xmlns='http://www.w3.org/2000/svg' width='50' height='48' viewBox='0 0 50 48' fill='none'>
-                    <path
-                      d='M44.0556 0C45.4995 0 46.8843 0.561903 47.9054 1.5621C48.9264 2.56229 49.5 3.91885 49.5 5.33333V42.6667C49.5 44.0812 48.9264 45.4377 47.9054 46.4379C46.8843 47.4381 45.4995 48 44.0556 48H5.94444C4.50049 48 3.11567 47.4381 2.09464 46.4379C1.07361 45.4377 0.5 44.0812 0.5 42.6667V5.33333C0.5 3.91885 1.07361 2.56229 2.09464 1.5621C3.11567 0.561903 4.50049 0 5.94444 0H44.0556ZM42.6944 41.3333V27.2C42.6944 24.8944 41.7595 22.6832 40.0952 21.0529C38.4309 19.4226 36.1736 18.5067 33.82 18.5067C31.5061 18.5067 28.8111 19.8933 27.5044 21.9733V19.0133H19.9094V41.3333H27.5044V28.1867C27.5044 26.1333 29.1922 24.4533 31.2883 24.4533C32.2991 24.4533 33.2685 24.8467 33.9832 25.5468C34.6979 26.2469 35.0994 27.1965 35.0994 28.1867V41.3333H42.6944ZM11.0622 14.8267C12.2751 14.8267 13.4384 14.3547 14.2961 13.5145C15.1537 12.6743 15.6356 11.5348 15.6356 10.3467C15.6356 7.86667 13.5939 5.84 11.0622 5.84C9.84208 5.84 8.67191 6.31481 7.80914 7.15997C6.94637 8.00514 6.46167 9.15143 6.46167 10.3467C6.46167 12.8267 8.53056 14.8267 11.0622 14.8267ZM14.8461 41.3333V19.0133H7.30556V41.3333H14.8461Z'
-                      fill='#1E60B8'
-                    />
-                  </svg>
+
+              {/* LinkedIn */}
+              <a href='https://ca.linkedin.com/company/qgdc' target='_blank' rel='noopener noreferrer'>
+                <div className='w-10 h-10 sm:w-12 sm:h-12'>
+                  <img src={linkedin_logo} alt='Linkedin' />
                 </div>
               </a>
             </div>
             {/* END SOCIALS FRAME */}
-
           </div>
-          
+
           {/* EMAIL SUBSCRIBE STUFF */}
           {/*
           <div className='Frame7' style={{ ustifyContent: "center", alignItems: "center", gap: 15, display: "flex" }}>
@@ -126,25 +95,10 @@ function Footer() {
           </div>
           */}
           {/* EMAIL SUBSCRIBE STUFF */}
-
-
         </div>
 
-        <p
-          style={{
-            color: "white",
-            textAlign: "center",
-            fontSize: 12,
-            fontFamily: "Lexend Deca",
-            fontWeight: "700",
-            wordWrap: "break-word",
-            paddingBottom: 20,
-          }}
-        >
-          © 2024 Queen's University Game Development Club
-        </p>
-      </div>{" "}
-      {/*end flex*/}
+        <p className='text-white text-center text-xs lg:text-sm font-bold break-words pb-5'>© 2024 Queen's University Game Development Club</p>
+      </div>
     </div>
   );
 }

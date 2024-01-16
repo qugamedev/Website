@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect,  useMemo  } from 'react';
 
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
-import discord_logo from "../assets/images/discord_logo.svg";
+import discord_logo from "../assets/images/logos/discord_logo.svg";
 
 import { MeshBasicMaterial } from 'three';
 

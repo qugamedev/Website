@@ -13,7 +13,8 @@ function Header() {
           <Link to='/'>
             <img src={logo} alt='Logo' className='h-24 w-27' />
           </Link>
-          {/* div below is normally hidden but on "medium" and up screens it is a flexbox. */}
+
+          {/* div below is hidden but on "medium" it is a flexbox. */}
           <div className='hidden space-x-4 md:flex'>
             <Link to='/' className='text-2xl font-bold hover:text-gray-300'>
               Home
