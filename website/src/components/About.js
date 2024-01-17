@@ -171,7 +171,7 @@ return (
 
     {/* BEGIN PAGE TEXT */}
     <div
-    className="about_content"
+    className="about_content pl-3 pr-3 sm:pl-10 sm:pr-10"
       style={{ display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
       }}>
 

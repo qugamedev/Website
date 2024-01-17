@@ -29,8 +29,8 @@ code {
 }
 
 .about_content {
-  padding: 52px;
   padding-top: 150px;
+  padding-bottom: 52px;
 }
 
 @media (max-width: 1150px) {
