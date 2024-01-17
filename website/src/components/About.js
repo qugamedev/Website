@@ -203,8 +203,11 @@ return (
       <div> {/** vertical container. */}
         <div className="WhyYouShouldJoinUs"
           style={{ color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-            Why you should <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" style={{color: "#B66cff"}}>
-              join us.</a>
+            Why you should 
+            
+            <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" 
+            style={{color: "#B66cff", whiteSpace: "nowrap"}}>
+              &nbsp;join us.</a>
         </div>
         <div className="lorem3" 
           style={{maxWidth: 819, color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>  
