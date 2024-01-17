@@ -7,6 +7,11 @@ import Header from "./components/Header.js";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
 import Blog from "./components/Blog.js";
+import Login from "./Auth/login.js";
+
+// Login Authentication
+import PrivateRoute from './Auth/PrivateRoute'
+import { AuthProvider} from './Auth/AuthContext';
 
 // Components
 import Footer from "./components/Footer.js";
@@ -33,12 +38,19 @@ function App() {
         </div>
       )}
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/home' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        {/* <Route path='/blog' element={<Blog />} /> */}
-      </Routes>
+      <AuthProvider>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/about' element={<About />} />
+
+            <Route path="/login" element={<Login />} />
+            {/* <Route path="/admin" element={<PrivateRoute><Admin/></PrivateRoute>} /> */}
+
+            
+          </Routes>
+      </AuthProvider>
+
       <Footer></Footer>
     </Router>
   );

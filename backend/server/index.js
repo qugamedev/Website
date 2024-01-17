@@ -175,4 +175,125 @@ app.listen(PORT, ()=>{
 });
 
 
+// START OF EXECS
+//CREATE EXECS
+app.put('/api/execs/create', (req, res) => {
+    const name = req.body.name;
+    const title = req.body.title;
+    const image = req.body.image;
+
+    db.query("INSERT INTO execs (name, title, image) VALUES (?,?,?)", [name, title, image], (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Internal server error");
+            return
+        }
+        res.status(200).send("Created admin sucessfully.")
+    })
+})
+
+
+//DELETE EXECS
+app.delete("/api/execs/delete/:id", (req, res) => {
+    const id = req.params.id;
+    db.query("DELETE FROM execs WHERE id = ?", id, (err, result)=> {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Internal server error: Could not delete.")
+        }
+            res.send(result);
+    })
+})
+
+
+//UPDATE EXECS
+app.put('/api/execs/put/:id', (req, res) => {
+    const id = req.params.id
+
+    const name = req.body.name;
+    const title = req.body.title;
+    const image = req.body.image;
+
+    db.query("UPDATE execs SET name = ?, title = ?, image = ? WHERE id = ?", [name, title, image, id], (err, result)=>{
+        if(err) {
+            console.log(err)
+            res.status(500).send('Internal server error.')
+        }
+            res.send(result)
+    })
+})
+
+app.get("/api/execs/get", (req, res) =>{
+    db.query("SELECT id, name, title, image FROM execs", (err, result) => {
+        if(err) {
+            console.log(err)
+        }
+        res.send(result)
+    })
+})
+
+
+
+
+
+
+
+
+// START OF COCHAIRS
+//CREATE COCHAIRS
+app.put('/api/cochairs/create', (req, res) => {
+    const name = req.body.name;
+    const title = req.body.title;
+    const image = req.body.image;
+
+    db.query("INSERT INTO cochairs (name, title, image) VALUES (?,?,?)", [name, title, image], (err, result) => {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Internal server error");
+            return
+        }
+        res.status(200).send("Created admin sucessfully.")
+    })
+})
+
+
+//DELETE EXECS
+app.delete("/api/cochairs/delete/:id", (req, res) => {
+    const id = req.params.id;
+    db.query("DELETE FROM cochairs WHERE id = ?", id, (err, result)=> {
+        if (err) {
+            console.log(err);
+            res.status(500).send("Internal server error: Could not delete.")
+        }
+            res.send(result);
+    })
+})
+
+
+//UPDATE EXECS
+app.put('/api/cochairs/put/:id', (req, res) => {
+    const id = req.params.id
+
+    const name = req.body.name;
+    const title = req.body.title;
+    const image = req.body.image;
+
+    db.query("UPDATE cochairs SET name = ?, title = ?, image = ? WHERE id = ?", [name, title, image, id], (err, result)=>{
+        if(err) {
+            console.log(err)
+            res.status(500).send('Internal server error.')
+        }
+            res.send(result)
+    })
+})
+
+app.get("/api/cochairs/get", (req, res) =>{
+    db.query("SELECT id, name, title, image FROM cochairs", (err, result) => {
+        if(err) {
+            console.log(err)
+        }
+        res.send(result)
+    })
+})
+
 app.get("/a")
