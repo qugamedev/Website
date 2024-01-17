@@ -6,7 +6,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div style={{minWidth: 500}} className='absolute top-0 left-0 z-10 w-full text-white bg-gradient-to-b from-black to-transparent'>
+    <div style={{ minWidth: 375 }} className='absolute top-0 left-0 z-10 w-full text-white bg-gradient-to-b from-black to-transparent'>
       <div className='flex items-center justify-between p-4'>
         {/* logo */}
         <div className='flex items-center space-x-4'>
@@ -39,13 +39,13 @@ function Header() {
       {/* Dropdown menu for small screens */}
       {isMenuOpen && (
         <div className='flex flex-col items-center md:hidden'>
-          <Link to='/' className='my-2 text-2xl font-bold hover:text-gray-300'>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to='/' className='my-2 text-2xl font-bold hover:text-gray-300'>
             Home
           </Link>
-          <Link to='/about' className='my-2 text-2xl font-bold hover:text-gray-300'>
+          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to='/about' className='my-2 text-2xl font-bold hover:text-gray-300'>
             About
           </Link>
-          {/* <Link to='/blog' className='my-2 text-2xl font-bold hover:text-gray-300'>
+          {/* <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to='/blog' className='my-2 text-2xl font-bold hover:text-gray-300'>
             Blog
           </Link> */}
         </div>

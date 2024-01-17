@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #root {
-  min-width: 500px;
+  min-width: 375;
 }
 
 body {
