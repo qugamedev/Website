@@ -177,8 +177,8 @@ return (
         </div>
         <div className="lorem1" 
         style={{maxWidth: 865, color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
-          Officially recognized by the AMS at Queen's University,
-          the Queen's Game Development Club is a hub for passionate game devs in Kingston.
+          Officially recognized by the AMS at Queen’s University,
+          the Queen’s Game Development Club is a hub for passionate game devs in Kingston.
           
           {/** We are a club .
           Our club was active from 2010 to 2013 and was recently re-ratified in 2021. */}
@@ -214,7 +214,7 @@ return (
 
           If you enjoy building games, we invite you to come out to our regular
           club meetups for speaker presentations and hands-on game development.
-          And if you're super ambitious, we're here to inspire and prepare you
+          And if you’re super ambitious, we’re here to inspire and prepare you
           in joining one of our gamedev teams, offering experiencing shipping a
           complete game.
                   
