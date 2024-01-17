@@ -86,7 +86,9 @@ return (
     }}>
       
       { /* Three.js Canvas */ }
-      <Canvas style={{ position: 'absolute', top: 0, left: 0, zIndex: 0, width: '100%', height: '100%' }}>
+      <Canvas 
+      id="logo_canvas"
+      style={{ position: 'absolute', left: 0, zIndex: 0, width: '100%', height:  802}}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
         <Model />
@@ -168,7 +170,9 @@ return (
     {/* END BACKGROUND ELEMENTS */}
 
     {/* BEGIN PAGE TEXT */}
-    <div className="about_content"  style={{padding:52, paddingTop:150, display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
+    <div
+    className="about_content"
+      style={{ display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
       }}>
 
       <div> {/** vertical container. */}

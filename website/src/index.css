@@ -24,14 +24,23 @@ code {
   src: url('NTBrickSans.ttf');
 }
 
-
-.about_content {
-  transition: background-color 0.5s ease;
+#logo_canvas {
+  top:0;
 }
 
-@media (max-width: 1300px) {
+.about_content {
+  padding: 52px;
+  padding-top: 150px;
+}
+
+@media (max-width: 1150px) {
+
+  #logo_canvas {
+    top: -210px;;
+  }
+
   .about_content {
-      background-color: rgba(0, 0, 0, 0.2);
+    padding-top: 380px;
   }
 }
 
