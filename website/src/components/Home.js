@@ -56,7 +56,7 @@ function Home() {
   return (
     <div className='text-white bg-dark-colour '>
       {/* { WELCOME PAGE} */}
-      <section style={topContainerStyle} className=' text-center border sm:text-left relative pb-20'>
+      <section style={topContainerStyle} className=' text-center sm:text-left relative pb-20'>
         <div className='container   pl-3 sm:pl-10 pt-72 md:pt-64 '>
           <h1 className='max-w-5xl  font-brick lg:text-7xl sm:text-5xl text-4xl leading-normal sm:leading-normal md:leading-normal lg:leading-normal'>
             Queen’s Game Development Club
