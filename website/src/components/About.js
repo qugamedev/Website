@@ -191,7 +191,7 @@ return (
         <div> {/** vertical container. */}
           <div className="WhatSOurGoal"
             style={{ textAlign: 'right', color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-              What's our Goal?
+              What’s our Goal?
           </div>
           <div className="lorem2" 
             style={{maxWidth: 776,  textAlign: 'right', color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
