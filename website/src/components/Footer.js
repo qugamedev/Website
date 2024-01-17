@@ -11,7 +11,9 @@ function Footer() {
         <div className='flex  items-center justify-center gap-5 p-5 '>
           <div className='flex flex-col  md:flex-row items-center justify-center md:gap-5'>
             <div className='text-center  text-white text-lg md:text-2xl font-bold break-words mb-2 md:mb-0'>
-              <a href='mailto:qugamedev@clubs.queensu.ca'>qugamedev@clubs.queensu.ca</a>
+              <a className='font-archivo' href='mailto:qugamedev@clubs.queensu.ca'>
+                qugamedev@clubs.queensu.ca
+              </a>
             </div>
 
             {/* BEGIN SOCIALS FRAME */}

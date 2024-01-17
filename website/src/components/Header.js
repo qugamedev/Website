@@ -22,9 +22,9 @@ function Header() {
             <Link to='/about' className='text-2xl font-bold hover:text-gray-300'>
               About
             </Link>
-            <Link to='/blog' className='text-2xl font-bold hover:text-gray-300'>
+            {/* <Link to='/blog' className='text-2xl font-bold hover:text-gray-300'>
               Blog
-            </Link>
+            </Link> */}
           </div>
         </div>
 
@@ -45,9 +45,9 @@ function Header() {
           <Link to='/about' className='my-2 text-2xl font-bold hover:text-gray-300'>
             About
           </Link>
-          <Link to='/blog' className='my-2 text-2xl font-bold hover:text-gray-300'>
+          {/* <Link to='/blog' className='my-2 text-2xl font-bold hover:text-gray-300'>
             Blog
-          </Link>
+          </Link> */}
         </div>
       )}
     </div>
