@@ -168,7 +168,7 @@ return (
     {/* END BACKGROUND ELEMENTS */}
 
     {/* BEGIN PAGE TEXT */}
-    <div className="about_content"  style={{padding:52, paddingTop:128, display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
+    <div className="about_content"  style={{padding:52, paddingTop:150, display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
       }}>
 
       <div> {/** vertical container. */}
