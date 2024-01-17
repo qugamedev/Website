@@ -92,7 +92,9 @@ return (
         <Model />
       </Canvas>
 
+       
       {/* BEGIN LEFT ARC */}
+      {/*
       <div style={{display: 'flex', position: 'absolute', top:0, right: 0, justifyContent: "flex-end",flexDirection: 'row' }}>
         <div className="LeftArc" style={{width: 396, height: 1201, position: 'relative',   transformOrigin: '0 0'}}>
           <div className="Rectangle3" style={{height: 1196, left: 1, top: 0, position: 'absolute',  transformOrigin: '0 0',  }}>
@@ -114,8 +116,10 @@ return (
           </div>
         </div>
       </div>
+      */}
       {/* END LEFT ARC */}
 
+      {/*
       <div style={{width: "734.692px",
         height: "587.586px",
         position: 'absolute',
@@ -132,6 +136,7 @@ return (
           flexShrink: 0}}>
         <img src={right_arc2}/>
       </div>
+      */}
       
       {/*
       <div className="Dpad" style={{width: 228.21, height: 227.33, }}>
@@ -163,62 +168,90 @@ return (
     {/* END BACKGROUND ELEMENTS */}
 
     {/* BEGIN PAGE TEXT */}
-    <div className="about_content"  style={{padding:52, paddingTop:350, display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
+    <div className="about_content"  style={{padding:52, paddingTop:128, display: 'flex', flexDirection: 'column', gap: 30, zIndex: 1, position: "relative",
       }}>
 
       <div> {/** vertical container. */}
-        <div className="WhatIsQgdc" style={{color: 'white', fontSize: 50, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
+        <div className="WhatIsQgdc" style={{color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
           What is the QGDC?
         </div>
         <div className="lorem1" 
-        style={{maxWidth: 865, color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
+        style={{maxWidth: 865, color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
+          Officially recognized by the AMS at Queen's University,
+          the Queen's Game Development Club is a hub for passionate game devs in Kingston.
           
-           The Queen's Game Development Club is a hub for individuals passionate
-           about video game creation. We foster and facilitate students of
-           diverse skill to come together to collaborate, learn, and jointly
-           develop video games. Our approach is deeply rooted in practical
-           experience, with a strong emphasis on in-person activities that fuel
-           creativity and teamwork. Alongside these interactive sessions, QGDC
-           offers a vibrant, digital forum-like environment, fostering a culture
-           of open discussion, constructive feedback, and tailored advice.
-
+          {/** We are a club .
+          Our club was active from 2010 to 2013 and was recently re-ratified in 2021. */}
+          
+        
         </div>
       </div>
 
       <div style={{display: 'flex', position: 'relative', justifyContent: "flex-end",flexDirection: 'row' }}>
         <div> {/** vertical container. */}
           <div className="WhatSOurGoal"
-            style={{ textAlign: 'right', color: 'white', fontSize: 50, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
+            style={{ textAlign: 'right', color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
               What's our Goal?
           </div>
           <div className="lorem2" 
-            style={{maxWidth: 776,  textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
-            
-            Our mission is to facilitate and foster deep connections among our
-            members, creating a collaborative and inclusive environment where
-            aspiring game developers can unite, share, and innovate. Our goal is
-            to empower each member to develop new skills and ultimately
-            contribute to the ever-evolving world of game development.
-          
+            style={{maxWidth: 776,  textAlign: 'right', color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
+            We aim to empower, connect, and mentor game development enthusiasts.
           </div>
         </div>
       </div>
 
       <div> {/** vertical container. */}
         <div className="WhyYouShouldJoinUs"
-          style={{ color: 'white', fontSize: 50, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
+          style={{ color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
             Why you should <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" style={{color: "#B66cff"}}>
               join us.</a>
         </div>
         <div className="lorem3" 
-          style={{maxWidth: 819, color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
-          Joining our club is an opportunity to push the limits of your technical knowledge. 
-          We aren't shy, and we'll bring the best out of you. Not only do we host technical workshops, 
-          and invite industry veterans for speaker series, but we care! We will look at your games with a discerning eye,
-          together with you, and help you to craft every pixel. And, like no other initiative on Queen's Campus, 
-          the QGDC is the proud operator of the QGDC Gamedev Team, where you get the opportunity to join a team of bright individuals in building a complete game.
+          style={{maxWidth: 819, color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>  
+
+          If you enjoy building games, we invite you to come out to our regular
+          club meetups for speaker presentations and hands-on game development.
+          And if you're super ambitious, we're here to inspire and prepare you
+          in joining one of our gamedev teams, offering experiencing shipping a
+          complete game.
+                  
         </div>
       </div>
+
+      {/*
+      <div style={{display: 'flex', position: 'relative', justifyContent: "flex-end",flexDirection: 'row' }}>
+        <div>
+          <div className="WhatSOurGoal"
+            style={{ textAlign: 'right', color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
+              Community Track
+          </div>
+          <div className="lorem2" 
+            style={{maxWidth: 776,  textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
+            The Community Track is the core experience and programming of the QGDC, open to all club participants.
+            We foster a community through weekly, in-person club meetups, where the QGDC hosts speaker series, Dev Hubs, and educational workshops. 
+The QGDC nurtures those in this track through regular, in-person club meetups,
+where the QGDC hosts speaker series, educational workshops, and Dev Hubs.
+
+You will get the opportunity to embark on the Sorcerer's Quest, together with your fellow game devs.
+We manage an active list of Community Projects on this website and in our Discord server.
+Did we mention that we have a vibrant Discord server?
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className="WhatIsQgdc" style={{color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
+        Professional Track
+        </div>
+        <div className="lorem1" 
+        style={{maxWidth: 865, color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
+          We incubate Gamedev Teams each year towards the creation of a complete, shipping game.
+          
+          We provide networking opportunities via the year end "Tradeshow", where the Gamedev Teams will present the fruit of their labour.
+        </div>
+      </div>
+      */}
+
 
     </div>
     {/* END PAGE TEXT */}
