@@ -6,17 +6,17 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div style={{ minWidth: 375 }} className='absolute top-0 left-0 z-10 w-full text-white bg-gradient-to-b from-black to-transparent'>
-      <div className='flex items-center justify-between p-4'>
+    <div style={{ minWidth: 375 }} className='absolute  top-0 left-0 h-[159px] z-10 w-full text-white bg-gradient-to-b from-black to-transparent'>
+      <div className='flex items-center   m-auto justify-between h-full p-4'>
         {/* logo */}
-        <div className='flex items-center space-x-4'>
+        <div className='flex items-center space-x-10'>
           <Link to='/'>
             <img src={logo} alt='Logo' className='h-24 w-27' />
           </Link>
 
           {/* div below is hidden but on "medium" it is a flexbox. */}
-          <div className='hidden space-x-4 md:flex'>
-            <Link to='/' className='text-2xl font-bold hover:text-gray-300'>
+          <div className='hidden space-x-6 md:flex'>
+            <Link to='/' className='text-2xl  font-bold hover:text-gray-300'>
               Home
             </Link>
             <Link to='/about' className='text-2xl font-bold hover:text-gray-300'>
@@ -38,7 +38,7 @@ function Header() {
 
       {/* Dropdown menu for small screens */}
       {isMenuOpen && (
-        <div className='flex flex-col items-center md:hidden'>
+        <div className='flex   flex-col items-center md:hidden'>
           <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to='/' className='my-2 text-2xl font-bold hover:text-gray-300'>
             Home
           </Link>

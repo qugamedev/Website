@@ -54,9 +54,9 @@ function Home() {
     backgroundSize: "100%, 100%",
   };
   return (
-    <div className='text-white bg-dark-colour '>
+    <div className='text-white bg-dark-colour  max-w-[2000px]'>
       {/* { WELCOME PAGE} */}
-      <section style={topContainerStyle} className=' text-center sm:text-left relative pb-20'>
+      <section style={topContainerStyle} className=' h-[777px] text-center sm:text-left relative pb-20'>
         <div className='container   pl-3 sm:pl-10 pt-72 md:pt-64 '>
           <h1 className='max-w-5xl  font-brick lg:text-7xl sm:text-5xl text-4xl leading-normal sm:leading-normal md:leading-normal lg:leading-normal'>
             Queen’s Game Development Club
@@ -65,12 +65,10 @@ function Home() {
             Queen’s Game Development Club is dedicated to enriching students’ experience in all areas of game development.
           </p>
         </div>
-        <img src={right_triangle} className='absolute bottom-0 left-0' alt='Bottom Left Image' />
-        <img src={left_triangle} className='absolute bottom-0 right-0 scale-y-[-1]' alt='Bottom Right Image' />
       </section>
 
       {/* { Leader Ship} */}
-      <section className='w-full   bg-custom-purple'>
+      <section className='w-full  bg-custom-purple'>
         <div className='p-10 mx-auto  max-w-8xl '>
           <h2 className='mb-10  font-bold text-center text-white lg:text-7xl sm:text-5xl text-4xl font-brick'>Executives</h2>
           <div className='md:flex md:justify-center'>
@@ -102,8 +100,6 @@ function Home() {
             <img src={discord_logo} alt='Discord' className='  w-36 sm:w-56 md:w-80' />
           </a>
         </div>
-        <img src={right_triangle} className='absolute top-0 left-0 z-10' style={{ transform: "scaleY(-1)" }} alt='Bottom Left Image' />
-        <img src={left_triangle} className='absolute top-0 right-0' alt='Bottom Right Image' />
       </section>
     </div>
   );
