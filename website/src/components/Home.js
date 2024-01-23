@@ -80,7 +80,7 @@ function Home() {
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>
             <Person name='Matthew Susko' title='Web Designer' image={Matthew} />
             <Person name='Daniel Dousek' title='Frontend Developer' image={Daniel} />
-            <Person name='Huy Minh Truong' title='Backend Developer' image={Huy} />
+            <Person is_huy={true} name='Huy Minh Truong' title='Backend Developer' image={Huy} />
             <Person name='Connor Borneman' title='Events Director' image={Conner} />
             <Person name='Lillie Amos' title='Videographer' image={Lillie} />
             <Person name='Alyssa Zhao' title='Graphic Designer' image={Alyssa} />

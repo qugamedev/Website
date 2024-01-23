@@ -179,8 +179,10 @@ return (
         <div className="WhatIsQgdc" style={{color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
           What is the QGDC?
         </div>
-        <div className="lorem1" 
-        style={{maxWidth: 865, color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
+        <div 
+        /*className="lorem1 ml-[0px] sm:ml-[8px]" */
+        style={{
+          maxWidth: 865, marginTop: 10, color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
           Officially recognized by the AMS at Queen’s University,
           the Queen’s Game Development Club is a hub for passionate game devs in Kingston.
           
@@ -197,8 +199,11 @@ return (
             style={{ textAlign: 'right', color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
               What’s our Goal?
           </div>
-          <div className="lorem2" 
-            style={{maxWidth: 776,  textAlign: 'right', color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
+          <div 
+          /*className="lorem2 mr-[0px] sm:mr-[8px]" */
+            style={{maxWidth: 776,   marginTop: 10,
+            
+            textAlign: 'right', color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
             We aim to empower, connect, and mentor game development enthusiasts.
           </div>
         </div>
@@ -213,8 +218,10 @@ return (
             style={{color: "#B66cff", whiteSpace: "nowrap"}}>
               &nbsp;join us.</a>
         </div>
-        <div className="lorem3" 
-          style={{maxWidth: 819, color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>  
+        <div 
+     /*   className="lorem3 ml-[0px] sm:ml-[8px]" */
+          style={{maxWidth: 819, marginTop: 10, 
+          color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>  
 
           If you enjoy building games, we invite you to come out to our regular
           club meetups for speaker presentations and hands-on game development.
