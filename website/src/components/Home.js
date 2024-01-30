@@ -54,7 +54,7 @@ function Home() {
     backgroundSize: "100%, 100%",
   };
   return (
-    <div className='text-white bg-dark-colour  max-w-[2000px]'>
+    <div className='text-white bg-dark-colour '>
       {/* { WELCOME PAGE} */}
       <section style={topContainerStyle} className=' h-[777px] text-center sm:text-left relative pb-20'>
         <div className='container   pl-3 sm:pl-10 pt-72 md:pt-64 '>
