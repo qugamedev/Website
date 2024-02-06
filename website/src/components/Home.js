@@ -27,12 +27,14 @@ import Person from "./Person";
 Titles:
 lg:text-7xl 
 sm:text-5xl 
-text-4xl
+xs:text-4xl
+text-3xl
 
 Text: 
-text-2xl 
-sm:text-3xl 
 lg:text-4xl
+sm:text-3xl 
+xs:text-2xl
+text-xl 
 
 
 */
@@ -57,11 +59,11 @@ function Home() {
     <div className='text-white bg-dark-colour '>
       {/* { WELCOME PAGE} */}
       <section style={topContainerStyle} className=' h-[777px] text-center sm:text-left relative pb-20'>
-        <div className='container   pl-3 sm:pl-10 pt-72 md:pt-64 '>
-          <h1 className='max-w-5xl  font-brick lg:text-7xl sm:text-5xl text-4xl leading-normal sm:leading-normal md:leading-normal lg:leading-normal'>
+        <div className='container   pl-3 sm:pl-10 pt-72 md:pt-64'>
+          <h1 className='max-w-5xl  font-brick lg:text-7xl sm:text-5xl xs:text-4xl text-3xl xs:leading-normal sm:leading-normal md:leading-normal lg:leading-normal'>
             Queen’s Game Development Club
           </h1>
-          <p className='max-w-6xl  font-archivo   pr-3 mt-20 text-2xl sm:text-3xl lg:text-4xl'>
+          <p className='max-w-6xl  font-archivo   pr-3 mt-20 text-xl xs:text-2xl sm:text-3xl lg:text-4xl'>
             Queen’s Game Development Club is dedicated to enriching students’ experience in all areas of game development.
           </p>
         </div>
@@ -69,8 +71,8 @@ function Home() {
 
       {/* { Leader Ship} */}
       <section className='w-full  bg-custom-purple'>
-        <div className='p-10 mx-auto  max-w-8xl '>
-          <h2 className='mb-10  font-bold text-center text-white lg:text-7xl sm:text-5xl text-4xl font-brick'>Executives</h2>
+        <div className='sm:p-10 mx-auto  max-w-8xl '>
+          <h2 className='mb-10 pt-10  font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl text-3xl font-brick'>Executives</h2>
           <div className='md:flex md:justify-center'>
             <div className='grid grid-cols-2 justify-items-center'>
               <Person name='Noah Cabral' title='Co-Chair' image={Noah} />
@@ -92,7 +94,7 @@ function Home() {
 
       {/* { Community =) } */}
       <section style={bottomContainerStyle} className='relative text-center pb-20 md:pb-32 lg:pb-60 pt-20 md:pt-32 lg:pt-60 '>
-        <div className='flex flex-col items-center justify-center text-3xl md:text-5xl font-bold'>
+        <div className='flex flex-col items-center justify-center text-2xl xs:text-3xl md:text-5xl font-bold'>
           <p className='mb-4 '>
             Join Our <br></br>Discord Community
           </p>

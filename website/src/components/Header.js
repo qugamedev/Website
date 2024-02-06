@@ -6,12 +6,12 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div style={{ minWidth: 375 }} className='absolute  top-0 left-0 h-[159px] z-10 w-full text-white bg-gradient-to-b from-black to-transparent'>
+    <div className='absolute  top-0 left-0 h-[159px] z-10 w-full text-white bg-gradient-to-b from-black to-transparent'>
       <div className='flex items-center   m-auto justify-between h-full p-4'>
         {/* logo */}
         <div className='flex items-center space-x-10'>
           <Link to='/'>
-            <img src={logo} alt='Logo' className='h-24 w-27' />
+            <img src={logo} alt='Logo' className='h-20 xs:h-24' />
           </Link>
 
           {/* div below is hidden but on "medium" it is a flexbox. */}
