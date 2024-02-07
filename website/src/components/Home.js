@@ -58,21 +58,21 @@ function Home() {
   return (
     <div className='text-white bg-dark-colour '>
       {/* { WELCOME PAGE} */}
-      <section style={topContainerStyle} className=' h-[777px] text-center sm:text-left relative pb-20'>
-        <div className='container   pl-3 sm:pl-10 pt-72 md:pt-64'>
-          <h1 className='max-w-5xl  font-brick lg:text-7xl sm:text-5xl xs:text-4xl text-3xl xs:leading-normal sm:leading-normal md:leading-normal lg:leading-normal'>
+      <section style={topContainerStyle} className=' h-[777px] text-center   sm:text-left  pb-20'>
+        <div className='pl-3 sm:container sm:pl-10 pt-72 md:pt-64'>
+          <h1 className='max-w-5xl text-3xl font-brick lg:text-7xl sm:text-5xl xs:text-4xl xs:leading-normal sm:leading-normal md:leading-normal lg:leading-normal'>
             Queen’s Game Development Club
           </h1>
-          <p className='max-w-6xl  font-archivo   pr-3 mt-20 text-xl xs:text-2xl sm:text-3xl lg:text-4xl'>
+          <p className='max-w-6xl pr-3 mt-20 text-xl font-archivo xs:text-2xl sm:text-3xl lg:text-4xl'>
             Queen’s Game Development Club is dedicated to enriching students’ experience in all areas of game development.
           </p>
         </div>
       </section>
 
       {/* { Leader Ship} */}
-      <section className='w-full  bg-custom-purple'>
-        <div className='sm:p-10 mx-auto  max-w-8xl '>
-          <h2 className='mb-10 pt-10  font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl text-3xl font-brick'>Executives</h2>
+      <section className='w-full bg-custom-purple'>
+        <div className='mx-auto sm:p-10 max-w-8xl '>
+          <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Executives</h2>
           <div className='md:flex md:justify-center'>
             <div className='grid grid-cols-2 justify-items-center'>
               <Person name='Noah Cabral' title='Co-Chair' image={Noah} />
@@ -93,13 +93,13 @@ function Home() {
       </section>
 
       {/* { Community =) } */}
-      <section style={bottomContainerStyle} className='relative text-center pb-20 md:pb-32 lg:pb-60 pt-20 md:pt-32 lg:pt-60 '>
-        <div className='flex flex-col items-center justify-center text-2xl xs:text-3xl md:text-5xl font-bold'>
+      <section style={bottomContainerStyle} className='relative pt-20 pb-20 text-center md:pb-32 lg:pb-60 md:pt-32 lg:pt-60 '>
+        <div className='flex flex-col items-center justify-center text-2xl font-bold xs:text-3xl md:text-5xl'>
           <p className='mb-4 '>
             Join Our <br></br>Discord Community
           </p>
           <a href='https://discord.gg/uGTPhR3a' target='_blank' rel='noopener noreferrer'>
-            <img src={discord_logo} alt='Discord' className='  w-36 sm:w-56 md:w-80' />
+            <img src={discord_logo} alt='Discord' className=' w-36 sm:w-56 md:w-80' />
           </a>
         </div>
       </section>
