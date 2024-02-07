@@ -11,7 +11,7 @@ function Header() {
         {/* logo */}
         <div className='flex items-center space-x-10'>
           <Link to='/'>
-            <img src={logo} alt='Logo' className='h-20 xs:h-24' />
+          <img src={logo} alt='Logo' style={{height: 120}} />
           </Link>
 
           {/* div below is hidden but on "medium" it is a flexbox. */}
