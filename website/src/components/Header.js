@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/qgdc_logo.png";
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  IconButton,
+  Hide,
+} from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,28 +37,32 @@ function Header() {
           </div>
         </div>
 
-        {/* on medium and up screens the hamburger menu is hidden. */}
-        <button className='p-2 rounded md:hidden hover:bg-gray-700 focus:bg-gray-700' onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          <svg className='w-10 h-10' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h16M4 18h16'></path>
-          </svg>
-        </button>
+        {/* hamburger menu (only shows with window is medium or smaller) */}
+        <Hide above="md">
+          <Menu >
+            <MenuButton
+              as={IconButton}
+              aria-label='Pages'
+              icon={<HamburgerIcon />}
+              variant='outline'
+              colorScheme="black"
+            />
+            <MenuList>
+              <Link to='/' className='text-2xl  font-bold hover:text-gray-300'>
+                <MenuItem color="black" >
+                    Home
+                </MenuItem>
+              </Link>
+              <Link to='/about' className='text-2xl font-bold hover:text-gray-300'>
+                <MenuItem color="black">
+                    About
+                </MenuItem>
+              </Link>
+            </MenuList>
+          </Menu> 
+        </Hide>
       </div>
 
-      {/* Dropdown menu for small screens */}
-      {isMenuOpen && (
-        <div className='flex   flex-col items-center md:hidden'>
-          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to='/' className='my-2 text-2xl font-bold hover:text-gray-300'>
-            Home
-          </Link>
-          <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to='/about' className='my-2 text-2xl font-bold hover:text-gray-300'>
-            About
-          </Link>
-          {/* <Link onClick={() => setIsMenuOpen(!isMenuOpen)} to='/blog' className='my-2 text-2xl font-bold hover:text-gray-300'>
-            Blog
-          </Link> */}
-        </div>
-      )}
     </div>
   );
 }
