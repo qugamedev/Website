@@ -224,9 +224,9 @@ return (
           color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>  
 
           If you enjoy building games, we invite you to come out to our regular
-          club meetups for speaker presentations and hands-on game development.
+          club meetups for speaker presentations and hands-on game development!
           And if you’re super ambitious, we’re here to inspire and prepare you
-          in joining one of our gamedev teams, offering experiencing shipping a
+          in joining one of our gamedev teams, offering experience in shipping a
           complete game.
                   
         </div>
