@@ -1,0 +1,24 @@
+sorted_items = HOME, EVENTS, DEV TEAMS, BLOG, TEAM.
+EVENTS       = MEETUPS, TRADESHOW, SPEAKERS, JAMS, WORKSHOPS.
+
+Q: ship website all at once or piecemeal?
+A: all at once since otherwise it looks unprofessional.
+
+M is working on design.
+H is working on backend.
+D is working on frontend.
+
+RW = reading week.
+EX = exams.
+DL = deadline = may 1st.
+
+W6  |  M: HOME,             H: EVENTS     D: STATIC SITE
+RW  |  M: EVENTS            H: EVENTS     D: STATIC SITE
+W7  |  M: EVENTS,           H: EVENTS     D: HOME
+W8  |  M: DEV TEAMS,        H: EVENTS     D: EVENTS
+W9  |  M: BLOG,             H: DEV TEAMS  D: EVENTS
+W10 |  M: TEAM,             H: n/a        D: DEV TEAMS
+W11 |  M: joins the party!  H: n/a        D: BLOG
+W12 |  M: joins the party!  H: n/a        D: TEAM
+EX  |  
+DL  |  M: joins the party!  H: ?          D: Polish Szn
