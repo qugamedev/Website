@@ -7,7 +7,13 @@ import Header from "./components/Header.js";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
 import Blog from "./components/Blog.js";
+
+//Admin pages
 import Login from "./Auth/login.js";
+import Admin from "./components/admin-components/admin.js"
+import Execs from "./components/admin-components/execs.js"
+import Cochairs from "./components/admin-components/cochairs.js"
+import CreateBlog from "./components/admin-components/create-blog.js"
 
 // Login Authentication
 import PrivateRoute from './Auth/PrivateRoute'
@@ -43,9 +49,13 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/home' element={<Home />} />
             <Route path='/about' element={<About />} />
+            <Route path='/blog' element={<Blog />} />
 
             <Route path="/login" element={<Login />} />
-            {/* <Route path="/admin" element={<PrivateRoute><Admin/></PrivateRoute>} /> */}
+            <Route path="/admin" element={<PrivateRoute><Admin/></PrivateRoute>} />
+            <Route path="/admin/execs" element={<PrivateRoute><Execs/></PrivateRoute>} />
+            <Route path="/admin/cochairs" element={<PrivateRoute><Cochairs/></PrivateRoute>} />
+            <Route path="/admin/create-blog" element={<PrivateRoute><CreateBlog/></PrivateRoute>} />
 
             
           </Routes>
