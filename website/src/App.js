@@ -1,12 +1,14 @@
-import React, { useLayoutEffect, useState } from "react";
+//import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+//import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // Pages
 import Header from "./components/Header.js";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
-import Blog from "./components/Blog.js";
+//import Blog from "./components/Blog.js";
 
 // Components
 import Footer from "./components/Footer.js";

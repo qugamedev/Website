@@ -1,6 +1,6 @@
 import React from "react";
 import graphics from "../assets/images/middle_graphics.svg";
-import gamejamIMG from "../assets/images/gamejam.png";
+//import gamejamIMG from "../assets/images/gamejam.png";
 import Post from "./Post";
 
 function Blog() {

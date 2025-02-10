@@ -1,5 +1,5 @@
 import React from "react";
-import temp_person from "../assets/images/headshots/temp_person.webp";
+//import temp_person from "../assets/images/headshots/temp_person.webp";
 
 const Post = ({ title, date, text }) => {
   return (
