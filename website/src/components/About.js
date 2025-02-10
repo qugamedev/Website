@@ -216,7 +216,7 @@ return (
           style={{ color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
             Why you should 
             
-            <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" 
+            <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" rel="noreferrer" 
             style={{color: "#B66cff", whiteSpace: "nowrap"}}>
               &nbsp;join us.</a>
         </div>
