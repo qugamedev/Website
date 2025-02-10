@@ -1,12 +1,12 @@
 import React from "react";
 
 // Assests
-import right_triangle from "../assets/images/right_triangle.svg";
-import left_triangle from "../assets/images/left_triangle.svg";
+//import right_triangle from "../assets/images/right_triangle.svg";
+//import left_triangle from "../assets/images/left_triangle.svg";
 import discord_logo from "../assets/images/logos/discord_logo.svg";
 import home_graphics from "../assets/images/home_graphics.svg";
 import top_graphic_items from "../assets/images/home_top_graphic_items.svg";
-import home_arcs from "../assets/images/home_arcs.svg";
+//import home_arcs from "../assets/images/home_arcs.svg";
 
 // Headshots
 import Noah from "../assets/images/headshots/noah.JPG";

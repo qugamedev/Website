@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/qgdc_logo.png";
 import {
@@ -12,7 +13,7 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  //const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className='absolute  top-0 left-0 h-[159px] z-10 w-full text-white bg-gradient-to-b from-black to-transparent'>

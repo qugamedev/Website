@@ -1,8 +1,9 @@
-import React, { useRef, useState, useEffect,  useMemo  } from 'react';
+//import React, { useRef, useState, useEffect,  useMemo  } from 'react';
+import React, { useRef} from 'react';
 
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import * as THREE from 'three';
-import discord_logo from "../assets/images/logos/discord_logo.svg";
+//import * as THREE from 'three';
+//import discord_logo from "../assets/images/logos/discord_logo.svg";
 
 import { MeshBasicMaterial } from 'three';
 
@@ -10,9 +11,9 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
 import qgdc_model from '../assets/qgdc.obj'
 
-import right_arc from "../assets/images/right arc.svg";
-import right_arc2 from "../assets/images/right arc 2.svg";
-
+//import right_arc from "../assets/images/right arc.svg";
+//import right_arc2 from "../assets/images/right arc 2.svg";
+/*
 function SpinningCube() {
   const cubeRef = useRef();
 
@@ -45,6 +46,7 @@ function Torus() {
     </mesh>
   );
 }
+*/
 
 function Model() {
   const obj = useLoader(OBJLoader, qgdc_model);
@@ -214,7 +216,7 @@ return (
           style={{ color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
             Why you should 
             
-            <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" 
+            <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" rel="noreferrer" 
             style={{color: "#B66cff", whiteSpace: "nowrap"}}>
               &nbsp;join us.</a>
         </div>
