@@ -9,16 +9,30 @@ import top_graphic_items from "../assets/images/home_top_graphic_items.svg";
 //import home_arcs from "../assets/images/home_arcs.svg";
 
 // Headshots
-import Noah from "../assets/images/headshots/noah.JPG";
-import Jaysall from "../assets/images/headshots/jaysall.png";
-import Daniel from "../assets/images/headshots/daniel.png";
-import Lillie from "../assets/images/headshots/lillie.JPG";
-import Eric from "../assets/images/headshots/eric.JPG";
-import Alyssa from "../assets/images/headshots/alyssa.JPG";
-import Annika from "../assets/images/headshots/annika.JPG";
-import Huy from "../assets/images/headshots/huy.JPG";
-import Matthew from "../assets/images/headshots/matthew.png";
-import Conner from "../assets/images/headshots/conner.JPG";
+import Chris from "../assets/images/headshots/Chris_Gil.JPG";
+import Isaiah from "../assets/images/headshots/Isaiah.PNG";
+import Abdullah from "../assets/images/headshots/Abdullah.jpg";
+import Techmeng from "../assets/images/headshots/Techmeng.png";
+import Renee from "../assets/images/headshots/Renee_Kim.webp";
+import Lillie from "../assets/images/headshots/Lillie.jpg";
+//finance
+import Sarah from "../assets/images/headshots/Sarah.png";
+import Mitch from "../assets/images/headshots/Mitch.png";
+//marketing
+import Mehr from "../assets/images/headshots/Mehr.jpg";
+import Gabriel from "../assets/images/headshots/Gabriel.jpg";
+import Basma from "../assets/images/headshots/Basma.JPG";
+import Phoebe from "../assets/images/headshots/Phoebe.jpg";
+import Ananya from "../assets/images/headshots/Ananya.jpg";
+import Alyssa from "../assets/images/headshots/Alyssa.jpg";
+//events
+import Tracy from "../assets/images/headshots/Tracy.jpg";
+import Rounika from "../assets/images/headshots/Rounika.jpg";
+import Vivian from "../assets/images/headshots/Vivian.jpg";
+import Arlen from "../assets/images/headshots/Arlen.jpg";
+
+//placeholder
+import temp from "../assets/images/headshots/temp_person.webp";
 
 import Person from "./Person";
 
@@ -74,20 +88,34 @@ function Home() {
         <div className='mx-auto sm:p-10 max-w-8xl '>
           <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Executives</h2>
           <div className='md:flex md:justify-center'>
-            <div className='grid grid-cols-2 justify-items-center'>
-              <Person name='Noah Cabral' title='Co-Chair' image={Noah} />
-              <Person name='Jaysall Bedi' title='Co-Chair' image={Jaysall} />
+            <div className='grid grid-cols-1 justify-items-center'>
+              {/* CHAIR */}
+              <Person name='Lillie Amos' title='Chair' image={Lillie} />
             </div>
           </div>
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>
-            <Person name='Matthew Susko' title='Web Designer' image={Matthew} />
-            <Person name='Daniel Dousek' title='Frontend Developer' image={Daniel} />
-            <Person is_huy={true} name='Huy Minh Truong' title='Backend Developer' image={Huy} />
-            <Person name='Connor Borneman' title='Events Director' image={Conner} />
-            <Person name='Lillie Amos' title='Videographer' image={Lillie} />
+            {/* WEBSITE TEAM */}
+            <Person name='Isaiah Wuthrich' title='Website Director' image={Isaiah} />
+            <Person name='Christopher Gil' title='Frontend Developer' image={Chris} />
+            <Person name='Kevin Valencia' title='Frontend Developer' image={temp} />
+            <Person name='Techmeng Aing' title='Backend Developer' image={Techmeng} />
+            <Person name='Abdullah Mohsin' title='Backend Developer' image={Abdullah} />
+            <Person name='Renee Kim' title='UI/UX Designer' image={Renee} />
+            {/* MARKETING */}
+            <Person name='Mehr Chelani' title='Marketing Director' image={Mehr} />
+            <Person name='Gabriel Dimovski' title='Videographer' image={Gabriel} />
+            <Person name='Basma Azeem' title='Social Media Manager' image={Basma} />
+            <Person name='Phoebe Chan' title='Graphic Designer' image={Phoebe} />
+            <Person name='Ananya Kollipara' title='Graphic Designer' image={Ananya} />
             <Person name='Alyssa Zhao' title='Graphic Designer' image={Alyssa} />
-            <Person name='Eric Schwar' title='Marketing Director' image={Eric} />
-            <Person name='Annika Tran' title='Finance Director' image={Annika} />
+            {/* EVENTS */}
+            <Person name='Tracy Chan' title='Events Director' image={Tracy} />
+            <Person name='Rounika Saxena' title='Events Organizer' image={Rounika} />
+            <Person name='Vivian Webster' title='Events Coordinator' image={Vivian} />
+            <Person name='Arlen Smith' title='Events Coordinator' image={Arlen} />
+            {/* FINANCE */}
+            <Person name='Sarah Mohammad' title='Finance Director' image={Sarah} />
+            <Person name='Mitch Turner' title='Budget Manager' image={Mitch} />
           </div>
         </div>
       </section>
