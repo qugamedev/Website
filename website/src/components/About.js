@@ -179,7 +179,8 @@ return (
 
       <div> {/** vertical container. */}
         <div className="WhatIsQgdc" style={{color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-          What is the QGDC?
+          What is the<span style={{color: "#B66cff", whiteSpace: "nowrap"}}>
+          &nbsp;QGDC?</span>
         </div>
         <div 
         /*className="lorem1 ml-[0px] sm:ml-[8px]" */
@@ -199,7 +200,8 @@ return (
         <div> {/** vertical container. */}
           <div className="WhatSOurGoal"
             style={{ textAlign: 'right', color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-              What’s our Goal?
+              What’s our<span style={{color: "#B66cff", whiteSpace: "nowrap"}}>
+              &nbsp;Goal?</span>
           </div>
           <div 
           /*className="lorem2 mr-[0px] sm:mr-[8px]" */
@@ -216,9 +218,11 @@ return (
           style={{ color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
             Why you should 
             
-            <a href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" rel="noreferrer" 
-            style={{color: "#B66cff", whiteSpace: "nowrap"}}>
-              &nbsp;join us.</a>
+            <span style={{color: "#B66cff", whiteSpace: "nowrap"}}>
+              &nbsp;join us!</span>
+
+              
+
         </div>
         <div 
      /*   className="lorem3 ml-[0px] sm:ml-[8px]" */
@@ -230,7 +234,24 @@ return (
           And if you’re super ambitious, we’re here to inspire and prepare you
           in joining one of our gamedev teams, offering experience in shipping a
           complete game.
-                  
+          <br />
+          <br />
+          <br />
+          
+        </div>
+        <div style={{maxWidth: '100%', marginTop: 10, 
+          color: 'white', fontSize: 24, fontFamily: 'NT Brick Sans', 
+          fontWeight: '400', wordWrap: 'break-word', display: 'flex',
+          justifyContent: 'center' }}
+            className="flex items-center justify-center">
+              <a 
+            href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" rel="noopener noreferrer" 
+            style={{ textDecoration: 'none' }}    // Removes default link styling
+          >
+          <button className="mt-6 px-6 py-3 border-2 border-purple-600 text-white font-bold rounded-md bg-purple-600 hover:bg-purple-700 transition">
+        Join Us
+      </button>
+      </a>
         </div>
       </div>
 
