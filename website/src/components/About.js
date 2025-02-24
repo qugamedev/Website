@@ -18,7 +18,7 @@ import Isaiah from "../assets/images/headshots/Isaiah.PNG";
 import Abdullah from "../assets/images/headshots/Abdullah.jpg";
 import Techmeng from "../assets/images/headshots/Techmeng.png";
 import Renee from "../assets/images/headshots/Renee_Kim.webp";
-import Lillie from "../assets/images/headshots/Lillie.jpg";
+import Lillie from "../assets/images/headshots/Lillie.JPG";
 //finance
 import Sarah from "../assets/images/headshots/Sarah.png";
 import Mitch from "../assets/images/headshots/Mitch.png";
@@ -28,7 +28,7 @@ import Gabriel from "../assets/images/headshots/Gabriel.jpg";
 import Basma from "../assets/images/headshots/Basma.JPG";
 import Phoebe from "../assets/images/headshots/Phoebe.jpg";
 import Ananya from "../assets/images/headshots/Ananya.jpg";
-import Alyssa from "../assets/images/headshots/Alyssa.jpg";
+import Alyssa from "../assets/images/headshots/Alyssa.JPG";
 //events
 import Tracy from "../assets/images/headshots/Tracy.jpg";
 import Rounika from "../assets/images/headshots/Rounika.jpg";
