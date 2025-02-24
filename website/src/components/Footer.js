@@ -79,11 +79,7 @@ function Footer() {
 }
 
 export default Footer;
-
-
-
-          {/* EMAIL SUBSCRIBE STUFF */}
-          {/*
+          /*
           <div className='Frame7' style={{ ustifyContent: "center", alignItems: "center", gap: 15, display: "flex" }}>
             <div
               className='Frame5'
@@ -128,5 +124,4 @@ export default Footer;
               </div>
             </div>
           </div>
-          */}
-          {/* EMAIL SUBSCRIBE STUFF */}
+          */

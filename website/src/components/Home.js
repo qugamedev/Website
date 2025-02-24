@@ -68,8 +68,7 @@ export default Home;
 
 
 
-      {/* COMMUNITY SECTION -- NOT NEEDED, WE CAN USE OTHER PAGES*/}
-      {/* <section
+      /* <section
         style={bottomContainerStyle}
         className="relative flex items-center justify-center pt-20 pb-20 md:pt-32 md:pb-32 lg:pt-60 lg:pb-60"
       >
@@ -82,4 +81,4 @@ export default Home;
             <img src={discord_logo} alt="Discord" className="w-36 sm:w-56 md:w-80" />
           </a>
         </div>
-      </section> */}
+      </section> */
