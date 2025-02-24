@@ -41,6 +41,10 @@ import temp from "../assets/images/headshots/temp_person.webp";
 import Person from "./Person";
 
 
+import * as THREE from 'three';
+import right_arc from "../assets/images/right arc.svg";
+import right_arc2 from "../assets/images/right arc 2.svg";
+
 //import right_arc from "../assets/images/right arc.svg";
 //import right_arc2 from "../assets/images/right arc 2.svg";
 /*
@@ -77,14 +81,6 @@ function Torus() {
   );
 }
 */
-
-import React, { useRef } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import * as THREE from 'three';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import qgdc_model from '../assets/qgdc.obj';
-import right_arc from "../assets/images/right arc.svg";
-import right_arc2 from "../assets/images/right arc 2.svg";
 
 function Model() {
   const obj = useLoader(OBJLoader, qgdc_model);
@@ -331,70 +327,15 @@ const About = () => {
           >
             Passionate about game development? Be a part of our vibrant community where creativity and innovation thrive.
           </p>
-          <a
-            href="https://forms.gle/HWqW5cS3cbxraV2u5"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: 'inline-block',
-              padding: '15px 30px',
-              background: 'linear-gradient(45deg, #B66cff, #FF555D)',
-              color: '#fff',
-              fontSize: '1.5rem',
-              fontFamily: 'NT Brick Sans, sans-serif',
-              borderRadius: '10px',
-              textDecoration: 'none',
-              transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'scale(1.05)';
-              e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.3)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.boxShadow = 'none';
-            }}
-          >
-            Join Us Now
-          </a>
         </div>
-      </div>
 
-      <div style={{display: 'flex', position: 'relative', justifyContent: "flex-end",flexDirection: 'row' }}>
         <div> {/** vertical container. */}
-          <div className="WhatSOurGoal"
-            style={{ textAlign: 'right', color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-              What’s our Goal?
-          </div>
-          <div 
-          /*className="lorem2 mr-[0px] sm:mr-[8px]" */
-            style={{maxWidth: 776,   marginTop: 10,
-            
-            textAlign: 'right', color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
-            We aim to empower, connect, and mentor game development enthusiasts.
-          </div>
-        </div>
-      </div>
-
-      <div> {/** vertical container. */}
         <div className="WhyYouShouldJoinUs"
           style={{ color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-            Why you should join us!
         </div>
+        
         <div 
-     /*   className="lorem3 ml-[0px] sm:ml-[8px]" */
-          style={{maxWidth: 819, marginTop: 10, 
-          color: 'white', fontSize: 24, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>  
-
-          If you enjoy building games, we invite you to come out to our regular
-          club meetups for speaker presentations and hands-on game development!
-          And if you’re super ambitious, we’re here to inspire and prepare you
-          in joining one of our gamedev teams, offering experience in shipping a
-          complete game.
-          <br />
-          <br />
-          <br />
-          
+          style={{maxWidth: 819, marginTop: 0}}>  
         </div>
         <div style={{maxWidth: '100%', marginTop: 0, marginBottom: 100,
           color: 'white', fontSize: 24, fontFamily: 'NT Brick Sans', 
@@ -406,13 +347,14 @@ const About = () => {
             style={{ textDecoration: 'none' }}    // Removes default link styling
           >
           <button className="mt-6 px-6 py-3 border-2 border-purple-600 text-white font-bold rounded-md bg-purple-600 hover:bg-purple-700 transition">
-        Join Us
+        Join Us Now
       </button>
       </a>
         </div>
       </div>
-      {/* { Leader Ship} */}
-      <section className='w-full bg-custom-purple'>
+
+       {/* { Leader Ship} */}
+       <section className='w-full bg-custom-purple'>
         <div className='mx-auto sm:p-10 max-w-8xl '>
           <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Our Team</h2>
           <div className='md:flex md:justify-center'>
@@ -482,6 +424,8 @@ const About = () => {
           </div>
         </div>
       </section>
+      </div>
+
       {/*
       <div style={{display: 'flex', position: 'relative', justifyContent: "flex-end",flexDirection: 'row' }}>
         <div>
