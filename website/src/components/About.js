@@ -11,6 +11,36 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
 import qgdc_model from '../assets/qgdc.obj'
 
+// Headshots
+//website
+import Chris from "../assets/images/headshots/Chris_Gil.JPG";
+import Isaiah from "../assets/images/headshots/Isaiah.PNG";
+import Abdullah from "../assets/images/headshots/Abdullah.jpg";
+import Techmeng from "../assets/images/headshots/Techmeng.png";
+import Renee from "../assets/images/headshots/Renee_Kim.webp";
+import Lillie from "../assets/images/headshots/Lillie.JPG";
+//finance
+import Sarah from "../assets/images/headshots/Sarah.png";
+import Mitch from "../assets/images/headshots/Mitch.png";
+//marketing
+import Mehr from "../assets/images/headshots/Mehr.jpg";
+import Gabriel from "../assets/images/headshots/Gabriel.jpg";
+import Basma from "../assets/images/headshots/Basma.JPG";
+import Phoebe from "../assets/images/headshots/Phoebe.jpg";
+import Ananya from "../assets/images/headshots/Ananya.jpg";
+import Alyssa from "../assets/images/headshots/Alyssa.JPG";
+//events
+import Tracy from "../assets/images/headshots/Tracy.jpg";
+import Rounika from "../assets/images/headshots/Rounika.jpg";
+import Vivian from "../assets/images/headshots/Vivian.jpg";
+import Arlen from "../assets/images/headshots/Arlen.jpg";
+
+//placeholder
+import temp from "../assets/images/headshots/temp_person.webp";
+
+import Person from "./Person";
+
+
 //import right_arc from "../assets/images/right arc.svg";
 //import right_arc2 from "../assets/images/right arc 2.svg";
 /*
@@ -246,7 +276,77 @@ return (
       </a>
         </div>
       </div>
+      {/* { Leader Ship} */}
+      <section className='w-full bg-custom-purple'>
+        <div className='mx-auto sm:p-10 max-w-8xl '>
+          <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Our Team</h2>
+          <div className='md:flex md:justify-center'>
+            <div className='grid grid-cols-1 justify-items-center'>
+              {/* CHAIR */}
+              <Person name='Lillie Amos' title='Chair' image={Lillie} />
+            </div>
+          </div>
+          {/* Website Section */}
+          <div className="w-full">
+            <h2 className='w-full pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
+              Website
+            </h2>
+          </div>
 
+          {/* WEBSITE TEAM HEADSHOTS*/}
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-8'>
+            <Person name='Isaiah Wuthrich' title='Website Director' image={Isaiah} />
+            <Person name='Christopher Gil' title='Frontend Developer' image={Chris} />
+            <Person name='Kevin Valencia' title='Frontend Developer' image={temp} />
+            <Person name='Techmeng Aing' title='Backend Developer' image={Techmeng} />
+            <Person name='Abdullah Mohsin' title='Backend Developer' image={Abdullah} />
+            <Person name='Renee Kim' title='UI/UX Designer' image={Renee} />
+          </div>
+
+          {/* Marketing Section txt*/}
+          <div className="w-full">
+            <h2 className='w-full pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
+              Marketing
+            </h2>
+          </div>
+
+          {/* MARKETING TEAM HEADSHOTS*/}
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-8'>
+            <Person name='Mehr Chelani' title='Marketing Director' image={Mehr} />
+            <Person name='Gabriel Dimovski' title='Videographer' image={Gabriel} />
+            <Person name='Basma Azeem' title='Social Media Manager' image={Basma} />
+            <Person name='Phoebe Chan' title='Graphic Designer' image={Phoebe} />
+            <Person name='Ananya Kollipara' title='Graphic Designer' image={Ananya} />
+            <Person name='Alyssa Zhao' title='Graphic Designer' image={Alyssa} />
+          </div>
+          {/* Events Section txt*/}
+          <div className="w-full">
+            <h2 className='w-full pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
+              Events
+            </h2>
+          </div>
+
+          {/* EVENTS TEAM HEADSHOTS */}
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>
+            <Person name='Tracy Chan' title='Events Director' image={Tracy} />
+            <Person name='Rounika Saxena' title='Events Organizer' image={Rounika} />
+            <Person name='Vivian Webster' title='Events Coordinator' image={Vivian} />
+            <Person name='Arlen Smith' title='Events Coordinator' image={Arlen} />
+          </div>
+          {/* Finance Section txt*/}
+          <div className="w-full">
+            <h2 className='w-full pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
+              Finance
+            </h2>
+          </div>
+
+          {/* Finance TEAM HEADSHOTS*/}
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 justify-items-center whitespace-nowrap '>
+          <Person name='Sarah Mohammad' title='Finance Director' image={Sarah} />
+          <Person name='Mitch Turner' title='Budget Manager' image={Mitch} />
+          </div>
+        </div>
+      </section>
       {/*
       <div style={{display: 'flex', position: 'relative', justifyContent: "flex-end",flexDirection: 'row' }}>
         <div>

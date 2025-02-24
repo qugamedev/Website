@@ -8,19 +8,7 @@ import home_graphics from "../assets/images/home_graphics.svg";
 import top_graphic_items from "../assets/images/home_top_graphic_items.svg";
 //import home_arcs from "../assets/images/home_arcs.svg";
 
-// Headshots
-import Noah from "../assets/images/headshots/noah.JPG";
-import Jaysall from "../assets/images/headshots/jaysall.png";
-import Daniel from "../assets/images/headshots/daniel.png";
-import Lillie from "../assets/images/headshots/lillie.JPG";
-import Eric from "../assets/images/headshots/eric.JPG";
-import Alyssa from "../assets/images/headshots/alyssa.JPG";
-import Annika from "../assets/images/headshots/annika.JPG";
-import Huy from "../assets/images/headshots/huy.JPG";
-import Matthew from "../assets/images/headshots/matthew.png";
-import Conner from "../assets/images/headshots/conner.JPG";
 
-import Person from "./Person";
 
 /* 
 
@@ -68,28 +56,9 @@ function Home() {
           </p>
         </div>
       </section>
-
-      {/* { Leader Ship} */}
+      {/*HEADSHOTS PLACEHOLDER. IDK WHAT WILL BE HERE SO REMOVE ME IF NEEDED*/}
       <section className='w-full bg-custom-purple'>
-        <div className='mx-auto sm:p-10 max-w-8xl '>
-          <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Executives</h2>
-          <div className='md:flex md:justify-center'>
-            <div className='grid grid-cols-2 justify-items-center'>
-              <Person name='Noah Cabral' title='Co-Chair' image={Noah} />
-              <Person name='Jaysall Bedi' title='Co-Chair' image={Jaysall} />
-            </div>
-          </div>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>
-            <Person name='Matthew Susko' title='Web Designer' image={Matthew} />
-            <Person name='Daniel Dousek' title='Frontend Developer' image={Daniel} />
-            <Person is_huy={true} name='Huy Minh Truong' title='Backend Developer' image={Huy} />
-            <Person name='Connor Borneman' title='Events Director' image={Conner} />
-            <Person name='Lillie Amos' title='Videographer' image={Lillie} />
-            <Person name='Alyssa Zhao' title='Graphic Designer' image={Alyssa} />
-            <Person name='Eric Schwar' title='Marketing Director' image={Eric} />
-            <Person name='Annika Tran' title='Finance Director' image={Annika} />
-          </div>
-        </div>
+        <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Headshots used to be here. This will be for game jam or events probably.</h2>
       </section>
 
       {/* { Community =) } */}
