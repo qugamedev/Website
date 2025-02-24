@@ -179,8 +179,7 @@ return (
 
       <div> {/** vertical container. */}
         <div className="WhatIsQgdc" style={{color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-          What is the<span style={{color: "#B66cff", whiteSpace: "nowrap"}}>
-          &nbsp;QGDC?</span>
+          What is the QGDC?
         </div>
         <div 
         /*className="lorem1 ml-[0px] sm:ml-[8px]" */
@@ -200,8 +199,7 @@ return (
         <div> {/** vertical container. */}
           <div className="WhatSOurGoal"
             style={{ textAlign: 'right', color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-              What’s our<span style={{color: "#B66cff", whiteSpace: "nowrap"}}>
-              &nbsp;Goal?</span>
+              What’s our Goal?
           </div>
           <div 
           /*className="lorem2 mr-[0px] sm:mr-[8px]" */
@@ -216,13 +214,7 @@ return (
       <div> {/** vertical container. */}
         <div className="WhyYouShouldJoinUs"
           style={{ color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-            Why you should 
-            
-            <span style={{color: "#B66cff", whiteSpace: "nowrap"}}>
-              &nbsp;join us!</span>
-
-              
-
+            Why you should join us!
         </div>
         <div 
      /*   className="lorem3 ml-[0px] sm:ml-[8px]" */
