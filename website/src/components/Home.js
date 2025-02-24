@@ -31,7 +31,7 @@ function Home() {
   // Use the same background style for both sections
   const commonBackgroundStyle = {
     backgroundImage: `url(${top_graphic_items})`,
-    backgroundRepeat: "no-repeat",
+    backgroundRepeat: "repeat",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backdropFilter: "blur(10px)",
@@ -53,11 +53,6 @@ function Home() {
           </p>
         </div>
       </section>
-      {/*HEADSHOTS PLACEHOLDER. IDK WHAT WILL BE HERE SO REMOVE ME IF NEEDED*/}
-      <section className='w-full bg-custom-purple'>
-        <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Headshots used to be here. This will be for game jam or events probably.</h2>
-      </section>
-
     </div>
   );
 }
