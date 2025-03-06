@@ -1,0 +1,26 @@
+@import url('https://fonts.cdnfonts.com/css/brick-sans');
+
+body {
+  font-family: 'Arial', sans-serif; /*Default font fallback */
+  background-color: #161616;
+}
+
+h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 2rem;  
+  padding-top: 20px; 
+}
+
+
+.brick-sans {
+    font-family: 'Brick Sans', sans-serif;
+    padding-top: 20px;
+  }
+.text-purple-600 {
+  color: #8b5cf6;  /*custom purple color for 2025 and important details*/
+}
+.archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
