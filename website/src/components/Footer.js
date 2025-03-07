@@ -18,7 +18,7 @@ function Footer() {
           <div className="flex items-center justify-center gap-6">
             {/* Discord */}
             <a
-              href="https://discord.gg/uGTPhR3a"
+              href="https://discord.gg/ZR5ux7yzwt"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform hover:scale-110"
@@ -44,7 +44,7 @@ function Footer() {
             </a>
             {/* YouTube */}
             <a
-              href="https://www.youtube.com/@queensgamedevelopmentclub"
+              href="https://www.youtube.com/@qugamedev"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform hover:scale-110"
@@ -79,11 +79,7 @@ function Footer() {
 }
 
 export default Footer;
-
-
-
-          {/* EMAIL SUBSCRIBE STUFF */}
-          {/*
+          /*
           <div className='Frame7' style={{ ustifyContent: "center", alignItems: "center", gap: 15, display: "flex" }}>
             <div
               className='Frame5'
@@ -128,5 +124,4 @@ export default Footer;
               </div>
             </div>
           </div>
-          */}
-          {/* EMAIL SUBSCRIBE STUFF */}
+          */
