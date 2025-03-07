@@ -53,11 +53,6 @@ function Home() {
           </p>
         </div>
       </section>
-      {/*HEADSHOTS PLACEHOLDER. IDK WHAT WILL BE HERE SO REMOVE ME IF NEEDED*/}
-      <section className='w-full bg-custom-purple'>
-        <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Headshots used to be here. This will be for game jam or events probably.</h2>
-      </section>
-
     </div>
   );
 }
@@ -68,7 +63,7 @@ export default Home;
 
 
 
-      {/* COMMUNITY SECTION -- NOT NEEDED, WE CAN USE OTHER PAGES*/}
+      /*{ COMMUNITY SECTION -- NOT NEEDED, WE CAN USE OTHER PAGES}
       {/* <section
         style={bottomContainerStyle}
         className="relative flex items-center justify-center pt-20 pb-20 md:pt-32 md:pb-32 lg:pt-60 lg:pb-60"
@@ -82,4 +77,4 @@ export default Home;
             <img src={discord_logo} alt="Discord" className="w-36 sm:w-56 md:w-80" />
           </a>
         </div>
-      </section> */}
+      </section> }*/
