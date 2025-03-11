@@ -32,6 +32,9 @@ function Header() {
             <Link to='/about' className='text-2xl font-bold hover:text-gray-300'>
               About
             </Link>
+            <Link to='/GameJam' className='text-2xl font-bold hover:text-gray-300'>
+              Game Jam
+            </Link>
             {/* <Link to='/blog' className='text-2xl font-bold hover:text-gray-300'>
               Blog
             </Link> */}
@@ -54,11 +57,19 @@ function Header() {
                     Home
                 </MenuItem>
               </Link>
+
               <Link to='/about' className='text-2xl font-bold hover:text-gray-300'>
                 <MenuItem color="black">
                     About
                 </MenuItem>
               </Link>
+
+              <Link to='/GameJam' className='text-2xl font-bold hover:text-gray-300'>
+                <MenuItem color="black">
+                    Game Jam
+                </MenuItem>
+              </Link>
+              
             </MenuList>
           </Menu> 
         </Hide>

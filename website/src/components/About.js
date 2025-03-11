@@ -371,7 +371,8 @@ const About = () => {
           </div>
 
           {/* WEBSITE TEAM HEADSHOTS*/}
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-8'>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-x-1 gap-y-4'>
+
             <Person name='Isaiah Wuthrich' title='Website Director' image={Isaiah} />
             <Person name='Christopher Gil' title='Frontend Developer' image={Chris} />
             <Person name='Kevin Valencia' title='Frontend Developer' image={temp} />
