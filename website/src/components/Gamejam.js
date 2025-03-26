@@ -72,21 +72,16 @@ function Gamejam() {
         </h1>
 
         <h2 className="brick-sans text-purple-600 text-6xl sm:text-7xl mt-2">
-          What is QGDC'S GAME JAM?
+          What is the QGDC GAME JAM?
         </h2>
         <p className="mt-5 mb-10 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-          QGDC’s Game Jam is a Lorem ipsum odor amet, consectetuer adipiscing elit.
-          Mus dui sollicitudin nisl himenaeos sed cursus rhoncus.
-          Pellentesque per suscipit ultricies maximus class viverra.
-          Ante vitae consequat ex duis dictum porttitor.
+        QGDC Game Jam is an annual game development competition held both online and in-person in Kingston. With fresh themes each year,
+        developers of all skill levels can unleash their creativity and compete against peers across Canada.
+        Ready to level up your game? Join now!
         </p>
-
-        <h2 className="brick-sans text-purple-600 text-6xl sm:text-7xl">
-          What should I know about Game Jam 2025?
-        </h2>
-        <p className="mt-5 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-          QGDC's Game Jam 2025 will occur at <span className="text-purple-600">XXX</span> on the <span className="text-purple-600">XXX</span> of <span className="text-purple-600">XXX</span>, <span className="text-purple-600">2025</span>!!
-          <br/>Other details, highlight important stuff with <span className="text-purple-600">XXX</span>.
+        
+        <p className="mt-7 mb-10 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
+          Details on the QGDC Game Jam 2026 will be revealed soon! Stay tuned for more details.
         </p>
         
       </section>
@@ -98,11 +93,6 @@ function Gamejam() {
         <h1 className="text-4xl sm:text-6xl font-bold brick-sans">
           PREVIOUS PROJECTS
         </h1>
-
-        <p className="mt-7 mb-10 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-          QGDC's Game Jam 2025 will occur at <span className="text-purple-600">XXX</span> on the <span className="text-purple-600">XXX</span> of <span className="text-purple-600">XXX</span>, <span className="text-purple-600">2025</span>!!
-          <br/>Other details, highlight important stuff with <span className="text-purple-600">XXX</span>.
-        </p>
 
       {/* Buttons and Projects for Each Year (Sorted by Latest First) */}
       {Object.keys(winnersByYear)
@@ -193,12 +183,12 @@ function Gamejam() {
 
       <p className="mt-2 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
         We are incredibly proud of all the amazing projects showcased at Game Jam 2025! 
-        A huge thank you to every participant, and a special shoutout to our winners for their outstanding creativity and hard work. (This is just a placeholder)
+        A huge thank you to every participant, and a special shoutout to our winners for their outstanding creativity and hard work.
       </p>
 
       {/* Redirect Button */}
       <a href="https://qugamedev.itch.io/" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-full shadow-lg">
-        View All Projects (Itch.io)
+        View All Projects
       </a>
     </section>
 
