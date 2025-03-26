@@ -182,13 +182,13 @@ function Gamejam() {
       </h1>
 
       <p className="mt-2 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-        We are incredibly proud of all the amazing projects showcased at Game Jam 2025! 
+        We are incredibly proud of all the amazing projects showcased at the QGDC Game Jam 2025! 
         A huge thank you to every participant, and a special shoutout to our winners for their outstanding creativity and hard work.
       </p>
 
       {/* Redirect Button */}
-      <a href="https://qugamedev.itch.io/" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-full shadow-lg">
-        View All Projects
+      <a href="https://qugamedev.itch.io/" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-600 transition rounded-lg shadow-lg">
+        View All Submissions
       </a>
     </section>
 
