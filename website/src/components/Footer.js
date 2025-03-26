@@ -11,7 +11,7 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-5 mb-2">
           <a
             href="mailto:qugamedev@clubs.queensu.ca"
-            className="text-white text-lg font-bold font-archivo text-center"
+            className="text-white text-lg font-archivo text-center"
           >
             qugamedev@clubs.queensu.ca
           </a>
@@ -71,7 +71,7 @@ function Footer() {
           </div>
         </div>
         <p className="text-white text-xs lg:text-sm font-bold text-center">
-          © 2024 Queen's University Game Development Club
+          © 2025 Queen's University Game Development Club
         </p>
       </div>
     </footer>

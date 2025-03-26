@@ -263,13 +263,13 @@ const About = () => {
           minHeight: 'calc(100vh - 100px)', // center within remaining viewport
         }}
       >
-        <div style={{ maxWidth: '900px', color: '#fff', textAlign: 'center' }}>
+        <div style={{ maxWidth: '1000px', color: '#fff', textAlign: 'center' }}>
           {/* Header */}
           <h1
             style={{
               fontFamily: 'NT Brick Sans, sans-serif',
-              fontSize: '3rem',
-              marginBottom: '40px',
+              fontSize: '4rem',
+              marginBottom: '35px',
             }}
           >
             Queen's Game Development Club (QGDC)
@@ -277,8 +277,8 @@ const About = () => {
           <p
             style={{
               fontFamily: 'Archivo Black, sans-serif',
-              fontSize: '1.25rem',
-              marginBottom: '40px',
+              fontSize: '1.5rem',
+              marginBottom: '35px',
               lineHeight: 1.5,
             }}
           >
@@ -298,8 +298,8 @@ const About = () => {
           <p
             style={{
               fontFamily: 'Archivo Black, sans-serif',
-              fontSize: '1.25rem',
-              marginBottom: '40px',
+              fontSize: '1.5rem',
+              marginBottom: '35px',
               lineHeight: 1.5,
             }}
           >
@@ -320,8 +320,8 @@ const About = () => {
           <p
             style={{
               fontFamily: 'Archivo Black, sans-serif',
-              fontSize: '1.25rem',
-              marginBottom: '40px',
+              fontSize: '1.5rem',
+              marginBottom: '35px',
               lineHeight: 1.5,
             }}
           >
@@ -371,7 +371,8 @@ const About = () => {
           </div>
 
           {/* WEBSITE TEAM HEADSHOTS*/}
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-8'>
+          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-x-1 gap-y-4'>
+
             <Person name='Isaiah Wuthrich' title='Website Director' image={Isaiah} />
             <Person name='Christopher Gil' title='Frontend Developer' image={Chris} />
             <Person name='Kevin Valencia' title='Frontend Developer' image={temp} />
