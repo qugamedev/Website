@@ -84,7 +84,7 @@ function Torus() {
 
 
 
-function Model() {
+/*function Model() {
   const obj = useLoader(OBJLoader, qgdc_model);
   const ref = useRef();
 
@@ -105,7 +105,7 @@ function Model() {
   });
 
   return <primitive object={obj} ref={ref} />;
-}
+}*/
 
 const About = () => {
   const [openSections, setOpenSections] = useState({
@@ -145,7 +145,7 @@ const About = () => {
       >
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} />
-        <Model />
+        {/*<Model />*/}
       </Canvas>
 
       {/* Left Arc Illustration */}
@@ -282,11 +282,7 @@ const About = () => {
         <div style={{ maxWidth: '1000px', color: '#fff', textAlign: 'center' }}>
           {/* Header */}
           <h1
-            style={{
-              fontFamily: 'NT Brick Sans, sans-serif',
-              fontSize: '4rem',
-              marginBottom: '35px',
-            }}
+            className="brick-sans text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-[35px]"
           >
             Queen's Game Development Club (QGDC)
           </h1>
@@ -303,11 +299,7 @@ const About = () => {
 
           {/* Our Mission */}
           <h2
-            style={{
-              fontFamily: 'NT Brick Sans, sans-serif',
-              fontSize: '2.5rem',
-              marginBottom: '20px',
-            }}
+            className="brick-sans text-4xl sm:text-5xl md:text-6xl mb-5"
           >
             Our Mission
           </h2>
@@ -325,11 +317,7 @@ const About = () => {
 
           {/* Join Our Community */}
           <h2
-            style={{
-              fontFamily: 'NT Brick Sans, sans-serif',
-              fontSize: '2.5rem',
-              marginBottom: '20px',
-            }}
+            className="brick-sans text-4xl sm:text-5xl md:text-6xl mb-5"
           >
             Join Our Community
           </h2>
@@ -362,7 +350,7 @@ const About = () => {
             href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" rel="noopener noreferrer" 
             style={{ textDecoration: 'none' }}    // Removes default link styling
           >
-          <button className="mt-6 px-6 py-3 border-2 border-purple-600 text-white font-bold rounded-md bg-purple-600 hover:bg-purple-700 transition">
+          <button className="mt-6 px-8 py-4 border-2 border-purple-600 text-white brick-sans text-2xl sm:text-4xl font-bold rounded-md bg-purple-600 hover:bg-purple-700 transition">
         Join Us Now
       </button>
       </a>
@@ -372,7 +360,7 @@ const About = () => {
        {/* { Leader Ship} */}
        <section className='w-full bg-custom-purple'>
         <div className='mx-auto sm:p-10 max-w-8xl '>
-          <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Our Team</h2>
+          <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl brick-sans'>Our Team</h2>
           <div className='md:flex md:justify-center'>
             <div className='grid grid-cols-1 justify-items-center'>
               {/* CHAIR */}
@@ -386,7 +374,7 @@ const About = () => {
               className='w-full pt-10 mb-5 flex items-center justify-center cursor-pointer'
               onClick={() => toggleSection('website')}
             >
-              <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
+              <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl brick-sans'>
                 Website
               </h2>
               <span className='ml-4 text-white text-4xl'>{openSections.website ? '▼' : '▶'}</span>
@@ -411,7 +399,7 @@ const About = () => {
               className='w-full pt-10 mb-5 flex items-center justify-center cursor-pointer'
               onClick={() => toggleSection('marketing')}
             >
-              <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
+              <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl brick-sans'>
                 Marketing
               </h2>
               <span className='ml-4 text-white text-4xl'>{openSections.marketing ? '▼' : '▶'}</span>
@@ -436,7 +424,7 @@ const About = () => {
               className='w-full pt-10 mb-5 flex items-center justify-center cursor-pointer'
               onClick={() => toggleSection('events')}
             >
-              <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
+              <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl brick-sans'>
                 Events
               </h2>
               <span className='ml-4 text-white text-4xl'>{openSections.events ? '▼' : '▶'}</span>
@@ -459,7 +447,7 @@ const About = () => {
               className='w-full pt-10 mb-5 flex items-center justify-center cursor-pointer'
               onClick={() => toggleSection('finance')}
             >
-              <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
+              <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl brick-sans'>
                 Finance
               </h2>
               <span className='ml-4 text-white text-4xl'>{openSections.finance ? '▼' : '▶'}</span>

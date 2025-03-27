@@ -42,12 +42,12 @@ function Home() {
         className="relative flex items-center justify-center h-screen px-4"
       >
         <div className="container mx-auto text-center sm:text-left">
-          <h1 className="max-w-5xl text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-brick font-bold leading-[1.8] flex flex-col items-start">
-            <span className="mb-3">Queen’s Game</span>
+          <h1 className="max-w-5xl text-3xl sm:text-5xl md:text-6xl lg:text-7xl brick-sans font-bold leading-[1.8] flex flex-col items-start">
+            <span className="mb-3">Queen's Game</span>
             <span>Development Club</span>
           </h1>
           <p className="max-w-6xl mt-8 sm:mt-10 text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-archivo">
-            Queen’s Game Development Club is dedicated to enriching students’
+            Queen's Game Development Club is dedicated to enriching students'
             experience in all areas of game development.
           </p>
         </div>
