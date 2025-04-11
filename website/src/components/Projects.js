@@ -1,30 +1,21 @@
-import React from "react";
-import project1 from "../assets/images/project1.jpg";
-export default function Projects() {
-  const projects = [
-    {
-      title: "Super Platformer",
-      slogan: "Jump into the action!",
-      madeBy: "Made by Alex",
-      img: project1,
-      alignRight: false,
-    },
-    {
-      title: "Mystery Dungeon",
-      slogan: "Solve puzzles, uncover secrets",
-      madeBy: "Made by Sam & Chris",
-      img: project1,
-      alignRight: true,
-    },
-    {
-      title: "Racing Rush",
-      slogan: "Fast tracks, faster fun",
-      madeBy: "Made by Jamie",
-      img: project1,
-      alignRight: false,
-    },
-  ];
+import React, { useEffect, useState } from "react";
+import client, {urlFor} from "./sanityClient";
 
+export default function Projects() {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    client
+      .fetch(`*[_type == "projectCard"]{
+        title,
+        slogan,
+        madeBy,
+        website,
+        alignRight,
+        img
+      }`)
+      .then((data) => setProjects(data))
+      .catch(console.error);
+  }, []);
   return (
     <div className="bg-[#0f0f10] min-h-screen text-white font-sans pt-24">
       <div className="text-center p-10">
@@ -40,7 +31,7 @@ export default function Projects() {
           <div
           key={index}
           className="relative w-11/12 md:w-3/4 h-72 bg-cover bg-center flex items-center px-10"
-          style={{ backgroundImage: `url(${project.img})` }}
+          style={{ backgroundImage: `url(${urlFor(project.img).width(1200).height(500).fit('crop').auto('format')})` }}
         >
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/50 z-0" />
@@ -51,14 +42,24 @@ export default function Projects() {
           >
             <h2 className="text-2xl font-bold">{project.title}</h2>
             <p className="italic text-lg">{project.slogan}</p>
-            <p className="text-sm mt-1">{project.madeBy}</p>
-            <a
-              href="https://www.google.com"
-              target="_blank"
-              className="inline-block mt-4 px-6 py-3 text-lg font-bold bg-[#0f0f10] text-white border border-white hover:bg-white hover:text-black transition-all duration-300 w-48 text-center"
-            >
-              SEE PROJECT
-            </a>
+            <p className="text-sm mt-1">Made by: {project.madeBy}</p>
+            {project.website ? (//disable button if no link is provided for the game card
+              <a
+                href={project.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-6 py-3 text-lg font-bold bg-[#0f0f10] text-white border border-white hover:bg-white hover:text-black transition-all duration-300 w-48 text-center"
+              >
+                SEE PROJECT
+              </a>
+            ) : (
+              <span
+                className="inline-block mt-4 px-6 py-3 text-lg font-bold bg-gray-700 text-gray-400 border border-gray-500 cursor-not-allowed w-48 text-center"
+                title="Link coming soon!"
+              >
+                SEE PROJECT
+              </span>
+            )}
 
           </div>
         </div>
