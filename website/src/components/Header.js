@@ -32,6 +32,9 @@ function Header() {
             <Link to='/GameJam' className='text-xl lg:text-2xl font-bold hover:text-gray-300'>
               Game Jam
             </Link>
+            <Link to='/Projects' className='text-xl lg:text-2xl font-bold hover:text-gray-300'>
+              Projects
+            </Link>
           </div>
         </div>
 
