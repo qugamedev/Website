@@ -9,6 +9,7 @@ import Header from "./components/Header.js";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
 import GameJam from "./components/Gamejam.js";
+import Projects from "./components/Projects.js"
 
 // Components
 import Footer from "./components/Footer.js";
@@ -45,6 +46,7 @@ function App() {
           <Route path='/home' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/gamejam' element={<GameJam />} />
+          <Route path='/Projects' element={<Projects />} />
           {/* <Route path='/blog' element={<Blog />} /> */}
         </Routes>
         <Footer></Footer>
