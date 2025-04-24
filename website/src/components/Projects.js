@@ -19,9 +19,9 @@ export default function Projects() {
   return (
     <div className="bg-[#0f0f10] min-h-screen text-white font-sans pt-24">
       <div className="text-center p-10">
-        <h1 className="brick-sans text-8xl sm:text-9xl pb-6 mt-4 font-extrabold leading-tight">PROJECT SHOWCASE</h1>
+        <h1 className="brick-sans text-8xl sm:text-9xl pb-6 mt-4 font-extrabold leading-tight">Community Projects</h1>
         <p className="mt-5 mb-10 text-lg sm:text-2xl archivo-black-regular leading-relaxed max-w-4xl mx-auto text-center">
-          Check out some amazing retro-style game projects! These were built with love, pixels,
+          Check out some amazing projects made by students here at Queens! These were built with love, pixels,
           and way too many cups of coffee.
         </p>
       </div>

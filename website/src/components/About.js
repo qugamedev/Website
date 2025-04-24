@@ -281,15 +281,10 @@ const About = () => {
       >
         <div style={{ maxWidth: '1000px', color: '#fff', textAlign: 'center' }}>
           {/* Header */}
-          <h1
-            style={{
-              fontFamily: 'NT Brick Sans, sans-serif',
-              fontSize: '4rem',
-              marginBottom: '35px',
-            }}
-          >
+          <h1 className="brick-sans text-7xl sm:text-7xl pb-6 mt-4 font-extrabold leading-tight">
             Queen's Game Development Club (QGDC)
           </h1>
+
           <p
             style={{
               fontFamily: 'Archivo Black, sans-serif',
@@ -302,13 +297,7 @@ const About = () => {
           </p>
 
           {/* Our Mission */}
-          <h2
-            style={{
-              fontFamily: 'NT Brick Sans, sans-serif',
-              fontSize: '2.5rem',
-              marginBottom: '20px',
-            }}
-          >
+          <h2 className="brick-sans text-7xl sm:text-7xl pb-6 mt-4 font-extrabold leading-tight">
             Our Mission
           </h2>
           <p
@@ -324,13 +313,7 @@ const About = () => {
           </p>
 
           {/* Join Our Community */}
-          <h2
-            style={{
-              fontFamily: 'NT Brick Sans, sans-serif',
-              fontSize: '2.5rem',
-              marginBottom: '20px',
-            }}
-          >
+          <h2 className="brick-sans text-7xl sm:text-7xl pb-6 mt-4 font-extrabold leading-tight">
             Join Our Community
           </h2>
           <p

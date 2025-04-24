@@ -33,7 +33,7 @@ function Header() {
               Game Jam
             </Link>
             <Link to='/Projects' className='text-xl lg:text-2xl font-bold hover:text-gray-300'>
-              Projects
+              Community Projects
             </Link>
           </div>
         </div>
@@ -57,6 +57,9 @@ function Header() {
               </Link>
               <Link to='/GameJam'>
                 <MenuItem color="black">Game Jam</MenuItem>
+              </Link>
+              <Link to='/Projects'>
+                <MenuItem color="black">Community Projects</MenuItem>
               </Link>
             </MenuList>
           </Menu> 
