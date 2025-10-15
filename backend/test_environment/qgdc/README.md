@@ -1,3 +1,19 @@
+# Navigating the `backend` Directory
+
+The `backend` directory contains two notable directories:
+- `server` : The directory that stores information about the website's database.
+- `test_environment` : The directory that stores the test environment that is run with the command `npm start`. Contains the following notable sub-directories:
+   * `public` : This directory contains images of the QGDC logo as well as a template HTML page.
+   * `src` : The main directory within `test_environment` that stores all the components and functionality of the website. Has the following notable sub-directories and files:
+      * `App.js` : A React component file that stores all the main routing and displays all the components for the website.
+      * `admin.js` : A file that manages the users in the database.
+      * `Auth` : The directory that stores the page for logging into the database.
+
+For running the back-end version of the website, you can either refer to the README.md file seen in the main folder of this repository, or refer below for additional information about running the website provided by React:
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
