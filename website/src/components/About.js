@@ -13,24 +13,24 @@ import qgdc_model from '../assets/qgdc.obj'
 
 // Headshots
 //website
-import Chris from "../assets/images/headshots/Chris_Gil.JPG";
-import Isaiah from "../assets/images/headshots/Isaiah.PNG";
-import Abdullah from "../assets/images/headshots/Abdullah.jpg";
-import Techmeng from "../assets/images/headshots/Techmeng.png";
-import Renee from "../assets/images/headshots/Renee_Kim.webp";
+import Chris from "../assets/images/headshots/Chris_Gil.JPG"; // No longer in club (Delete later?)
+import Isaiah from "../assets/images/headshots/Isaiah.PNG"; // No longer in club
+import Abdullah from "../assets/images/headshots/Abdullah.jpg"; // No longer in club
+import Techmeng from "../assets/images/headshots/Techmeng.png"; // No longer in club
+import Renee from "../assets/images/headshots/Renee_Kim.webp"; // No longer in club
 import Lillie from "../assets/images/headshots/lillie.JPG";
 //finance
-import Sarah from "../assets/images/headshots/Sarah.png";
+import Sarah from "../assets/images/headshots/Sarah.png"; // No longer in club
 import Mitch from "../assets/images/headshots/Mitch.png";
 //marketing
-import Mehr from "../assets/images/headshots/Mehr.jpg";
-import Gabriel from "../assets/images/headshots/Gabriel.jpg";
-import Basma from "../assets/images/headshots/Basma.JPG";
+import Mehr from "../assets/images/headshots/Mehr.jpg"; // No longer in club 
+import Gabriel from "../assets/images/headshots/Gabriel.jpg"; // No longer in club
+import Basma from "../assets/images/headshots/Basma.JPG"; // No longer in club
 import Phoebe from "../assets/images/headshots/Phoebe.jpg";
 import Ananya from "../assets/images/headshots/Ananya.jpg";
-import Alyssa from "../assets/images/headshots/alyssa.JPG";
+import Alyssa from "../assets/images/headshots/alyssa.JPG"; // No longer in club
 //events
-import Tracy from "../assets/images/headshots/Tracy.jpg";
+import Tracy from "../assets/images/headshots/Tracy.jpg"; // No longer in club
 import Rounika from "../assets/images/headshots/Rounika.jpg";
 import Vivian from "../assets/images/headshots/Vivian.jpg";
 import Arlen from "../assets/images/headshots/Arlen.jpg";
@@ -357,9 +357,10 @@ const About = () => {
         <div className='mx-auto sm:p-10 max-w-8xl '>
           <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Our Team</h2>
           <div className='md:flex md:justify-center'>
-            <div className='grid grid-cols-1 justify-items-center'>
-              {/* CHAIR */}
-              <Person name='Lillie Amos' title='Chair' image={Lillie} />
+            <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center gap-24'>
+              {/* CO-CHAIRS */}
+              <Person name='Lillie Amos' title='Co-Chair' image={Lillie} />
+              <Person name='Arlen Smith' title='Co-Chair' image={Arlen} />
             </div>
           </div>
 
@@ -378,13 +379,10 @@ const About = () => {
 
           {/* WEBSITE TEAM HEADSHOTS*/}
           {openSections.website && (
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-8'>
-              <Person name='Isaiah Wuthrich' title='Website Director' image={Isaiah} />
-              <Person name='Christopher Gil' title='Frontend Developer' image={Chris} />
-              <Person name='Kevin Valencia' title='Frontend Developer' image={temp} />
-              <Person name='Techmeng Aing' title='Backend Developer' image={Techmeng} />
-              <Person name='Abdullah Mohsin' title='Backend Developer' image={Abdullah} />
-              <Person name='Renee Kim' title='UI/UX Designer' image={Renee} />
+            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-8'>
+              <Person name='Christian Fiorino' title='Website Director' image={temp} />
+              <Person name='Cayla Wong' title='Front-End Developer' image={temp} />
+              <Person name='Alex Georgiyev' title='Back-End Developer' image={temp} />
             </div>
           )}
 
@@ -403,13 +401,11 @@ const About = () => {
 
           {/* MARKETING TEAM HEADSHOTS*/}
           {openSections.marketing && (
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-8'>
-              <Person name='Mehr Chelani' title='Marketing Director' image={Mehr} />
-              <Person name='Gabriel Dimovski' title='Videographer' image={Gabriel} />
-              <Person name='Basma Azeem' title='Social Media Manager' image={Basma} />
+            <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-8'>
+              <Person name='Ananya Kollipara' title='Marketing Director' image={Ananya} />
               <Person name='Phoebe Chan' title='Graphic Designer' image={Phoebe} />
-              <Person name='Ananya Kollipara' title='Graphic Designer' image={Ananya} />
-              <Person name='Alyssa Zhao' title='Graphic Designer' image={Alyssa} />
+              <Person name='Duncan Mahar' title='Social Media Manager' image={temp} />
+              <Person name='Lauren McQuat' title='Videographer ' image={temp} />
             </div>
           )}
 
@@ -428,11 +424,11 @@ const About = () => {
 
           {/* EVENTS TEAM HEADSHOTS */}
           {openSections.events && (
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>
-              <Person name='Tracy Chan' title='Events Director' image={Tracy} />
-              <Person name='Rounika Saxena' title='Events Organizer' image={Rounika} />
-              <Person name='Vivian Webster' title='Events Coordinator' image={Vivian} />
-              <Person name='Arlen Smith' title='Events Coordinator' image={Arlen} />
+            <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-8'>
+              <Person name='Vivian Webster' title='Events Director' image={Vivian} />
+              <Person name='Rounika Saxena' title='Events Coordinator' image={Rounika} />
+              <Person name='Ethan Xu' title='Events Coordinator' image={temp} />
+              <Person name='Leif Hill' title='Events Outreach' image={temp} />
             </div>
           )}
 
@@ -451,9 +447,8 @@ const About = () => {
 
           {/* Finance TEAM HEADSHOTS*/}
           {openSections.finance && (
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 justify-items-center whitespace-nowrap'>
-              <Person name='Sarah Mohammad' title='Finance Director' image={Sarah} />
-              <Person name='Mitch Turner' title='Budget Manager' image={Mitch} />
+            <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 justify-items-center whitespace-nowrap'>
+              <Person name='Maia Turner' title='Finance Manager' image={Mitch} />
             </div>
           )}
         </div>
