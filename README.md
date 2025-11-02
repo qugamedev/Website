@@ -7,6 +7,11 @@ This is the repository for the Queen's Game Development Club (QGDC) website.
 
 The Figma design used for this website can be found [here](https://www.figma.com/design/nFfrRugpOiNgpcul5EAfBv/QGDC-Static-Website?node-id=12-165).
 
+## Website Deployment
+
+This website is hosted using Vercel. The management of the Vercel deployment settings will be dealt with by the QGDC Website Director. If you believe there is an issue with the deployment, please contact either the QGDC Co-Chairs or the QGDC Website Director so that it can be fixed right away.
+
+Assuming the Vercel deployment functions appropriately, once a pull request is merged into the `main` branch of this repository, the deployment will automatically update with the pull request's changes. As such, developers should not need to worry about deployment.
 
 ## Navigating the Repository
 
