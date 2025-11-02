@@ -83,7 +83,7 @@ function Gamejam() {
         <p className="mt-7 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
         The 2025 QGDC Game Jam is happening this 
          <br /><p className="mt-5 py-3 text-2xl sm:text-4xl bg-gradient-to-r from-purple-600 to-indigo-500">November 7-9th</p><br />
-        Click the button below to sign up! Deadline to register is November 7th.
+        Click the button below to sign up! Deadline to register is Nov 7th @ 6:00PM.
         </p>
 
         {/* Redirect Button */}
