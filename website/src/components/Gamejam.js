@@ -80,9 +80,16 @@ function Gamejam() {
         Ready to level up your game? Join now!
         </p>
         
-        <p className="mt-7 mb-10 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-          Details on the QGDC Game Jam 2026 will be revealed soon! Stay tuned for more details.
+        <p className="mt-7 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
+        The 2025 QGDC Game Jam is happening this 
+         <br /><p className="mt-5 py-3 text-2xl sm:text-4xl bg-gradient-to-r from-purple-600 to-indigo-500">November 7-9th</p><br />
+        Click the button below to sign up! Deadline to register is Nov 7th @ 6:00PM.
         </p>
+
+        {/* Redirect Button */}
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0uvXSrUK73t8OsPpYK-8HhUwbMV2yfLO4jOcXi8LPxiUc0A/viewform" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
+        Sign-Up Form
+      </a>
         
       </section>
 
@@ -187,7 +194,7 @@ function Gamejam() {
       </p>
 
       {/* Redirect Button */}
-      <a href="https://qugamedev.itch.io/" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-600 transition rounded-lg shadow-lg">
+      <a href="https://qugamedev.itch.io/" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
         View All Submissions
       </a>
     </section>
