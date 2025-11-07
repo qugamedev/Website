@@ -2,6 +2,9 @@ import React from "react";
 import graphics from "../assets/images/middle_graphics.svg";
 //import gamejamIMG from "../assets/images/gamejam.png";
 import Post from "./Post";
+import {useEffect} from "react"; // for importing aos
+import AOS from 'aos'; // importing aos
+import 'aos/dist/aos.css'; // importing aos
 
 function Blog() {
   const ContainerStyle = {

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "../CSS/Gamejam.css"; // Import CSS file
+import {useEffect} from "react"; // for importing aos
+import AOS from 'aos'; // importing aos
+import 'aos/dist/aos.css'; // importing aos
 
 // Assets
 import fivefirst from "../assets/images/gamejam/fivefirst.png";
@@ -59,6 +62,10 @@ function Gamejam() {
     setShowProjects((prev) => ({ ...prev, [year]: !prev[year] }));
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
   return (
     <div className="bg-[#0f0f10] text-white min-h-screen flex flex-col items-center">
       
@@ -68,27 +75,27 @@ function Gamejam() {
           QGDC Presents...
         </h1>
         <h1 className="brick-sans text-8xl sm:text-9xl pb-6 mt-4 font-extrabold leading-tight">
-          GAME JAM <span className="text-purple-600">2025</span>
+          GAME JAM <span className="text-purple-600">FALL 2025</span>
         </h1>
 
         <h2 className="brick-sans text-purple-600 text-6xl sm:text-7xl mt-2">
           What is the QGDC GAME JAM?
         </h2>
-        <p className="mt-5 mb-10 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
+        <p className=" data-aos-fade-down mt-5 mb-10 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
         QGDC Game Jam is an annual game development competition held both online and in-person in Kingston. With fresh themes each year,
         developers of all skill levels can unleash their creativity and compete against peers across Canada.
         Ready to level up your game? Join now!
         </p>
         
         <p className="mt-7 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-        The 2025 QGDC Game Jam is happening this 
+        The QGDC Game Jam Fall 2025 is happening this 
          <br /><p className="mt-5 py-3 text-2xl sm:text-4xl bg-gradient-to-r from-purple-600 to-indigo-500">November 7-9th</p><br />
-        Click the button below to sign up! Deadline to register is November 7th.
+        Check out the official QGDC itch.io page for updates!
         </p>
 
         {/* Redirect Button */}
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0uvXSrUK73t8OsPpYK-8HhUwbMV2yfLO4jOcXi8LPxiUc0A/viewform" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
-        Sign-Up Form
+      <a href="https://itch.io/jam/qugamedev-game-jam-fall25" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
+        QGDC Fall 2025 Page
       </a>
         
       </section>

@@ -3,6 +3,9 @@ import discord_logo from "../assets/images/logos/discord_logo.svg";
 import instagram_logo from "../assets/images/logos/instagram_logo.svg";
 import youtube_logo from "../assets/images/logos/youtube_logo.svg";
 import linkedin_logo from "../assets/images/logos/linkedin_logo.svg";
+import {useEffect} from "react"; // for importing aos
+import AOS from 'aos'; // importing aos
+import 'aos/dist/aos.css'; // importing aos
 
 function Footer() {
   return (
