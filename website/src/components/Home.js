@@ -1,4 +1,7 @@
 import React from "react";
+import {useEffect} from "react"; // for importing aos
+import AOS from 'aos'; // importing aos
+import 'aos/dist/aos.css'; // importing aos
 
 // Assests
 //import right_triangle from "../assets/images/right_triangle.svg";
