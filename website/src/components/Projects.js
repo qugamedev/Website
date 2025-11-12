@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import client, {urlFor} from "./sanityClient";
 
+
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   useEffect(() => {

@@ -1,5 +1,8 @@
 //import React, { useRef, useState, useEffect,  useMemo  } from 'react';
 import React, { useRef, useState } from 'react';
+import {useEffect} from "react"; // for importing aos
+import AOS from 'aos'; // importing aos
+import 'aos/dist/aos.css'; // importing aos
 
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 //import * as THREE from 'three';

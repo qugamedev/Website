@@ -6,6 +6,10 @@ import linkedin_logo from "../assets/images/logos/linkedin_logo.svg";
 import itchio_logo from "../assets/images/logos/itchio_logo_black.svg";
 import linktree_logo from "../assets/images/logos/linktree_logo.png";
 
+import {useEffect} from "react"; // for importing aos
+import AOS from 'aos'; // importing aos
+import 'aos/dist/aos.css'; // importing aos
+
 function Footer() {
   return (
     <footer className="w-full relative z-10 bg-[#121212] border-t border-gray-800">

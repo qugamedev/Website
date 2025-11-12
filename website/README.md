@@ -1,3 +1,22 @@
+# Navigating the `website` Directory
+
+The `website` directory contains two directories and the following three files:
+- `package.json` and `package-lock.json` : Store the package dependencies needed for the website to function.
+- `tailwind.config.js` : The config file for TailwindCSS. May need to be edited to allow for custom colours or fonts.
+
+The following is the information for the aforementioned two directories stored within `website`:
+- `public` : This directory contains images of the QGDC logo as well as a template HTML page.
+- `src` : The main directory within `website` that stores all the components and styling of the website. Has the following notable sub-directories and files:
+   * `App.js` : A React component file that stores all the main routing and displays all the components for the website.
+   * `index.js` : The main renderer file for the website. Renders the "App" component from `App.js`.
+   * `assets` : The directory that stores all the photos and shapes used across the website, including a blender model called `qgdc.obj` that's used on the 'About' page of the website.
+   * `components` : The directory that stores the different pages of the website (such as `About.js` being the 'About' page), as well as helper components used on said pages (such as `Person.js` being a component used to create the 'blocks' to showcase each team member on the 'About' page).
+
+For running the front-end version of the website, you can either refer to the README.md file seen in the main folder of this repository, or refer below for additional information about running the website provided by React:
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
