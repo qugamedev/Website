@@ -34,7 +34,7 @@ import Ananya from "../assets/images/headshots/Ananya.jpg";
 import Alyssa from "../assets/images/headshots/alyssa.JPG"; // No longer in club
 //events
 import Tracy from "../assets/images/headshots/Tracy.jpg"; // No longer in club
-import Rounika from "../assets/images/headshots/Rounika.jpg";
+//import Rounika from "../assets/images/headshots/Rounika.jpg";
 import Vivian from "../assets/images/headshots/Vivian.jpg";
 import Arlen from "../assets/images/headshots/Arlen.jpg";
 
@@ -427,9 +427,9 @@ const About = () => {
 
           {/* EVENTS TEAM HEADSHOTS */}
           {openSections.events && (
-            <div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-8'>
               <Person name='Vivian Webster' title='Events Director' image={Vivian} />
-              <Person name='Rounika Saxena' title='Events Coordinator' image={Rounika} />
+              {/* <Person name='Rounika Saxena' title='Events Coordinator' image={Rounika} /> */}
               <Person name='Ethan Xu' title='Events Coordinator' image={temp} />
               <Person name='Leif Hill' title='Events Outreach' image={temp} />
             </div>
