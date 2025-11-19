@@ -355,11 +355,11 @@ const About = () => {
 
        {/* { Leader Ship} */}
        <section className='w-full bg-custom-purple'>
-        <div className='mx-auto sm:p-10 max-w-8xl '>
+        <div className='mx-auto sm:p-15 px-10 max-w-8xl '>
           <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Our Team</h2>
           <div className='md:flex md:justify-center'>
-            <div className='grid grid-cols-2 md:grid-cols-2 justify-items-center gap-24'>
-              {/* CO-CHAIRS */}
+            {/* CO-CHAIRS */}
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 justify-items-center gap-24'>
               <Person name='Lillie Amos' title='Co-Chair' image={Lillie} />
               <Person name='Arlen Smith' title='Co-Chair' image={Arlen} />
             </div>
@@ -380,7 +380,7 @@ const About = () => {
 
           {/* WEBSITE TEAM HEADSHOTS*/}
           {openSections.website && (
-            <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-auto-fit justify-items-center gap-8'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-8'>
               <Person name='Christian Fiorino' title='Website Director' image={Christian} />
               <Person name='Cayla Wong' title='Front-End Developer' image={Cayla} />
               <Person name='Alex Georgiyev' title='Back-End Developer' image={Alex} />
@@ -402,15 +402,15 @@ const About = () => {
 
           {/* MARKETING TEAM HEADSHOTS*/}
           {openSections.marketing && (
-            <><div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center '>
-                <Person name='Ananya Kollipara' title='Marketing Director' image={Ananya} />
-                <Person name='Phoebe Chan' title='Graphic Designer' image={Phoebe} />
-                <Person name='Duncan Mahar' title='Social Media Manager' image={Duncan} />
-              </div><div className='grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-0.1 place-items-center '>
-                  <Person name='Lauren McQuat' title='Videographer ' image={Lauren} />
-                  <Person name='Maia Turner' title='Finance Manager' image={Maia} />
-                </div></>
+            <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 place-items-center">
+              <Person name='Ananya Kollipara' title='Marketing Director' image={Ananya} />
+              <Person name='Phoebe Chan' title='Graphic Designer' image={Phoebe} />
+              <Person name='Duncan Mahar' title='Social Media Manager' image={Duncan} />
+              <Person name='Lauren McQuat' title='Videographer' image={Lauren} />
+              <Person name='Maia Turner' title='Finance Manager' image={Maia} />
+            </div>
           )}
+
 
           {/* Events Section */}
           <div className="w-full">
@@ -427,7 +427,7 @@ const About = () => {
 
           {/* EVENTS TEAM HEADSHOTS */}
           {openSections.events && (
-            <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-8'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-8'>
               <Person name='Vivian Webster' title='Events Director' image={Vivian} />
               <Person name='Ethan Xu' title='Events Coordinator' image={Ethan} />
               <Person name='Leif Hill' title='Events Outreach' image={Leif} />

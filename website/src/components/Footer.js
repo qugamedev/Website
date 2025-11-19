@@ -86,7 +86,7 @@ function Footer() {
 
             {/* itch.io */}
             <a
-              href="https://itch.io/jam/qugamedev-game-jam-fall25"
+              href="https://qugamedev.itch.io/"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-transform hover:scale-110"
