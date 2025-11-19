@@ -3,9 +3,8 @@ import discord_logo from "../assets/images/logos/discord_logo.svg";
 import instagram_logo from "../assets/images/logos/instagram_logo.svg";
 import youtube_logo from "../assets/images/logos/youtube_logo.svg";
 import linkedin_logo from "../assets/images/logos/linkedin_logo.svg";
-import {useEffect} from "react"; // for importing aos
-import AOS from 'aos'; // importing aos
-import 'aos/dist/aos.css'; // importing aos
+import itchio_logo from "../assets/images/logos/itchio_logo_black.svg";
+import linktree_logo from "../assets/images/logos/linktree_logo.png";
 
 function Footer() {
   return (
@@ -69,6 +68,33 @@ function Footer() {
                 src={linkedin_logo}
                 alt="Linkedin"
                 className="w-6 h-6 sm:w-8 sm:h-8"
+              />
+            </a> 
+            {/* Linktree */}
+            <a
+              href="https://linktr.ee/qugamedev?fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnl4NeRPEAf0UJ8Vc_SUn77zFwH9d9swl2bvOFHzowLWCUXfqGLgPTZuWy2Ns_aem_Ne8KIXpa7Su36dmIkZri5w&brid=npV0_85enfiMriXlHdSjDw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform hover:scale-110"
+            >
+              <img
+                src={linktree_logo}
+                alt="Linktree"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-md"
+              />
+            </a>
+
+            {/* itch.io */}
+            <a
+              href="https://qugamedev.itch.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-transform hover:scale-110"
+            >
+              <img
+                src={itchio_logo}
+                alt="itch.io"
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-md"
               />
             </a>
           </div>
