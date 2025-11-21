@@ -282,9 +282,14 @@ const About = () => {
       >
         <div style={{ maxWidth: '1000px', color: '#fff', textAlign: 'center' }}>
           {/* Header */}
-          <h1 className="brick-sans text-7xl sm:text-7xl pb-6 mt-4 font-extrabold leading-tight">
-            Queen's Game Development Club (QGDC)
-          </h1>
+          <div data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+          data-aos-delay="0">
+            <h1 className="brick-sans text-7xl sm:text-7xl pb-6 mt-4 font-extrabold leading-tight">
+              Queen's Game Development Club (QGDC)
+            </h1>
+          
 
           <p
             style={{
@@ -296,8 +301,13 @@ const About = () => {
           >
             Officially recognized by the AMS at Queen's University, the Queen's Game Development Club is a hub for passionate game devs in Kingston.
           </p>
+          </div>
 
           {/* Our Mission */}
+          <div  data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+          data-aos-delay="300">
           <h2 className="brick-sans text-7xl sm:text-7xl pb-6 mt-4 font-extrabold leading-tight">
             Our Mission
           </h2>
@@ -311,9 +321,13 @@ const About = () => {
           >
             We empower, connect, and mentor aspiring game developers through hands-on projects,
             dynamic community meetups, and innovative learning experiences.
-          </p>
+          </p></div>
 
           {/* Join Our Community */}
+          <div  data-aos="fade-down"
+          data-aos-duration="1000"
+          data-aos-offset="0"
+          data-aos-delay="600">
           <h2 className="brick-sans text-7xl sm:text-7xl pb-6 mt-4 font-extrabold leading-tight">
             Join Our Community
           </h2>
@@ -327,6 +341,7 @@ const About = () => {
           >
             Passionate about game development? Be a part of our vibrant community where creativity and innovation thrive.
           </p>
+        </div>
         </div>
 
         <div> {/** vertical container. */}
@@ -342,6 +357,8 @@ const About = () => {
           fontWeight: '400', wordWrap: 'break-word', display: 'flex',
           justifyContent: 'center' }}
             className="flex items-center justify-center">
+              <div  data-aos-duration="1000"
+            data-aos="zoom-in">
               <a 
             href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" rel="noopener noreferrer" 
             style={{ textDecoration: 'none' }}    // Removes default link styling
@@ -350,16 +367,17 @@ const About = () => {
         Join Us Now
       </button>
       </a>
+      </div>
         </div>
       </div>
 
        {/* { Leader Ship} */}
        <section className='w-full bg-custom-purple'>
-        <div className='mx-auto sm:p-15 px-10 max-w-8xl '>
+        <div className='mx-auto sm:p-15 px-10 max-w-8xl'>
           <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Our Team</h2>
           <div className='md:flex md:justify-center'>
             {/* CO-CHAIRS */}
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 justify-items-center gap-24'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 justify-items-center gap-24 overflow-hidden'>
               <Person name='Lillie Amos' title='Co-Chair' image={Lillie} />
               <Person name='Arlen Smith' title='Co-Chair' image={Arlen} />
             </div>

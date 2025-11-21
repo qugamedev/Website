@@ -20,13 +20,27 @@ export default function Projects() {
   return (
     <div className="bg-[#0f0f10] min-h-screen text-white font-sans pt-24">
       <div className="text-center p-10">
+        <div data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-offset="0"
+        data-aos-delay="300">
         <h1 className="brick-sans text-8xl sm:text-9xl pb-6 mt-4 font-extrabold leading-tight">Community Projects</h1>
+        </div>
+        <div data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-offset="0"
+        data-aos-delay="600">
         <p className="mt-5 mb-10 text-lg sm:text-2xl archivo-black-regular leading-relaxed max-w-4xl mx-auto text-center">
           Check out some amazing projects made by students here at Queen's! These were built with love, pixels,
           and way too many cups of coffee.
         </p>
+        </div>
       </div>
-
+      
+      <div data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-offset="0"
+        data-aos-delay="600">
       <div className="flex flex-col items-center gap-10 pb-10">
         {projects.map((project, index) => (
           <div
@@ -65,6 +79,7 @@ export default function Projects() {
           </div>
         </div>
         ))}
+        </div>
       </div>
     </div>
   );
