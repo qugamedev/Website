@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "../CSS/Gamejam.css"; // Import CSS file
-import {useEffect} from "react"; // for importing aos
-import AOS from 'aos'; // importing aos
-import 'aos/dist/aos.css'; // importing aos
 
 // Assets
 import fivefallfirst from "../assets/images/gamejam/fivefallfirst.png";
@@ -77,22 +74,27 @@ function Gamejam() {
     setShowProjects((prev) => ({ ...prev, [year]: !prev[year] }));
   };
 
-  useEffect(() => {
-    AOS.init();
-  }, [])
-
   return (
     <div className="bg-[#0f0f10] text-white min-h-screen flex flex-col items-center">
       
       {/* Top Container */}
       <section className="w-full max-w-5xl px-6 sm:px-12 text-center flex flex-col items-center justify-center min-h-[calc(100vh-180px)] pt-[180px]">
+      <div data-aos="fade-down"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-aos-delay="0">
       <h1 className="text-3xl sm:text-5xl font-bold archivo-black-regular animate-fade-in">
           Loading...
         </h1>
         <h1 className="brick-sans text-8xl sm:text-9xl pb-6 mt-4 font-extrabold leading-tight">
           QGDC GAME JAM <span className="text-purple-600">2026</span>
         </h1>
+        </div>
 
+        <div data-aos="fade-down"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-aos-delay="300">
         <h2 className="brick-sans text-purple-600 text-6xl sm:text-7xl mt-2">
           What is the QGDC GAME JAM?
         </h2>
@@ -101,18 +103,29 @@ function Gamejam() {
         developers of all skill levels can unleash their creativity and compete against peers across Canada.
         Ready to level up your game? Join now!
         </p>
+        </div>
         
         {/* Next Game Jam */}
+        <div data-aos="fade-down"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-aos-delay="300">
         <p className="mt-7 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
         Thank you for participating in the QGDC Fall Game Jam 2025! We can't wait to see the incredible games you'll create for the 
          <br /><p className="mt-5 py-3 text-2xl sm:text-4xl bg-gradient-to-r from-purple-600 to-indigo-500">Game Jam 2026!</p><br /> 
         Check out the official QGDC itch.io page for updates!
         </p>
-        
+        </div>
+
         {/* Redirect Button */}
+        <div data-aos="zoom-in"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-aos-delay="350">
       <a href="https://itch.io/jam/qugamedev-game-jam-fall25" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
         QGDC Fall 2025 Page
       </a>
+      </div>
         
       </section>
 
@@ -120,10 +133,20 @@ function Gamejam() {
 
       {/* Previous Projects Section */}
       <section className="w-full text-center py-16">
+      <div data-aos="fade-down"
+      data-aos-offset="300"
+      data-aos-duration="1000"
+      data-aos-delay="0">
         <h1 className="text-4xl sm:text-6xl font-bold brick-sans">
           PREVIOUS PROJECTS
         </h1>
+        </div>
+        
 
+        <div data-aos="fade-in"
+      data-aos-offset="350"
+      data-aos-duration="1000"
+      data-aos-delay="0">
       {/* Buttons and Projects for Each Year (Sorted by Latest First) */}
       {Object.keys(winnersByYear)
         .sort((a, b) => b - a) // Sort years in descending order
@@ -204,6 +227,7 @@ function Gamejam() {
             </div>
           </div>
       ))}
+      </div>
 
       </section>
 
@@ -211,6 +235,10 @@ function Gamejam() {
 
     {/* VIEW ALL PROJECTS!! Section (Redirect to new Page) */}
     <section className="w-full max-w-5xl px-6 sm:px-12 text-center flex flex-col items-center mt-1 mb-20">
+    <div data-aos="fade-down"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-aos-delay="0">
       <h1 className="brick-sans text-6xl sm:text-8xl pb-6 font-extrabold leading-tight">
         Congratulations to all <span className="text-purple-600">Winners!</span>
       </h1>
@@ -219,11 +247,17 @@ function Gamejam() {
         We are incredibly proud of all the amazing projects showcased at the QGDC Fall Game Jam 2025! 
         A huge thank you to every participant, and a special shoutout to our winners for their outstanding creativity and hard work.
       </p>
+      </div>
 
+      <div data-aos="zoom-in"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-aos-delay="0">
       {/* Redirect Button */}
       <a href="https://qugamedev.itch.io/" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
         View All Submissions
-      </a>
+      </a> </div>
+      
     </section>
 
 

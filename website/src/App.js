@@ -21,8 +21,17 @@ import logo from "./assets/images/qgdc_logo.png";
 // import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react'
 
+// AOS Animations
+import { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
   var singlePage = true;
+  useEffect(() => {
+    AOS.init({once: true}); // plays all animations only the first time you are on the page
+    AOS.refresh();
+  }, []);
   return (
     <ChakraProvider>
       <Router>
