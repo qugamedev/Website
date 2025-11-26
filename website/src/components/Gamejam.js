@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "../CSS/Gamejam.css"; // Import CSS file
 
 // Assets
+import fivefallfirst from "../assets/images/gamejam/fivefallfirst.png";
+import fivefallsecond from "../assets/images/gamejam/fivefallsecond.png";
+import fivefallthird from "../assets/images/gamejam/fivefallthird.png";
+
 import fivefirst from "../assets/images/gamejam/fivefirst.png";
 import fivesecond from "../assets/images/gamejam/fivesecond.png";
 import fivethird from "../assets/images/gamejam/fivethird.png";
@@ -19,6 +23,11 @@ import twosecond from "../assets/images/gamejam/twosecond.png";
 import twothird from "../assets/images/gamejam/twothird.png";
 
 const winnersByYear = {
+  2025.5: [
+    { title: "No--", developer: "@compsup, @Zo-We", img: fivefallfirst, place: "1st", link: "https://compsup.itch.io/noem"  },
+    { title: "Unchair Canny Valley", developer: "@Applepielord", img: fivefallsecond, place: "2nd", link: "https://applepielord291.itch.io/unchair-canny-valley"  },
+    { title: "Nightmare Town?", developer: "@Vivian Webster", img: fivefallthird, place: "3rd", link: "https://viviannnnnn.itch.io/nightmare-town"  },
+  ],
   2025: [
     { title: "Lobotany", developer: "@Vivian Webster", img: fivefirst, place: "1st", link: "https://viviannnnnn.itch.io/lobotany"  },
     { title: "RPG SIMULATOR", developer: "@ziggy964", img: fivesecond, place: "2nd", link: "https://ziggy964.itch.io/rpg-simulator"  },
@@ -45,11 +54,17 @@ const placeColors = {
   "1st": "bg-yellow-500",
   "2nd": "bg-gray-400",
   "3rd": "bg-orange-500",
+}; 
+
+const displayNames = {
+  "2025.5": "Fall 2025",
+  "2025": "Winter 2025",
 };
 
 function Gamejam() {
   const [showProjects, setShowProjects] = useState({
-    2025: true,
+    2025.5: true,
+    2025: false,
     2024: false,
     2023: false,
     2022: false,
@@ -69,10 +84,10 @@ function Gamejam() {
       data-aos-duration="1000"
       data-aos-delay="0">
       <h1 className="text-3xl sm:text-5xl font-bold archivo-black-regular animate-fade-in">
-          QGDC Presents...
+          Loading...
         </h1>
         <h1 className="brick-sans text-8xl sm:text-9xl pb-6 mt-4 font-extrabold leading-tight">
-          GAME JAM <span className="text-purple-600">FALL 2025</span>
+          QGDC GAME JAM <span className="text-purple-600">2026</span>
         </h1>
         </div>
 
@@ -90,13 +105,14 @@ function Gamejam() {
         </p>
         </div>
         
+        {/* Next Game Jam */}
         <div data-aos="fade-down"
       data-aos-offset="0"
       data-aos-duration="1000"
       data-aos-delay="300">
         <p className="mt-7 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-        The QGDC Game Jam Fall 2025 is happening this 
-         <br /><p className="mt-5 py-3 text-2xl sm:text-4xl bg-gradient-to-r from-purple-600 to-indigo-500">November 7-9th</p><br />
+        Thank you for participating in the QGDC Fall Game Jam 2025! We can't wait to see the incredible games you'll create for the 
+         <br /><p className="mt-5 py-3 text-2xl sm:text-4xl bg-gradient-to-r from-purple-600 to-indigo-500">Game Jam 2026!</p><br /> 
         Check out the official QGDC itch.io page for updates!
         </p>
         </div>
@@ -145,8 +161,12 @@ function Gamejam() {
     
             >
               <span>
-                {showProjects[year] ? `Hide ${year} Projects` : `Show ${year} Projects`}
+                {showProjects[year] 
+                  ? `Hide ${displayNames[year] || year} Projects`
+                  : `Show ${displayNames[year] || year} Projects`
+                }
               </span>
+
               <span className="text-2xl transition-transform duration-300 transform"
                     style={{ transform: showProjects[year] ? "rotate(180deg)" : "rotate(0deg)" }}>
                 ▼
@@ -159,7 +179,7 @@ function Gamejam() {
                 showProjects[year] ? "max-h-[1000px] opacity-100 mt-6" : "max-h-0 opacity-0"
               }`}
             >
-              <h2 className="text-4xl sm:text-5xl font-bold brick-sans">{year} Winners 🎉</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold brick-sans">{(displayNames[year] || year) + " Winners 🎉"} </h2>
 
               {/* Project Boxes */}
               <div className="flex flex-col items-center gap-8 mt-10 w-full">
@@ -224,7 +244,7 @@ function Gamejam() {
       </h1>
 
       <p className="mt-2 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-        We are incredibly proud of all the amazing projects showcased at the QGDC Game Jam 2025! 
+        We are incredibly proud of all the amazing projects showcased at the QGDC Fall Game Jam 2025! 
         A huge thank you to every participant, and a special shoutout to our winners for their outstanding creativity and hard work.
       </p>
       </div>
