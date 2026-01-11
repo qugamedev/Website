@@ -13,7 +13,7 @@ import qgdc_model from '../assets/qgdc.obj'
 
 // Headshots
 //co-chairs
-import Lillie from "../assets/images/headshots/Lillie.jpg";
+import Lillie from "../assets/images/headshots/lillie.JPG";
 import Arlen from "../assets/images/headshots/Arlen.jpg";
 
 //website
@@ -34,7 +34,7 @@ import Lauren from "../assets/images/headshots/Lauren.jpg";
 //events
 import Vivian from "../assets/images/headshots/Vivian.jpg";
 import Ethan from "../assets/images/headshots/Ethan.jpg";
-import Leif from "../assets/images/headshots/Leif.jpg"; 
+// import Leif from "../assets/images/headshots/Leif.jpg"; 
 
 //placeholder
 import temp from "../assets/images/headshots/temp_person.webp";
@@ -377,7 +377,7 @@ const About = () => {
           <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Our Team</h2>
           <div className='md:flex md:justify-center'>
             {/* CO-CHAIRS */}
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 justify-items-center gap-24 overflow-hidden'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 justify-items-center gap-8 sm:gap-24 overflow-hidden'>
               <Person name='Lillie Amos' title='Co-Chair' image={Lillie} />
               <Person name='Arlen Smith' title='Co-Chair' image={Arlen} />
             </div>
@@ -444,13 +444,15 @@ const About = () => {
           </div>
 
           {/* EVENTS TEAM HEADSHOTS */}
+          <div className='md:flex md:justify-center'>
           {openSections.events && (
-            <div className='grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-items-center gap-8'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 justify-items-center gap-8 sm:gap-24'>
               <Person name='Vivian Webster' title='Events Director' image={Vivian} />
               <Person name='Ethan Xu' title='Events Coordinator' image={Ethan} />
-              <Person name='Leif Hill' title='Events Outreach' image={Leif} />
+              {/* <Person name='Leif Hill' title='Events Outreach' image={Leif} /> */}
             </div>
           )}
+          </div>
 
           {/* Finance Section ********REMOVED********* 
           <div className="w-full">

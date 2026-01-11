@@ -19,7 +19,7 @@ There are two main directories in the repository - `website` and `backend`.
 
 The `website` directory contains all the front-end components for the website, including image assets and JavaScript components/pages. If you are working on any front-end task, this is the directory you want to be in. Details about what's in the `website` directory are found in the README.md file in said directory.
 
-The `backend` directory contains all the back-end components for the website, including a database and a test environment for admin users. If you need to work on a back-end task, this is the directory you want to be in. Details about the contents of the `backend` directory are found in the README.md file in said directory.
+The `backend` directory contains all the back-end components for the website, including a database and a test environment for admin users. If you need to work on a back-end task, this is the directory you want to be in. Details about the contents of the `backend` directory are found in the README.md file in said directory. However, it should be noted that the backend folders are currently deprecated, although there are plans to utilize the pre-existing backend.
 
 
 ## Running a Localhost (for Developers)
@@ -29,18 +29,14 @@ To run the website locally for development and testing purposes, clone this repo
 cd website
 ```
 ```
-npm start
+npm run dev
 ```
 
-Note that the `cd website` command takes you to the front-end directory, and thus runs the front-end version of the website. If you want to run the back-end version of the website locally, replace the `cd website` command with the command `cd backend/test_environment/qgdc`.
+Note that the `cd website` command takes you to the front-end directory, and thus runs the front-end version of the website. After running `npm run dev`, the localhost will automatically open in your default browser.
 
-After running `npm start`, the localhost will automatically open in your default browser.
+If you want to run the back-end version of the website locally, replace the `cd website` command with the command `cd backend/test_environment/qgdc`, and then run `npm start` instead of `npm run dev`.
 
 
-## Known Local Installation Errors
+## Dependency Notice
 
-If when running the `npm start` command in either directory you receive an error, you may need to update the `react-scripts` dependency. To do so, run the following command:
-```
-npm install react-scripts --save
-```
-Once the dependency is finished installing, try running `npm start` again.
+It should be noted that the frontend of the website utilizes **Vite** as its build tool, while the backend utilizes **react-scripts**. This is the reason why they have different execution commands (i.e., `run dev` and `start` respectively).
