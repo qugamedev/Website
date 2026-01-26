@@ -44,3 +44,16 @@ code {
   }
 }
 
+html,
+body {
+  cursor: url("./assets/images/cursor/cursor_idle.svg") 8 8, auto;
+}
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea {
+  cursor: url("./assets/images/cursor/cursor_point.svg") 8 8, pointer;
+}
