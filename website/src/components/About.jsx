@@ -385,8 +385,9 @@ const About = () => {
 
           {/* Website Section */}
           <div className="w-full">
-            <div 
-              className='w-full pt-10 mb-5 flex items-center justify-center cursor-pointer'
+            <div  
+              role="button"
+              className='w-full pt-10 mb-5 flex items-center justify-center'
               onClick={() => toggleSection('website')}
             >
               <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
@@ -408,7 +409,8 @@ const About = () => {
           {/* Marketing Section */}
           <div className="w-full">
             <div 
-              className='w-full pt-10 mb-5 flex items-center justify-center cursor-pointer'
+              role="button"
+              className='w-full pt-10 mb-5 flex items-center justify-center'
               onClick={() => toggleSection('marketing')}
             >
               <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
@@ -433,7 +435,8 @@ const About = () => {
           {/* Events Section */}
           <div className="w-full">
             <div 
-              className='w-full pt-10 mb-5 flex items-center justify-center cursor-pointer'
+              role="button"
+              className='w-full pt-10 mb-5 flex items-center justify-center'
               onClick={() => toggleSection('events')}
             >
               <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
