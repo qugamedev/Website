@@ -11,6 +11,8 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
 import qgdc_model from '../assets/qgdc.obj'
 
+import ToggleArrow from "../assets/images/icons/toggle_arrow.svg"; 
+
 // Headshots
 //co-chairs
 import Lillie from "../assets/images/headshots/lillie.JPG";
@@ -393,7 +395,16 @@ const About = () => {
               <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
                 Website
               </h2>
-              <span className='ml-4 text-white text-4xl'>{openSections.website ? '▼' : '▶'}</span>
+              <img
+                src={ToggleArrow}
+                alt="Toggle section"
+                className={`
+                  ml-4 w-20 h-20 
+                  translate-y-[18px]
+                  transition-transform duration-300
+                  ${openSections.website ? 'rotate-90' : ''}
+                `}
+              />
             </div>
           </div>
 
@@ -416,7 +427,16 @@ const About = () => {
               <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
                 Marketing
               </h2>
-              <span className='ml-4 text-white text-4xl'>{openSections.marketing ? '▼' : '▶'}</span>
+              <img
+                src={ToggleArrow}
+                alt="Toggle section"
+                className={`
+                  ml-4 w-20 h-20 
+                  translate-y-[18px]
+                  transition-transform duration-300
+                  ${openSections.marketing ? 'rotate-90' : ''}
+                `}
+              />
             </div>
           </div>
 
@@ -442,7 +462,16 @@ const About = () => {
               <h2 className='text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>
                 Events
               </h2>
-              <span className='ml-4 text-white text-4xl'>{openSections.events ? '▼' : '▶'}</span>
+              <img
+                src={ToggleArrow}
+                alt="Toggle section"
+                className={`
+                  ml-4 w-20 h-20 
+                  translate-y-[18px]
+                  transition-transform duration-300
+                  ${openSections.events ? 'rotate-90' : ''}
+                `}
+              />
             </div>
           </div>
 
