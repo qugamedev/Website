@@ -399,8 +399,11 @@ const About = () => {
                 src={ToggleArrow}
                 alt="Toggle section"
                 className={`
-                  ml-4 w-20 h-20 
-                  translate-y-[18px]
+                  ml-3
+                  w-10 h-10
+                  sm:w-10 sm:h-10
+                  lg:w-20 lg:h-20
+                  translate-y-[12px]
                   transition-transform duration-300
                   ${openSections.website ? 'rotate-90' : ''}
                 `}
@@ -431,8 +434,11 @@ const About = () => {
                 src={ToggleArrow}
                 alt="Toggle section"
                 className={`
-                  ml-4 w-20 h-20 
-                  translate-y-[18px]
+                  ml-3
+                  w-10 h-10
+                  sm:w-10 sm:h-10
+                  lg:w-20 lg:h-20
+                  translate-y-[12px]
                   transition-transform duration-300
                   ${openSections.marketing ? 'rotate-90' : ''}
                 `}
@@ -466,8 +472,11 @@ const About = () => {
                 src={ToggleArrow}
                 alt="Toggle section"
                 className={`
-                  ml-4 w-20 h-20 
-                  translate-y-[18px]
+                  ml-3
+                  w-10 h-10
+                  sm:w-10 sm:h-10
+                  lg:w-20 lg:h-20
+                  translate-y-[12px]
                   transition-transform duration-300
                   ${openSections.events ? 'rotate-90' : ''}
                 `}
