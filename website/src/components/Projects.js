@@ -79,6 +79,35 @@ export default function Projects() {
           </div>
         </div>
         ))}
+
+<div className="w-3/4 mx-auto border-t border-gray-600 opacity-50 my-16"></div>
+
+         {/* SUBMIT game request form */}
+    <section className="w-full max-w-5xl px-6 sm:px-12 text-center flex flex-col items-center mt-1 mb-20">
+    <div data-aos="fade-down"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-aos-delay="0">
+      <h1 className="brick-sans text-6xl sm:text-8xl pb-6 font-extrabold leading-tight">
+        Want to see your <span className="text-purple-600">game</span> here?
+      </h1>
+
+      <p className="mt-2 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
+        Fill out the form below for a chance to have your game be displayed on this page! Only requirement is to be a student at Queen's University. 
+      </p>
+      </div>
+
+      <div data-aos="zoom-in"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-aos-delay="0">
+      {/* Redirect Button */}
+      <a href="https://forms.gle/TVkcrApeS1meoax98" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
+        Game Request Form
+      </a> </div>
+      
+    </section>
+
         </div>
       </div>
     </div>
