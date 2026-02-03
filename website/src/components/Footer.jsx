@@ -100,7 +100,7 @@ function Footer() {
           </div>
         </div>
         <p className="text-white text-xs lg:text-sm font-bold text-center">
-          © 2025 Queen's University Game Development Club
+          © 2026 Queen's University Game Development Club
         </p>
       </div>
     </footer>
