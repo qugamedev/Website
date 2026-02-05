@@ -93,7 +93,7 @@ export default function Projects() {
           Want to see your <span className="text-purple-600">game</span> here?
         </h1>
         <p className="mt-2 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-          Fill out the form below for a chance to have your game be displayed on this page! Only requirement is to be a student at Queen's University.
+          Fill out the form below for a chance to have your game be displayed on this page! Only requirement is to be affiliated with Queen's University.
         </p>
         </div>
         <div data-aos="zoom-in"
