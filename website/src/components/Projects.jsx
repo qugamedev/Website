@@ -37,6 +37,7 @@ export default function Projects() {
         </div>
       </div>
       
+      {/* Project List */}
       <div data-aos="fade-down"
         data-aos-duration="1000"
         data-aos-offset="0"
@@ -80,7 +81,30 @@ export default function Projects() {
         </div>
         ))}
         </div>
+
       </div>
+  <div className="text-center p-10">
+  {/* SUBMIT game request form */}
+  <div data-aos="fade-down"
+        data-aos-offset="0"
+        data-aos-duration="1000"
+        data-aos-delay="0">
+        <h1 className="brick-sans text-6xl sm:text-8xl pb-6 font-extrabold leading-tight">
+          Want to see your <span className="text-purple-600">game</span> here?
+        </h1>
+        <p className="mt-2 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
+          Fill out the form below for a chance to have your game be displayed on this page! Only requirement is to be a student at Queen's University.
+        </p>
+        </div>
+        <div data-aos="zoom-in"
+        data-aos-offset="0"
+        data-aos-duration="1000"
+        data-aos-delay="0">
+        {/* Redirect Button */}
+        <a href="https://forms.gle/TVkcrApeS1meoax98" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
+          Game Request Form
+        </a> </div>
+        </div>    
     </div>
   );
 }
