@@ -28,6 +28,7 @@ const PageNotFound = () => {
             text-white font-extrabold leading-none tracking-tight
             text-[90px] sm:text-[120px] md:text-[150px]
             drop-shadow-[0_10px_0_rgba(0,0,0,0.25)]
+            translate-y-[-45px]
             "
         >
             404
@@ -40,6 +41,7 @@ const PageNotFound = () => {
             text-white/95 uppercase tracking-[0.2em]
             text-sm sm:text-base md:text-lg
             drop-shadow-[0_4px_0_rgba(0,0,0,0.25)]
+            translate-y-[-30px]
             "
         >
             Page Not Found
