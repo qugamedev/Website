@@ -17,7 +17,7 @@ const PageNotFound = () => {
             w-[180px] sm:w-[220px] md:w-[260px]
             h-auto
             drop-shadow-[0_10px_0_rgba(0,0,0,0.25)]
-            -mb-12
+            sm:-mb-12
             relative z-10
             "
         />
