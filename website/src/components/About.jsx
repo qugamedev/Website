@@ -31,11 +31,14 @@ import Ananya from "../assets/images/headshots/Ananya.jpg";
 import Duncan from "../assets/images/headshots/Duncan.jpg";
 import Phoebe from "../assets/images/headshots/Phoebe.jpg";
 import Lauren from "../assets/images/headshots/Lauren.jpg";
+import Evelyn from "../assets/images/headshots/Evelyn.jpg"
+import Cade from "../assets/images/headshots/Cade.jpg"
 
 
 //events
 import Vivian from "../assets/images/headshots/Vivian.jpg";
 import Ethan from "../assets/images/headshots/Ethan.jpg";
+import Josh from "../assets/images/headshots/Josh.jpg"
 // import Leif from "../assets/images/headshots/Leif.jpg"; 
 
 //placeholder
@@ -451,8 +454,10 @@ const About = () => {
             <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 place-items-center">
               <Person name='Ananya Kollipara' title='Marketing Director' image={Ananya} />
               <Person name='Phoebe Chan' title='Graphic Designer' image={Phoebe} />
+              <Person name='Evelyn Siewert' title='Graphic Designer' image={Evelyn} />
               <Person name='Duncan Mahar' title='Social Media Manager' image={Duncan} />
               <Person name='Lauren McQuat' title='Videographer' image={Lauren} />
+              <Person name='Cade Menezes' title='Videographer' image={Cade} />
               <Person name='Maia Turner' title='Finance Manager' image={Maia} />
             </div>
           )}
@@ -485,15 +490,14 @@ const About = () => {
           </div>
 
           {/* EVENTS TEAM HEADSHOTS */}
-          <div className='md:flex md:justify-center'>
           {openSections.events && (
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 justify-items-center gap-8 sm:gap-24'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-3 justify-items-center gap-8'>
               <Person name='Vivian Webster' title='Events Director' image={Vivian} />
               <Person name='Ethan Xu' title='Events Coordinator' image={Ethan} />
+              <Person name='Josh Puusaari' title='Events Coordinator' image={Josh} />
               {/* <Person name='Leif Hill' title='Events Outreach' image={Leif} /> */}
             </div>
           )}
-          </div>
 
           {/* Finance Section ********REMOVED********* 
           <div className="w-full">
