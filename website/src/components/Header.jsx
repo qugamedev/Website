@@ -10,7 +10,7 @@ import {
   Hide,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
-import {useEffect} from "react"; // for importing aos
+import { useEffect } from "react"; // for importing aos
 import AOS from 'aos'; // importing aos
 import 'aos/dist/aos.css'; // importing aos
 
@@ -65,7 +65,7 @@ function Header() {
                 <MenuItem color="black">Community Projects</MenuItem>
               </Link>
             </MenuList>
-          </Menu> 
+          </Menu>
         </Hide>
       </div>
     </div>
