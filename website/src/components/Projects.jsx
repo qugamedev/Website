@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import client, { urlFor } from "./sanityClient";
 
 export default function Projects() {
-  {/* HTML Game Request Form Scripts !!!!!!!!!!!!!!!!!!!!!! */ }
+  {/* HTML Game Request Form Scripts */ }
   const [email, setEmail] = useState("");
   const [title, setTitle] = useState("");
   const [devs, setDevs] = useState("");
@@ -15,7 +15,6 @@ export default function Projects() {
 
   const handleSubmit = (e) => {
     // Form submit
-    e.preventDefault();
     console.log(
       email,
       title,
@@ -27,7 +26,6 @@ export default function Projects() {
       create,
       add,
     );
-    // SUBMISSION LOGIC TO SANITY
   };
 
   const handleReset = () => {
@@ -173,7 +171,8 @@ export default function Projects() {
               QUESTIONS: <br /><br /></p>
 
             {/* Form start */}
-            <form action="#" method="get">
+            <form action="https://formspree.io/f/xykndawq"
+              method="POST">
               {/* Queen's email */}
               <label for="email">
                 1. What is your Queen's email?*  <br />
