@@ -172,7 +172,8 @@ export default function Projects() {
 
             {/* Form start */}
             <form action="https://formspree.io/f/xykndawq"
-              method="POST">
+              method="POST"
+              enctype="multipart/form-data">
               {/* Queen's email */}
               <label for="email">
                 1. What is your Queen's email?*  <br />
