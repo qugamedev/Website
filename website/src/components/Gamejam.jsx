@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "../CSS/Gamejam.css"; // Import CSS file
 
 // Assets
+import sixwinterfirst from "../assets/images/gamejam/sixwinterfirst.png";
+import sixwintersecond from "../assets/images/gamejam/sixwintersecond.png";
+import sixwinterthird from "../assets/images/gamejam/sixwinterthird.png";
+
 import fivefallfirst from "../assets/images/gamejam/fivefallfirst.png";
 import fivefallsecond from "../assets/images/gamejam/fivefallsecond.png";
 import fivefallthird from "../assets/images/gamejam/fivefallthird.png";
@@ -22,7 +26,12 @@ import twofirst from "../assets/images/gamejam/twofirst.png";
 import twosecond from "../assets/images/gamejam/twosecond.png";
 import twothird from "../assets/images/gamejam/twothird.png";
 
-const winnersByYear = {
+const winnersByYear = { 
+  2026: [ 
+    { title: "Snow Snow", developer: "Nerdbow, wasura, TurkeySandwich43", img: sixwinterfirst, place: "1st", link: "https://nerdbow.itch.io/snowsnow"},
+    { title: "SLASH WITHOUT ERROR", developer: "Applepielord", img: sixwintersecond, place: "2nd", link: "https://applepielord291.itch.io/slash-without-error" },
+    { title: "Creme Crash", developer: "SY64I", img: sixwinterthird, place: "3rd", link: "https://sy64i.itch.io/creme-crash" },
+  ],
   2025.5: [
     { title: "No--", developer: "@compsup, @Zo-We", img: fivefallfirst, place: "1st", link: "https://compsup.itch.io/noem"  },
     { title: "Unchair Canny Valley", developer: "@Applepielord", img: fivefallsecond, place: "2nd", link: "https://applepielord291.itch.io/unchair-canny-valley"  },
@@ -57,13 +66,15 @@ const placeColors = {
 }; 
 
 const displayNames = {
+  "2026": "Winter 2026",
   "2025.5": "Fall 2025",
   "2025": "Winter 2025",
 };
 
 function Gamejam() {
   const [showProjects, setShowProjects] = useState({
-    2025.5: true,
+    2026: true,
+    2025.5: false,
     2025: false,
     2024: false,
     2023: false,
@@ -111,34 +122,10 @@ function Gamejam() {
           data-aos-offset="0"
           data-aos-duration="1000"
           data-aos-delay="300">
-        <p className="text-lg sm:text-2xl archivo-black-regular leading-relaxed"> We're excited to announce that our next Game Jam is happening on... </p>
-        {/* Thank you for participating in the QGDC Fall Game Jam 2025! We can't wait to see the incredible games you'll create for the  */}
-        <br />
-        <div className="flex justify-center items-center">
-          <p className="sm:px-8 px-3 py-3 text-2xl sm:text-4xl bg-gradient-to-r from-purple-600 to-indigo-500 archivo-black-regular leading-relaxed">February 27th to March 1st</p>
+        <p className="text-lg sm:text-2xl archivo-black-regular leading-relaxed">
+          Stay tuned for the <span className="text-purple-600 font-bold">QGDC Fall 2026 Game Jam</span> - we can't wait to see what you'll create!
+        </p>
         </div>
-        <br /> 
-        <p className="mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed"> The deadline to register is February 27th at 6:00pm EST. </p>
-        <p className="mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed"> For more information and to register for the Game Jam, click the below buttons to access the sign-up form and the jam's itch.io page! </p>
-        </div>
-
-
-        {/* Redirect Button */}
-        <div data-aos="zoom-in"
-      data-aos-offset="0"
-      data-aos-duration="1000"
-      data-aos-delay="350">
-
-      <div className="grid grid-cols-2 md:gap-10 gap-4 place-items-center">
-        <a href="https://forms.gle/vEwvFN1pzKExnG7m9" className="px-8 py-4 text-xl sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
-          Sign-Up Form
-        </a>
-        <a href="https://itch.io/jam/qgdc-winter-2026-game-jam" className="px-11 py-4 text-xl sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
-          Itch.io Page
-        </a>
-      </div>
-
-      </div>
         
       </section>
 
@@ -257,7 +244,7 @@ function Gamejam() {
       </h1>
 
       <p className="mt-2 mb-6 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
-        We are incredibly proud of all the amazing projects showcased at the QGDC Fall Game Jam 2025! 
+        We are incredibly proud of all the amazing projects showcased at the QGDC Winter Game Jam 2026! 
         A huge thank you to every participant, and a special shoutout to our winners for their outstanding creativity and hard work.
       </p>
       </div>
