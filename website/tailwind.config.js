@@ -6,6 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width:{
+        '128': '32rem',
+        '144': '36rem',
+        '152': '38rem',
+        '160': '40rem'
+      },
       screens: {
         xs: "375px",
       },
