@@ -2,49 +2,17 @@ import React, { useEffect, useState } from "react";
 import uploadImg from "../assets/upload.png"
 import qgdcLogo from "../assets/qgdc_requestForm_logo.png"
 import Xmark from "../assets/X.png"       
+import { useForm } from "react-hook-form"
+import { createPortal } from "react-dom" //Used to allow transformations on the form.
 
-export default function CommunityForm() {
-  {/* HTML Game Request Form Scripts */ }
-  const [email, setEmail] = useState("");
-  const [title, setTitle] = useState("");
-  const [devs, setDevs] = useState("");
-  const [desc, setDesc] = useState("");
-  const [image, setImage] = useState("");
-  const [link, setLink] = useState();
-  const [trigg, setTrigg] = useState("");
-  const [add, setAdd] = useState("");
+export default function CommunityForm({ isOpen, onClose }) {
 
-  //Pop-Up Opening Logic
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleSubmit = (e) => {
-    // Submit form variables.  
-    e.preventDefault(); //Prevents page reload.
-    console.log(
-      "hello |",
-      email,
-      title,
-      devs,
-      desc,
-      image,
-      link,
-      trigg,
-      add,
-    );
-    handleReset()
+  const handleTransmission = (data) => { 
+    // e.preventDefault(); //Prevents page reload.
+    console.log(data);
+    reset()
+    onClose()
     // Insert Additional Submission Logic Here
-  };
-
-  const handleReset = () => {
-    // Reset all form variables.
-    setEmail("");
-    setTitle("");
-    setDevs("");
-    setDesc("");
-    setImage("");
-    setLink("");
-    setTrigg("");
-    setAdd("");
   };
 
   //Used to prevent the screen from scrolling when the form pop-up is open.
@@ -55,28 +23,32 @@ export default function CommunityForm() {
       document.body.classList.remove("overflow-hidden");
     }
 
-    // Cleanup in case the component unmounts while open
+    // Clean-up in case the component unmounts while open.
     return () => document.body.classList.remove("overflow-hidden");
   }, [isOpen])
 
-  return (
-    <div 
-    // data-aos="zoom-in"
-    // data-aos-offset="0"
-    // data-aos-duration="1000"
-    // data-aos-delay="0"
-    className="mt-5">
-      {/* The above transforms are temporarily commented-out as otherwise the pop-up isn't centered on the screen. */}
+  const {register, handleSubmit, reset, watch, formState: { errors }} = useForm({
+    mode: "onSubmit", //Validate only when submit button is pressed.
+    reValidateMode: "onChange" //Validate every time an input changes after the first submit.
+  })
 
-      <button id="accessForm" onClick={() => setIsOpen(!isOpen)} className="bg-fuchsia-500 px-10 py-4 rounded-lg text-xl font-bold">GAME REQUEST FORM</button>
+  //Used for the "No File Chosen" text.
+  const imageFile = watch("image")
+  const fileName = imageFile?.[0]?.name ?? "No File Chosen"
 
-      {/* HTML Game Request Form */}
-      <div className={`${isOpen ? 'flex' : 'hidden'} z-50 fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm`} onClick={() => setIsOpen(!isOpen)}>
-        <form action="#" method="get" className="w-152 h-80 overflow-y-auto [scrollbar-width:none] rounded-2xl" onClick={(e) => e.stopPropagation()}>
+  return createPortal(
+      <div className={`${isOpen ? 'flex' : 'hidden'} z-50 fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm`} onClick={() => onClose()}>
+        <form 
+          action="#" 
+          method="get" 
+          className="w-4/5 h-3/4 lg:w-1/2 md:h-2/3 overflow-y-auto [scrollbar-width:none] rounded-2xl" //w-152 h-80
+          onClick={(e) => e.stopPropagation()}
+          onSubmit={handleSubmit(handleTransmission)}
+        >
 
-          <div className="grid grid-flow-row grid-rows-5  items-center justify-items-center  w-full h-4/5 bg-purple-600 pt-10 relative">
+          <div className="grid grid-flow-row grid-rows-5  items-center justify-items-center  w-full h-2/5 bg-purple-600 pt-10 relative">
 
-            <button className="absolute right-3 top-3 bg-[#FF4DAF] w-10 h-10 rounded-lg" onClick={() => setIsOpen(!isOpen)}>
+            <button className="absolute right-3 top-3 bg-[#FF4DAF] w-10 h-10 rounded-lg" onClick={() => onClose()}>
               <img src={Xmark} className="w-7 h-7 m-auto"></img>
             </button> 
 
@@ -94,143 +66,122 @@ export default function CommunityForm() {
             
 
             {/* Queen's email */}
-            <label className="flex text-white text-left archivo-black-regular text-lg pt-5">
-              1) What is your Queen's email?<span className="text-fuchsia-500">*</span>  <br />
+            <label className="flex text-white text-left archivo-black-regular md:text-lg text-sm pt-5">
+              1) What is your Queen's email?<span className="text-fuchsia-500 ml-auto">*</span>  <br />
             </label>
             <input
-              type="email"
-              name="email"
-              id="email"
-              value={email}
-              onChange={(e) =>
-                setEmail(e.target.value)
-              }
-              placeholder="Enter Queen's email"
-              className="w-full h-6 py-2 bg-indigo-50 text-black invalid:border-fuchsia-500 invalid:border-2 invalid:bg-fuchsia-100" //#EBEFFF
-
-              required
-              minLength={1}
+              {...register("email", {
+                required: "The email address is required",
+                pattern: {value: /^\S+@queensu.ca$/, message: "The email address must be a (@queensu.ca) address."}
+              })}
+              placeholder=" Enter Queen's email"
+              className={`w-full h-6 py-2 bg-indigo-50 text-black ${errors.email ? 'border-fuchsia-500 border-2 bg-fuchsia-100' : ''}`} //#EBEFFF
             /> 
-            <label className="flex text-left text-gray-300 text-sm pt-1">
+            <label className="flex text-left text-gray-300 sm:text-sm text-xs pt-1">
               • This will be our main point of contact with you. (Ex: word@queensu.ca)
-            </label>              
+            </label>
+            {errors.email &&(
+              <p className="mt-1 sm:text-sm text-xs text-fuchsia-500">{errors.email.message}</p>
+            )}         
             <br />  <br />
             
             
             
-            {/* Game Title */}
-            <label className="flex text-white text-left archivo-black-regular text-md">
-              2) What are the name(s) or alias(es) of the developer(s)?<span className="text-fuchsia-500">*</span>  <br />
+            {/* Developers */}
+            <label className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+              2) What are the name(s) or alias(es) of the developer(s)?<span className="text-fuchsia-500 ml-auto">*</span>  <br />
             </label>
             <input
-              type="text"
-              name="title"
-              id="title"
-              value={title}
-              onChange={(e) =>
-                setTitle(e.target.value)
-              }
-              placeholder="Enter game title"
-              className="w-full h-6 bg-indigo-50 text-black invalid:border-fuchsia-500 invalid:border-2 invalid:bg-fuchsia-100" //#EBEFFF
-
-              required
-              minLength={1}
+              {...register("developer", {
+                required: "The name(s) of the developer(s) is required.",
+              })}
+              placeholder=" Enter developer name(s)"
+              className={`w-full h-6 bg-indigo-50 text-black ${errors.developer ? 'border-fuchsia-500 border-2 bg-fuchsia-100' : ''}`} //#EBEFFF
             /> 
-            <label className="flex text-left text-gray-300 text-sm pt-1">
+            <label className="flex text-left text-gray-300 sm:text-sm text-xs pt-1">
               • Use commas ( , ) to separate developers. <br/>
               • Use the vertical bar ( | ) to separate any aliases of the same developer.
             </label> 
+            {errors.developer &&(
+              <p className="mt-1 sm:text-sm text-xs text-fuchsia-500">{errors.developer.message}</p>
+            )}
             <br /> <br />
 
 
 
-            {/* Developers */}
-            <label className="flex text-white text-left archivo-black-regular text-lg">
-              3) What is the title of your game?<span className="text-fuchsia-500">*</span>  <br />
+            {/* Game Title */}
+            <label className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+              3) What is the title of your game?<span className="text-fuchsia-500 ml-auto">*</span>  <br />
             </label>
             <input
-              type="text"
-              name="devs"
-              id="devs"
-              value={devs}
-              onChange={(e) =>
-                setDevs(e.target.value)
-              }
-              placeholder="Enter developer names"
-              className="w-full h-6 bg-indigo-50 text-black invalid:border-fuchsia-500 invalid:border-2 invalid:bg-fuchsia-100" //#EBEFFF
-
-              required
-              minLength={1}
+              {...register("title", {
+                required: "The game's title is required.",
+              })}
+              placeholder=" Enter game title"
+              className={`w-full h-6 bg-indigo-50 text-black ${errors.title ? 'border-fuchsia-500 border-2 bg-fuchsia-100' : ''}`} //#EBEFFF
             />
+            {errors.title &&(
+              <p className="mt-1 sm:text-sm text-xs text-fuchsia-500">{errors.title.message}</p>
+            )}
             <br /> <br />
 
 
 
             {/* Description */}
-            <label className="flex text-white text-left archivo-black-regular text-lg">
-              4) Give a short description of your game.<span className="text-fuchsia-500">*</span>  <br />
+            <label className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+              4) Give a short description of your game.<span className="text-fuchsia-500 ml-auto">*</span>  <br />
             </label>
             <input
-              type="text"
-              name="desc"
-              id="desc"
-              value={desc}
-              onChange={(e) =>
-                setDesc(e.target.value)
-              }
-              placeholder="Enter short description"
-              className="w-full h-6 bg-indigo-50 text-black invalid:border-fuchsia-500 invalid:border-2 invalid:bg-fuchsia-100"
-
-              required
-              minLength={1}
-              maxLength={75}
-            /> 
-            <label className="flex text-left text-gray-300 text-sm pt-1">
+              {...register("desc", {
+                required: "The game's description is required.",
+                maxLength: {value: 75, message: "Too many characters."}
+              })}
+              placeholder=" Enter short description"
+              className={`w-full h-6 bg-indigo-50 text-black ${errors.desc ? 'border-fuchsia-500 border-2 bg-fuchsia-100' : ''}`}
+            />
+            <label className="flex text-left text-gray-300 sm:text-sm text-xs pt-1">
               • Please limit it to 1-2 sentences, with a maximum of 75 words. <br />
               • The wording submitted will be displayed exactly.
             </label> 
+            {errors.desc &&(
+              <p className="mt-1 sm:text-sm text-xs text-fuchsia-500">{errors.desc.message}</p>
+            )}
             <br /> <br />
 
 
 
             {/* Game URL Link */}
-            <label className="flex text-white text-left archivo-black-regular text-lg">
-              5) Provide the URL to your game's itch.io page.<span className="text-fuchsia-500">*</span>  <br />
+            <label className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+              5) Provide the URL to your game's itch.io page.<span className="text-fuchsia-500 ml-auto">*</span>  <br />
             </label>
             <input
+              {...register("url", {
+                required: "The game's itch.io page URL is required.",
+                minLength: 1,
+                pattern: {value: /^(https?:\/\/)?([a-z0-9-]+\.itch\.io)(\/.*)?$/i, message: "The provided URL was not an itch.io link."}
+              })}
               type="url"
-              name="link"
-              id="link"
-              onChange={(e) =>
-                setLink(e.target.value)
-              }
-              placeholder="Enter url"
-              className="w-full h-6 bg-indigo-50 text-black invalid:border-fuchsia-500 invalid:border-2 invalid:bg-fuchsia-100"
-
-              required
-              minLength={1}
+              placeholder=" Enter url"
+              className={`w-full h-6 bg-indigo-50 text-black ${errors.url ? 'border-fuchsia-500 border-2 bg-fuchsia-100' : ''}`}
             />  
+            {errors.url &&(
+              <p className="mt-1 sm:text-sm text-xs text-fuchsia-500">{errors.url.message}</p>
+            )}
             <br /> <br />
 
 
 
             {/* Trigger Warnings */}
-            <label className="flex text-white text-left archivo-black-regular text-lg">
+            <label className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
               6) Does your game contain any trigger warnings? If so, please list all of them.  <br />
             </label>
             <input
-              type="text"
-              name="trigg"
-              id="trigg"
-              value={trigg}
-              onChange={(e) =>
-                setTrigg(e.target.value)
-              }
-              placeholder="Enter warnings"
+              {...register("triggers")}
+              placeholder=" Enter warnings"
               className="w-full h-6 bg-indigo-50 text-black"
             />  
             
-            <label className="flex text-left text-gray-300 text-sm pt-1">
+            <label className="flex text-left text-gray-300 sm:text-sm text-xs pt-1">
               You must answer the above question if your game contains any of the following: <br/>
               • Flashing Lights <br/>
               • Gore/Blood <br/>
@@ -247,54 +198,52 @@ export default function CommunityForm() {
 
 
             {/* Image */}
-            <label className="flex text-white text-left archivo-black-regular text-lg">
-              7) Upload an image of your game.<span className="text-fuchsia-500">*</span>  <br />
+            <label className="flex text-white text-left archivo-black-regular md:text-lg text-sm pb-2">
+              7) Upload an image of your game.<span className="text-fuchsia-500 ml-auto">*</span>  <br />
             </label>
-            <div className="flex items-center justify-center bg-indigo-600 h-48 rounded-3xl">
+            <div className="flex items-center justify-center bg-indigo-600 h-48 rounded-3xl md:w-1/2 w-2/3 px-2 m-auto">
               <div className="flex justify-center items-center bg-indigo-600 flex-col w-95/100 min-h-44 border-4 border-dashed border-white rounded-2xl">
-                  <img src={uploadImg} className="w-1/5 h-1/5 flex"></img>
+                  <img src={uploadImg} className="md:w-1/5 md:h-1/5 w-2/5 h-2/5 flex"></img>
                   
-                  <div className="grid grid-cols-2 gap-x-3 w-full">
-                    <label className="flex justify-end underline text-lg">
+                  <div className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 md:gap-x-3 w-full">
+                    <label className="flex justify-center md:justify-end items-center underline md:text-lg text-sm text-white">
                         Choose File
+                        <input
+                          {...register("image", {
+                            required: "An image of the game is required.",
+                          })}
+                          type="file"
+                          placeholder=" Enter upload file"
+                          className="hidden"
+                        />  
                     </label>
 
-                    <input
-                      type="file"
-                      name="image"
-                      id="file-upload"
-                      onChange={(e) =>
-                        setDesc(e.target.files[0])
-                      }
-                      placeholder="Enter upload file"
-                      className="text-lg file:hidden w-44"
-
-                      required
-                    />  
+                    <span className="md:m-0 m-auto md:text-left text-center md:text-lg text-sm text-white">
+                      {fileName}
+                    </span>
                   </div>
 
               </div>
             </div>
             
-            <label className="flex text-left text-gray-300 text-sm pt-1">
+            <label className="flex text-left text-gray-300 sm:text-sm text-xs pt-1">
               • This will be the image used on the Community Projects page.
-            </label> 
+            </label>
+            {errors.image &&(
+              <p className="mt-1 sm:text-sm text-xs text-fuchsia-500">{errors.image.message}</p>
+            )} 
             <br /> <br />
 
 
 
             {/* Additional comments */}
-            <label className="flex text-white text-left archivo-black-regular text-lg">
+            <label className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
               8) Any additional comments about your request?    <br />             </label>
             <textarea
-              name="add"
-              id="add"
+              {...register("comments")}
               cols="40"
               rows="5"
-              onChange={(e) =>
-                setAdd(e.target.value)
-              }
-              placeholder="Enter additional comments"
+              placeholder=" Enter additional comments"
               className="w-full h-6 bg-indigo-50 pb-5 text-black"
             ></textarea> 
             <br /> <br /> <br />
@@ -303,13 +252,13 @@ export default function CommunityForm() {
 
 
             {/* Reset Button */}
-            <div className="h-2/5 bg-purple-600 relative">
+            <div className="h-1/6 bg-purple-600 relative">
 
             <button
               type="reset"
               value="reset"
-              onClick={() => handleReset()}
-              className="bg-red-400 rounded-2xl font-bold px-20 py-4 text-2xl drop-shadow-md absolute left-10 top-4"
+              onClick={() => reset()}
+              className="bg-red-400 md:rounded-2xl rounded-lg font-bold md:px-20 px-7 md:py-4 py-2 md:text-2xl text-lg text-white drop-shadow-md absolute left-10 top-4"
             >
               Reset
             </button>
@@ -318,8 +267,7 @@ export default function CommunityForm() {
             <button
               type="submit"
               value="Submit"
-              onClick={(e) => handleSubmit(e)}
-              className="bg-lime-500 rounded-2xl font-bold px-20 py-4 text-2xl drop-shadow-md absolute right-10 top-4"
+              className="bg-lime-500 md:rounded-2xl rounded-lg font-bold md:px-20 px-7 md:py-4 py-2 md:text-2xl text-lg text-white drop-shadow-md absolute right-10 top-4"
             >
               {/* Submit Button */}
               Submit
@@ -327,7 +275,7 @@ export default function CommunityForm() {
 
           </div>
         </form>
-      </div>
-    </div>
+      </div>,
+    document.body
   ) 
 }

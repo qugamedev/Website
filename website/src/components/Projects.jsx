@@ -18,6 +18,9 @@ export default function Projects() {
       .catch(console.error);
   }, []);
 
+  //Pop-Up Opening Logic
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="bg-[#0f0f10] min-h-screen text-white font-sans pt-24">
 
@@ -101,7 +104,19 @@ export default function Projects() {
           </p>
         </div>
 
-        <CommunityForm/>
+        <div 
+        data-aos="zoom-in"
+        data-aos-offset="0"
+        data-aos-duration="1000"
+        data-aos-delay="0"
+        className="mt-5"
+        >
+
+          <button id="accessForm" onClick={() => setIsOpen(!isOpen)} className="bg-fuchsia-500 px-10 py-4 rounded-lg text-xl font-bold">GAME REQUEST FORM</button>
+
+          <CommunityForm isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}/>
+
+        </div>
 
       </div>
 
