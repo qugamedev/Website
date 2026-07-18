@@ -12,6 +12,9 @@ module.exports = {
         '152': '38rem',
         '160': '40rem'
       },
+      height:{
+        '66': '16.5rem'
+      },
       screens: {
         xs: "375px",
       },

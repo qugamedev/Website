@@ -46,7 +46,7 @@ export default function CommunityForm({ isOpen, onClose }) {
           onSubmit={handleSubmit(handleTransmission)}
         >
 
-          <div className="grid grid-flow-row grid-rows-5  items-center justify-items-center  w-full h-2/5 bg-purple-600 pt-10 relative">
+          <div className="grid grid-flow-row grid-rows-5  items-center justify-items-center  w-full h-66 bg-purple-600 pt-10 relative">
 
             <button className="absolute right-3 top-3 bg-[#FF4DAF] w-10 h-10 rounded-lg" onClick={() => onClose()}>
               <img src={Xmark} className="w-7 h-7 m-auto"></img>
@@ -160,7 +160,6 @@ export default function CommunityForm({ isOpen, onClose }) {
                 minLength: 1,
                 pattern: {value: /^(https?:\/\/)?([a-z0-9-]+\.itch\.io)(\/.*)?$/i, message: "The provided URL was not an itch.io link."}
               })}
-              type="url"
               placeholder=" Enter url"
               className={`w-full h-6 bg-indigo-50 text-black ${errors.url ? 'border-fuchsia-500 border-2 bg-fuchsia-100' : ''}`}
             />  
@@ -252,7 +251,7 @@ export default function CommunityForm({ isOpen, onClose }) {
 
 
             {/* Reset Button */}
-            <div className="h-1/6 bg-purple-600 relative">
+            <div className="md:h-24 h-20 bg-purple-600 relative">
 
             <button
               type="reset"
