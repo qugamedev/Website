@@ -99,7 +99,7 @@ export default function Projects() {
           <h1 className="brick-sans text-6xl sm:text-8xl pb-6 font-extrabold leading-tight">
             Want to see your <span className="text-purple-600">game</span> here?
           </h1>
-          <p className="mt-2 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
+          <p className="mt-2 text-lg sm:text-2xl archivo-black-regular leading-relaxed pb-5">
             Fill out the form below for a chance to have your game be displayed on this page! Only requirement is to be affiliated with Queen's University.
           </p>
         </div>
@@ -111,10 +111,13 @@ export default function Projects() {
         data-aos-delay="0"
         className="mt-5"
         >
+          <a href="https://forms.gle/TVkcrApeS1meoax98" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
+          Game Request Form
+        </a>
 
-          <button id="accessForm" onClick={() => setIsOpen(!isOpen)} className="bg-fuchsia-500 px-10 py-4 rounded-lg text-xl font-bold">GAME REQUEST FORM</button>
+          {/* <button id="accessForm" onClick={() => setIsOpen(!isOpen)} className="bg-fuchsia-500 px-10 py-4 rounded-lg text-xl font-bold">GAME REQUEST FORM</button>
 
-          <CommunityForm isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}/>
+          <CommunityForm isOpen={isOpen} onClose={() => setIsOpen(!isOpen)}/> */}
 
         </div>
 
