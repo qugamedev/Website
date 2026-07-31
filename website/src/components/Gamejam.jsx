@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../CSS/Gamejam.css"; // Import CSS file
+import "../Gamejam.css"; // Import CSS file
 
-// Assets
+// Game Jam Winner Assets
 import sixwinterfirst from "../assets/images/gamejam/sixwinterfirst.png";
 import sixwintersecond from "../assets/images/gamejam/sixwintersecond.png";
 import sixwinterthird from "../assets/images/gamejam/sixwinterthird.png";
@@ -72,6 +72,8 @@ const displayNames = {
 };
 
 function Gamejam() {
+
+  // [useState] tracker variables that check if a game jam's year section is open or not.
   const [showProjects, setShowProjects] = useState({
     2026: true,
     2025.5: false,
@@ -112,11 +114,10 @@ function Gamejam() {
         <p className=" data-aos-fade-down mt-5 mb-10 text-lg sm:text-2xl archivo-black-regular leading-relaxed">
         The QGDC Game Jam is a biannual game development competition held both online and in-person in Kingston. With fresh themes each jam,
         developers of all skill levels can unleash their creativity and compete against their peers across Canada.
-        {/* Ready to level up your game? Join now! */}
         </p>
         </div>
         
-        {/* Next Game Jam */}
+        {/* Next Game Jam Text */}
         <div className="mt-7 mb-6"
           data-aos="fade-down"
           data-aos-offset="0"
@@ -233,6 +234,9 @@ function Gamejam() {
 
       <div className="w-3/4 mx-auto border-t border-gray-600 opacity-50 my-16"></div>
 
+
+
+
     {/* VIEW ALL PROJECTS!! Section (Redirect to new Page) */}
     <section className="w-full max-w-5xl px-6 sm:px-12 text-center flex flex-col items-center mt-1 mb-20">
     <div data-aos="fade-down"
@@ -259,8 +263,6 @@ function Gamejam() {
       </a> </div>
       
     </section>
-
-
 
     </div>
   );

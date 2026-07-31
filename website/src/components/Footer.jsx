@@ -1,4 +1,3 @@
-import React from "react";
 import discord_logo from "../assets/images/logos/discord_logo.svg";
 import instagram_logo from "../assets/images/logos/instagram_logo.svg";
 import youtube_logo from "../assets/images/logos/youtube_logo.svg";
@@ -11,6 +10,7 @@ function Footer() {
     <footer className="w-full relative z-10 bg-[#121212] border-t border-gray-800">
       <div className="container mx-auto px-4 py-4 flex flex-col items-center justify-center">
         <div className="flex flex-col md:flex-row items-center justify-center gap-5 mb-2">
+          {/* Email */}
           <a
             href="mailto:qugamedev@clubs.queensu.ca"
             className="text-white text-lg font-archivo text-center"
@@ -108,49 +108,3 @@ function Footer() {
 }
 
 export default Footer;
-          /*
-          <div className='Frame7' style={{ ustifyContent: "center", alignItems: "center", gap: 15, display: "flex" }}>
-            <div
-              className='Frame5'
-              style={{
-                padding: 20,
-                borderRadius: 10,
-                overflow: "hidden",
-                border: "5px black solid",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: 10,
-                display: "inline-flex",
-              }}
-            >
-              <div
-                className='TypeYourEmail'
-                style={{ textAlign: "center", color: "#C1C1C1", fontSize: 20, fontFamily: "Lexend Deca", fontWeight: "700", wordWrap: "break-word" }}
-              >
-                <input style={{width: 173, background: "inherit"}}  placeholder='Type your email...'></input>
-              </div>
-            </div>
-            <div
-              className='Frame4'
-              style={{
-                padding: 25,
-                background: "black",
-                borderRadius: 10,
-                overflow: "hidden",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: 10,
-                display: "inline-flex",
-              }}
-            >
-              <div
-                className='Subscribe'
-                style={{ textAlign: "center", color: "white", fontSize: 20, fontFamily: "Lexend Deca", fontWeight: "700", wordWrap: "break-word" }}
-              >
-                <button>Subscribe</button>
-              </div>
-            </div>
-          </div>
-          */

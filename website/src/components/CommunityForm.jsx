@@ -12,7 +12,7 @@ export default function CommunityForm({ isOpen, onClose }) {
     console.log(data);
     reset()
     onClose()
-    // Insert Additional Submission Logic Here
+    // Insert Additional Submission Logic Here <--- <--- <--- <--- <---
   };
 
   //Used to prevent the screen from scrolling when the form pop-up is open.
@@ -27,10 +27,13 @@ export default function CommunityForm({ isOpen, onClose }) {
     return () => document.body.classList.remove("overflow-hidden");
   }, [isOpen])
 
+
+  //Set-up logic for form validation.
   const {register, handleSubmit, reset, watch, formState: { errors }} = useForm({
     mode: "onSubmit", //Validate only when submit button is pressed.
     reValidateMode: "onChange" //Validate every time an input changes after the first submit.
   })
+
 
   //Used for the "No File Chosen" text.
   const imageFile = watch("image")
@@ -118,7 +121,7 @@ export default function CommunityForm({ isOpen, onClose }) {
                 required: "The game's title is required.",
               })}
               placeholder=" Enter game title"
-              className={`w-full h-6 bg-indigo-50 text-black ${errors.title ? 'border-fuchsia-500 border-2 bg-fuchsia-100' : ''}`} //#EBEFFF
+              className={`w-full h-6 bg-indigo-50 text-black ${errors.title ? 'border-fuchsia-500 border-2 bg-fuchsia-100' : ''}`}
             />
             {errors.title &&(
               <p className="mt-1 sm:text-sm text-xs text-fuchsia-500">{errors.title.message}</p>
@@ -250,9 +253,9 @@ export default function CommunityForm({ isOpen, onClose }) {
             </div>
 
 
-            {/* Reset Button */}
             <div className="md:h-24 h-20 bg-purple-600 relative">
 
+            {/* Reset Button */}
             <button
               type="reset"
               value="reset"
@@ -263,12 +266,12 @@ export default function CommunityForm({ isOpen, onClose }) {
             </button>
 
 
+            {/* Submit Button */}
             <button
               type="submit"
               value="Submit"
               className="bg-lime-500 md:rounded-2xl rounded-lg font-bold md:px-20 px-7 md:py-4 py-2 md:text-2xl text-lg text-white drop-shadow-md absolute right-10 top-4"
             >
-              {/* Submit Button */}
               Submit
             </button>
 

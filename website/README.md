@@ -1,8 +1,10 @@
 # Navigating the `website` Directory
 
+The `website` directory acts as the main folder containing all of the assets, components and functionalities of the website.
+
 The `website` directory contains two directories and the following four files:
 - `package.json` and `package-lock.json` : Store the package dependencies needed for the website to function.
-- `tailwind.config.js` : The config file for TailwindCSS. May need to be edited to allow for custom colours or fonts.
+- `tailwind.config.js` : The config file for TailwindCSS. May need to be edited to allow for custom colours, heights or fonts.
 - `vite.config.js` : The config file for Vite. May need to be edited to allow for different build settings.
 
 The following is the information for the aforementioned two directories stored within `website`:

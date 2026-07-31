@@ -5,7 +5,7 @@ This is the repository for the Queen's Game Development Club (QGDC) website.
 
 ## Figma Design
 
-The Figma design used for this website can be found [here](https://www.figma.com/design/nFfrRugpOiNgpcul5EAfBv/QGDC-Static-Website?node-id=12-165).
+The Figma design used for this website can be found [here](https://www.figma.com/design/xANVZnzMgay1hEDySqX66P/QGDC-Static-Website--2025-2026-UPDATE-?node-id=4601-122&p=f&t=nOx83qUJFFwxkKE4-0).
 
 ## Website Deployment
 
@@ -19,7 +19,7 @@ There are two main directories in the repository - `website` and `backend`.
 
 The `website` directory contains all the front-end components for the website, including image assets and JavaScript components/pages. If you are working on any front-end task, this is the directory you want to be in. Details about what's in the `website` directory are found in the README.md file in said directory.
 
-The `backend` directory contains all the back-end components for the website, including a database and a test environment for admin users. If you need to work on a back-end task, this is the directory you want to be in. Details about the contents of the `backend` directory are found in the README.md file in said directory. However, it should be noted that the backend folders are currently deprecated, although there are plans to utilize the pre-existing backend.
+The `backend` directory contains all the back-end components for the website, including a database and a test environment for admin users. If you need to work on a back-end task, this is the directory you want to be in. Details about the contents of the `backend` directory are found in the README.md file in said directory. However, it should be noted that the backend folders are currently deprecated, although there are plans to update it.
 
 
 ## Running a Localhost (for Developers)

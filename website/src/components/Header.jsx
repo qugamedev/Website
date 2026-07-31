@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/qgdc_logo.png";
 import {
@@ -18,8 +17,9 @@ function Header() {
   return (
     <div className='fixed top-0 left-0 z-50 w-full text-white bg-gradient-to-b from-black to-transparent h-[120px] sm:h-[140px] lg:h-[159px]'>
       <div className='flex items-center justify-between h-full px-6 sm:px-10 lg:px-16'>
-        {/* Logo */}
+
         <div className='flex items-center space-x-6 sm:space-x-10'>
+          {/* Logo */}
           <Link to='/'>
             <img src={logo} alt='Logo' className='h-[90px] sm:h-[110px] lg:h-[120px]' />
           </Link>

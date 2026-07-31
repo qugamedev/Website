@@ -1,3 +1,6 @@
+
+// DISCLAIMER: This code is deprecated but is being retained for potential future use.
+
 import React from "react";
 import graphics from "../assets/images/middle_graphics.svg";
 //import gamejamIMG from "../assets/images/gamejam.png";
