@@ -1,7 +1,3 @@
-//import React, { useLayoutEffect, useState } from "react";
-import React from "react";
-
-//import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // Pages
@@ -28,14 +24,18 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function App() {
-  var singlePage = true;
+  var singlePage = true; //Decides if the header is included on the homepage or not.
+
   useEffect(() => {
     AOS.init({once: true}); // plays all animations only the first time you are on the page
     AOS.refresh();
   }, []);
+
   return (
     <ChakraProvider>
       <Router>
+
+        {/* Either use the <Header> component, or use a simplified title header depending on [singlePage] value. */}
         {singlePage ? (
           <Header></Header>
         ) : (
@@ -51,6 +51,7 @@ function App() {
           </div>
         )}
 
+        {/* Establish routes to other pages. */}
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -60,7 +61,10 @@ function App() {
           <Route path='*' element={<PageNotFound />} />
           {/* <Route path='/blog' element={<Blog />} /> */}
         </Routes>
+
+        {/* Add footer component to page. */}
         <Footer></Footer>
+        
       </Router>
     </ChakraProvider>
   );

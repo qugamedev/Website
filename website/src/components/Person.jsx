@@ -1,4 +1,6 @@
-import React from "react";
+
+// A subcomponent used in the "About" page to create the headshot objects.
+
 import temp_person from "../assets/images/headshots/temp_person.webp";
 import {useEffect} from "react"; // for importing aos
 import AOS from 'aos'; // importing aos

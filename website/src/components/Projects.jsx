@@ -3,6 +3,8 @@ import client, { urlFor } from "./sanityClient";
 import CommunityForm from "./CommunityForm";
 
 export default function Projects() {
+
+  // Sanity.io Logic to showcase Community Projects - To be updated with our own backend in the future.
   const [projects, setProjects] = useState([]);
   useEffect(() => {
     client
@@ -18,12 +20,14 @@ export default function Projects() {
       .catch(console.error);
   }, []);
 
-  //Pop-Up Opening Logic
+
+  //HTML Form Pop-Up Opening Logic
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="bg-[#0f0f10] min-h-screen text-white font-sans pt-24">
 
+      {/* Opening Text */}
       <div className="text-center p-10">
         <div data-aos="fade-down"
           data-aos-duration="1000"
@@ -88,10 +92,10 @@ export default function Projects() {
         </div>
 
       </div>
+
+
+      {/* Game Request Form */}
       <div className="text-center p-10">
-
-
-        {/* TEMP Game Request Form */}
         <div data-aos="fade-down"
           data-aos-offset="0"
           data-aos-duration="1000"
@@ -111,7 +115,8 @@ export default function Projects() {
         data-aos-delay="0"
         className="mt-5"
         >
-          <a href="https://forms.gle/TVkcrApeS1meoax98" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
+        {/* The current <a> is temporary, and will be replaced with the commented-out <CommunityForm> component once its connected to the backend. */}
+        <a href="https://forms.gle/TVkcrApeS1meoax98" className="px-8 py-4 text-lg sm:text-2xl font-bold text-white bg-purple-600 hover:bg-purple-700 transition rounded-lg shadow-lg">
           Game Request Form
         </a>
 

@@ -1,5 +1,6 @@
-import React from "react";
-//import temp_person from "../assets/images/headshots/temp_person.webp";
+
+// DISCLAIMER: This code is deprecated but is being retained for potential future use.
+
 import {useEffect} from "react"; // for importing aos
 import AOS from 'aos'; // importing aos
 import 'aos/dist/aos.css'; // importing aos

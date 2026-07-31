@@ -1,10 +1,14 @@
 # Navigating the `backend` Directory
 
+The `backend` directory was established by the Website Team prior to the Fall 2025 term. As such, documentation on its intended use is scarce, but it seems
+that it was used to enable a deprecated Blog feature on the website. Due to the deprecation, the `backend` directory has no current relevance to the website's
+functionalities. (Although as of writing, we are hoping to remedy that by adding our own database to the website to store community project submissions).
+
 The `backend` directory contains two notable directories:
-- `server` : The directory that stores information about the website's database.
+- `server` : The directory that stores information about the website's rough database.
 - `test_environment` : The directory that stores the test environment that is run with the command `npm start`. Contains the following notable sub-directories:
    * `public` : This directory contains images of the QGDC logo as well as a template HTML page.
-   * `src` : The main directory within `test_environment` that stores all the components and functionality of the website. Has the following notable sub-directories and files:
+   * `src` : The main directory within `test_environment` that stores all the components and functionality of the website's backend. Has the following notable sub-directories and files:
       * `App.js` : A React component file that stores all the main routing and displays all the components for the website.
       * `admin.js` : A file that manages the users in the database.
       * `Auth` : The directory that stores the page for logging into the database.

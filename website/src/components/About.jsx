@@ -2,10 +2,6 @@
 import React, { useRef, useState } from 'react';
 
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-//import * as THREE from 'three';
-//import discord_logo from "../assets/images/logos/discord_logo.svg";
-
-import { MeshBasicMaterial } from 'three';
 
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
@@ -51,45 +47,7 @@ import * as THREE from 'three';
 import right_arc from "../assets/images/right arc.svg";
 import right_arc2 from "../assets/images/right arc 2.svg";
 
-//import right_arc from "../assets/images/right arc.svg";
-//import right_arc2 from "../assets/images/right arc 2.svg";
-/*
-function SpinningCube() {
-  const cubeRef = useRef();
-
-  useFrame(() => {
-    cubeRef.current.rotation.x += 0.01;
-   // cubeRef.current.rotation.y += 0.01;
-  });
-
-  return (
-    <mesh ref={cubeRef}>
-      <boxGeometry args={[2, 2, 2]} />
-      <meshStandardMaterial attach="material" color="orange" />
-    </mesh>
-  );
-}
-
-function Torus() {
-  const torusRef = useRef();
-
-  useFrame(() => {
-    // Rotate the torus for some basic animation
-    torusRef.current.rotation.x += 0.01;
-   // torusRef.current.rotation.y += 0.02;
-  });
-
-  return (
-    <mesh ref={torusRef}>
-      <torusGeometry args={[1, 0.4, 16, 100]} />
-      <meshBasicMaterial color="#B66cff" wireframe />
-    </mesh>
-  );
-}
-*/
-
-
-
+// A function used to load the Blender object to be used in the background.
 function Model() {
   const obj = useLoader(OBJLoader, qgdc_model);
   const ref = useRef();
@@ -113,7 +71,11 @@ function Model() {
   return <primitive object={obj} ref={ref} />;
 }
 
+
+//Return the frontend design of the page
 const About = () => {
+
+  // [useState] tracker variables that check if a subteam's section is open or not.
   const [openSections, setOpenSections] = useState({
     website: false,
     marketing: false,
@@ -295,7 +257,7 @@ const About = () => {
               Queen's Game Development Club (QGDC)
             </h1>
           
-
+          {/* AMS Recognition Text */}
           <p
             style={{
               fontFamily: 'Archivo Black, sans-serif',
@@ -308,7 +270,7 @@ const About = () => {
           </p>
           </div>
 
-          {/* Our Mission */}
+          {/* Our Mission Text */}
           <div  data-aos="fade-down"
           data-aos-duration="1000"
           data-aos-offset="0"
@@ -328,7 +290,7 @@ const About = () => {
             dynamic community meetups, and innovative learning experiences.
           </p></div>
 
-          {/* Join Our Community */}
+          {/* Join Our Community Text */}
           <div  data-aos="fade-down"
           data-aos-duration="1000"
           data-aos-offset="0"
@@ -349,38 +311,38 @@ const About = () => {
         </div>
         </div>
 
-        <div> {/** vertical container. */}
-        <div className="WhyYouShouldJoinUs"
-          style={{ color: 'white', fontSize: 40, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-        </div>
-        
+      {/* Join Us Now Button */}
+      <div>
         <div 
           style={{maxWidth: 819, marginTop: 0}}>  
         </div>
+
         <div style={{maxWidth: '100%', marginTop: 0, marginBottom: 100,
           color: 'white', fontSize: 24, fontFamily: 'NT Brick Sans', 
           fontWeight: '400', wordWrap: 'break-word', display: 'flex',
           justifyContent: 'center' }}
-            className="flex items-center justify-center">
-              <div  data-aos-duration="1000"
-            data-aos="zoom-in">
-              <a 
+          className="flex items-center justify-center">
+          
+          <div  data-aos-duration="1000" data-aos="zoom-in">
+          <a 
             href='https://forms.gle/HWqW5cS3cbxraV2u5' target="_blank" rel="noopener noreferrer" 
             style={{ textDecoration: 'none' }}    // Removes default link styling
           >
           <button className="mt-6 px-6 py-3 border-2 border-purple-600 text-white font-bold rounded-md bg-purple-600 hover:bg-purple-700 transition">
-        Join Us Now
-      </button>
-      </a>
-      </div>
+            Join Us Now
+          </button>
+          </a>
+          </div>
         </div>
       </div>
 
-       {/* { Leader Ship} */}
+
+       {/* {Leadership} */}
        <section className='w-full bg-custom-purple'>
         <div className='mx-auto sm:p-15 px-10 max-w-8xl'>
           <h2 className='pt-10 mb-10 text-3xl font-bold text-center text-white lg:text-7xl sm:text-5xl xs:text-4xl font-brick'>Our Team</h2>
           <div className='md:flex md:justify-center'>
+
             {/* CO-CHAIRS */}
             <div className='grid sm:grid-cols-1 md:grid-cols-2 justify-items-center gap-8 sm:gap-24 overflow-hidden'>
               <Person name='Lillie Amos' title='Co-Chair' image={Lillie} />
@@ -527,40 +489,6 @@ const About = () => {
       </section>
       </div>
 
-      {/*
-      <div style={{display: 'flex', position: 'relative', justifyContent: "flex-end",flexDirection: 'row' }}>
-        <div>
-          <div className="WhatSOurGoal"
-            style={{ textAlign: 'right', color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-              Community Track
-          </div>
-          <div className="lorem2" 
-            style={{maxWidth: 776,  textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
-            The Community Track is the core experience and programming of the QGDC, open to all club participants.
-            We foster a community through weekly, in-person club meetups, where the QGDC hosts speaker series, Dev Hubs, and educational workshops. 
-The QGDC nurtures those in this track through regular, in-person club meetups,
-where the QGDC hosts speaker series, educational workshops, and Dev Hubs.
-
-You will get the opportunity to embark on the Sorcerer's Quest, together with your fellow game devs.
-We manage an active list of Community Projects on this website and in our Discord server.
-Did we mention that we have a vibrant Discord server?
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <div className="WhatIsQgdc" style={{color: 'white', fontSize: 60, fontFamily: 'NT Brick Sans', fontWeight: '700', wordWrap: 'break-word'}}>
-        Professional Track
-        </div>
-        <div className="lorem1" 
-        style={{maxWidth: 865, color: 'white', fontSize: 32, fontFamily: 'Archivo Black', fontWeight: '400', wordWrap: 'break-word'}}>
-          We incubate Gamedev Teams each year towards the creation of a complete, shipping game.
-          
-          We provide networking opportunities via the year end "Tradeshow", where the Gamedev Teams will present the fruit of their labour.
-        </div>
-      </div>
-      */}
-
 
       {/* Mobile Friendly Styles */}
       <style>{`
@@ -589,7 +517,6 @@ Did we mention that we have a vibrant Discord server?
     
   );
 
-  
 };
 
 export default About;
