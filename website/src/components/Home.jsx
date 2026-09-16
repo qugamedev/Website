@@ -515,7 +515,7 @@ function Home() {
          ══════════════════════════════════════════════════ */}
       <section className="bg-[#111111] py-20 px-6 sm:px-12">
         <div className="container mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold font-archivo text-center mb-10">
+          <h2 className="brick-sans text-3xl sm:text-4xl font-extrabold text-center mb-10 uppercase">
             Check Out Our Events
           </h2>
           <EventCarousel />
