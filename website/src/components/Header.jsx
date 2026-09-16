@@ -29,9 +29,6 @@ function Header() {
             <Link to='/' className='text-xl lg:text-2xl font-bold hover:text-gray-300'>
               Home
             </Link>
-            <Link to='/about' className='text-xl lg:text-2xl font-bold hover:text-gray-300'>
-              About
-            </Link>
             <Link to='/GameJam' className='text-xl lg:text-2xl font-bold hover:text-gray-300'>
               Game Jam
             </Link>
@@ -54,9 +51,6 @@ function Header() {
             <MenuList>
               <Link to='/'>
                 <MenuItem color="black">Home</MenuItem>
-              </Link>
-              <Link to='/about'>
-                <MenuItem color="black">About</MenuItem>
               </Link>
               <Link to='/GameJam'>
                 <MenuItem color="black">Game Jam</MenuItem>
