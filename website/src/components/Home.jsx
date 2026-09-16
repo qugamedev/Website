@@ -140,7 +140,7 @@ function DepartmentGroup({ label, rows }) {
       {/* Department label */}
       <div className="flex items-center gap-4 mb-10">
         <div className="flex-1 h-px bg-white/20" />
-        <span className="brick-sans text-xl sm:text-2xl font-extrabold text-white/70 uppercase tracking-widest">
+        <span className="brick-sans text-2xl sm:text-3xl font-extrabold text-white/70 uppercase tracking-widest">
           {label}
         </span>
         <div className="flex-1 h-px bg-white/20" />
@@ -161,11 +161,11 @@ function DepartmentGroup({ label, rows }) {
 }
 
 const EVENTS = [
-  { src: event_computing_showcase, name: "Computing Showcase", alt: "Computing Showcase, Winter 2026" },
-  { src: event_game_jam,           name: "Game Jam",             alt: "Game Jam, Fall 2025" },
-  { src: event_general_meeting,    name: "General Meeting",      alt: "General Meeting, Fall 2025" },
-  { src: event_jeopardy,           name: "Jeopardy Night",     alt: "Jeopardy Night, Winter 2025" },
-  { src: event_qhacks_collab,      name: "QHacks Collab",        alt: "QHacks Collab, Fall 2025" },
+  { src: event_computing_showcase, name: "Computing Showcase (Winter 2026)", alt: "Computing Showcase, Winter 2026" },
+  { src: event_game_jam,           name: "Game Jam (Fall 2025)",             alt: "Game Jam, Fall 2025" },
+  { src: event_general_meeting,    name: "General Meeting (Fall 2025)",      alt: "General Meeting, Fall 2025" },
+  { src: event_jeopardy,           name: "Jeopardy Night (Winter 2025)",     alt: "Jeopardy Night, Winter 2025" },
+  { src: event_qhacks_collab,      name: "QHacks Collab (Fall 2025)",        alt: "QHacks Collab, Fall 2025" },
 ];
 const EVENT_CARD_WIDTH = 320; // px, keep in sync with the inline style below
 const EVENT_CARD_GAP = 24; // px, keep in sync with the gap-6 class below
@@ -277,7 +277,7 @@ function Home() {
       `}</style>
 
       {/* ══════════════════════════════════════════════════
-          1. HERO / START SCREEN  (unchanged from current)
+          1. HERO / START SCREEN 
          ══════════════════════════════════════════════════ */}
       <section
         style={heroStyle}
@@ -312,8 +312,6 @@ function Home() {
 
       {/* ══════════════════════════════════════════════════
           2. ABOUT US DESCRIPTION
-          (background merged in from About.jsx: 3D model,
-          arc illustrations, blur overlay)
          ══════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden py-20 px-6 sm:px-12" style={{ background: '#121212' }}>
 
@@ -505,7 +503,7 @@ function Home() {
             href="https://discord.gg/PDGjGTJR"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-blue-500 hover:bg-cyan-500 transition text-white font-bold font-archivo px-8 py-3 rounded-md text-base sm:text-lg"
+            className="inline-flex items-center gap-3 bg-[#1ECCFC] hover:bg-[#18A3CA] transition text-white font-bold font-archivo px-8 py-3 rounded-md text-base sm:text-lg"
           >
             Join Us Now
           </a>
@@ -616,9 +614,14 @@ function Home() {
          ══════════════════════════════════════════════════ */}
       <section className="bg-purple-500 py-20 px-6 sm:px-12">
         <div className="container mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold font-archivo text-center mb-14">
-            Leadership
-          </h2>
+          {/* Leadership header, styled consistently with department headers below */}
+          <div className="flex items-center gap-4 mb-14">
+            <div className="flex-1 h-px bg-white/20" />
+            <span className="brick-sans text-3xl sm:text-5xl font-extrabold text-white uppercase tracking-widest text-center">
+              Leadership
+            </span>
+            <div className="flex-1 h-px bg-white/20" />
+          </div>
 
           {/* Co-Chairs row (2, centred) */}
           <div className="flex justify-center gap-16 mb-16 flex-wrap">
