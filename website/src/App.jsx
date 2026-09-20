@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 // Pages
 import Header from "./components/Header.jsx";
 import Home from "./components/Home.jsx";
-import About from "./components/About.jsx";
 import GameJam from "./components/Gamejam.jsx";
 import Projects from "./components/Projects.jsx"
 import PageNotFound from "./components/404Page.jsx";
@@ -54,7 +53,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
-          <Route path='/about' element={<About />} />
           <Route path='/gamejam' element={<GameJam />} />
           <Route path='/Projects' element={<Projects />} />
           <Route path='*' element={<PageNotFound />} />
