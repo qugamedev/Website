@@ -4,23 +4,35 @@ import qgdcLogo from "../assets/qgdc_requestForm_logo.png"
 import Xmark from "../assets/X.png"
 import { useForm } from "react-hook-form"
 import { createPortal } from "react-dom" //Used to allow transformations on the form.
-import axios from 'axios' // Connecting the database to the website
+import axios from 'axios'; // Used for the database connection
 
 export default function CommunityForm({ isOpen, onClose }) {
 
-  const [email, setEmail] = useState("");
-  const [gameDevs, setDevs] = useState("");
-
+  //Database values
+  const [values, setValues] = useState({
+    email: '',
+    gameDevs: '',
+    gameTitle: '',
+    gameDesc: '',
+    gameUrl: '',
+    gameTriggers: '',
+    gameImg: '',
+    comments: ''
+  })
+  const handleChange = (event) => {
+    setValues({ ...values, [event.target.name]: [event.target.value] })
+  }
 
   // Connecting with database logic
-  const handleTransmission = async (e) => {
-    e.preventDefault(); //Prevents page reload.
-    console.log(e);
+  const handleTransmission = (event) => {
+    event.preventDefault(); //Prevents page reload.
+    // Database Logic
+    axios.post('http://localhost:4000', { values })
+      .then(res => console.log("Form submitted successfully"))
+      .catch(err => console.log(err));
+    console.log(event);
     reset() // resets form
     onClose()
-    // Database Logic
-    const response = await axios.post('', { email })
-    console.log(response)
   };
 
   //Used to prevent the screen from scrolling when the form pop-up is open.
@@ -35,6 +47,7 @@ export default function CommunityForm({ isOpen, onClose }) {
     return () => document.body.classList.remove("overflow-hidden");
   }, [isOpen])
 
+
   // Used for the form logic
   const { register, handleSubmit, reset, watch, formState: { errors } } = useForm({
     mode: "onSubmit", //Validate only when submit button is pressed.
@@ -44,6 +57,7 @@ export default function CommunityForm({ isOpen, onClose }) {
   //Used for the "No File Chosen" text.
   const imageFile = watch("image")
   const fileName = imageFile?.[0]?.name ?? "No File Chosen"
+
 
   return createPortal(
     <div className={`${isOpen ? 'flex' : 'hidden'} z-50 fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm`} onClick={() => onClose()}>
@@ -75,16 +89,16 @@ export default function CommunityForm({ isOpen, onClose }) {
 
 
           {/* Queen's email */}
-          <label for="email" className="flex text-white text-left archivo-black-regular md:text-lg text-sm pt-5">
+          <label htmlFor="email" className="flex text-white text-left archivo-black-regular md:text-lg text-sm pt-5">
             1) What is your Queen's email?<span className="text-fuchsia-500 ml-auto">*</span>  <br />
           </label>
-          <input id="email"
+          <input onChange={handleChange}
+            nme="email"
             {...register("email", {
               required: "The email address is required",
               pattern: { value: /^\S+@queensu.ca$/, message: "The email address must be a (@queensu.ca) address." }
             })}
             placeholder=" Enter Queen's email"
-            onChange={(e) => setEmail(e.target.value)}
             className={`w-full h-6 py-2 bg-indigo-50 text-black ${errors.email ? 'border-fuchsia-500 border-2 bg-fuchsia-100' : ''}`} //#EBEFFF
           />
           <label className="flex text-left text-gray-300 sm:text-sm text-xs pt-1">
@@ -98,10 +112,10 @@ export default function CommunityForm({ isOpen, onClose }) {
 
 
           {/* Developers */}
-          <label for="gameDevs" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+          <label htmlFor="gameDevs" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
             2) What are the name(s) or alias(es) of the developer(s)?<span className="text-fuchsia-500 ml-auto">*</span>  <br />
           </label>
-          <input id="gameDevs"
+          <input onChange={handleChange}
             {...register("developer", {
               required: "The name(s) of the developer(s) is required.",
             })}
@@ -120,10 +134,11 @@ export default function CommunityForm({ isOpen, onClose }) {
 
 
           {/* Game Title */}
-          <label for="gameTitle" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+          <label htmlFor="gameTitle" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
             3) What is the title of your game?<span className="text-fuchsia-500 ml-auto">*</span>  <br />
           </label>
-          <input id="gameTitle"
+          <input name="gameTitle"
+            onChange={handleChange}
             {...register("title", {
               required: "The game's title is required.",
             })}
@@ -138,10 +153,11 @@ export default function CommunityForm({ isOpen, onClose }) {
 
 
           {/* Description */}
-          <label for="gameDesc" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+          <label htmlFor="gameDesc" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
             4) Give a short description of your game.<span className="text-fuchsia-500 ml-auto">*</span>  <br />
           </label>
-          <input id="gameDesc"
+          <input name="gameDesc"
+            onChange={handleChange}
             {...register("desc", {
               required: "The game's description is required.",
               maxLength: { value: 75, message: "Too many characters." }
@@ -161,10 +177,11 @@ export default function CommunityForm({ isOpen, onClose }) {
 
 
           {/* Game URL Link */}
-          <label for="gameUrl" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+          <label htmlFor="gameUrl" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
             5) Provide the URL to your game's itch.io page.<span className="text-fuchsia-500 ml-auto">*</span>  <br />
           </label>
-          <input id="gameUrl"
+          <input name="gameUrl"
+            onChange={handleChange}
             {...register("url", {
               required: "The game's itch.io page URL is required.",
               minLength: 1,
@@ -181,10 +198,11 @@ export default function CommunityForm({ isOpen, onClose }) {
 
 
           {/* Trigger Warnings */}
-          <label for="gameTriggers" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+          <label htmlFor="gameTriggers" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
             6) Does your game contain any trigger warnings? If so, please list all of them.  <br />
           </label>
-          <input id="gameTriggers"
+          <input name="gameTriggers"
+            onChange={handleChange}
             {...register("triggers")}
             placeholder=" Enter warnings"
             className="w-full h-6 bg-indigo-50 text-black"
@@ -207,7 +225,7 @@ export default function CommunityForm({ isOpen, onClose }) {
 
 
           {/* Image */}
-          <label for="gameImg" className="flex text-white text-left archivo-black-regular md:text-lg text-sm pb-2">
+          <label htmlFor="gameImg" className="flex text-white text-left archivo-black-regular md:text-lg text-sm pb-2">
             7) Upload an image of your game.<span className="text-fuchsia-500 ml-auto">*</span>  <br />
           </label>
           <div className="flex items-center justify-center bg-indigo-600 h-48 rounded-3xl md:w-1/2 w-2/3 px-2 m-auto">
@@ -217,7 +235,8 @@ export default function CommunityForm({ isOpen, onClose }) {
               <div className="grid md:grid-cols-2 grid-cols-1 md:grid-rows-1 grid-rows-2 md:gap-x-3 w-full">
                 <label className="flex justify-center md:justify-end items-center underline md:text-lg text-sm text-white">
                   Choose File
-                  <input id="gameImg"
+                  <input name="gameImg"
+                    onChange={handleChange}
                     {...register("image", {
                       required: "An image of the game is required.",
                     })}
@@ -246,9 +265,10 @@ export default function CommunityForm({ isOpen, onClose }) {
 
 
           {/* Additional comments */}
-          <label for="comments" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
+          <label htmlFor="comments" className="flex text-white text-left archivo-black-regular md:text-lg text-sm">
             8) Any additional comments about your request?    <br />             </label>
-          <textarea id="comments"
+          <textarea name="comments"
+            onChange={handleChange}
             {...register("comments")}
             cols="40"
             rows="5"
