@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -6,13 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      width:{
+
+      width: {
         '128': '32rem',
         '144': '36rem',
         '152': '38rem',
         '160': '40rem'
       },
-      height:{
+      height: {
         '66': '16.5rem'
       },
       screens: {
@@ -26,8 +28,13 @@ module.exports = {
         brick: ['"NT Brick Sans"', "sans-serif"],
         archivo: ['"Archivo Black"', "sans-serif"],
       },
+      keyframes: {
+        blink: {
+          '0%, 100%': { opacity: '100%' },
+          '50%': { opacity: '0%' },
+        }
+      },
     },
   },
   plugins: [],
 }
-
