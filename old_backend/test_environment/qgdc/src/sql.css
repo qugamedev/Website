@@ -1,0 +1,44 @@
+.editButton {
+    color: red;
+}
+
+.holder {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    margin: auto;
+    margin-top: 30px;
+    width: 20vw;
+    background-color: aquamarine;
+}
+
+.form {
+    margin: auto;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 50px;
+}
+
+img {
+    width: 20vw;
+}
+p {
+    margin: auto;
+    margin-bottom: 5vw;
+    width: 40vw;
+}
+
+.editButton {
+    margin-top: 20px;
+}
+
+.preview {
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 10px;
+    border-color: aquamarine;
+}
