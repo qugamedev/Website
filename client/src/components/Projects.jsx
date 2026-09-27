@@ -129,9 +129,13 @@ export default function Projects() {
           Fill out the form below for a chance to have your game be displayed on this page! Only requirement is to be affiliated with Queen's University.
         </p>
         <div className="flex justify-center align-items-center pb-8 pt-3">
-          {/* Game request button */}
-          <button id="accessForm" onClick={() => setIsOpen(!isOpen)} className="bg-fuchsia-500 px-10 py-4 rounded-lg text-xl font-bold">GAME REQUEST FORM</button>
-          <CommunityForm isOpen={isOpen} onClose={() => setIsOpen(!isOpen)} />
+
+          {/* Game request button (REACTIVATE WHEN DATABASE IS FUNCTIONAL) */}
+          {/*<button id="accessForm" onClick={() => setIsOpen(!isOpen)} className="bg-fuchsia-500 px-10 py-4 rounded-lg text-xl font-bold">GAME REQUEST FORM</button>
+          <CommunityForm isOpen={isOpen} onClose={() => setIsOpen(!isOpen)} />*/}
+
+          {/* Temporary google form game request button */}
+        <a href="https://forms.gle/TVkcrApeS1meoax98" target="_blank" className="bg-fuchsia-500 px-10 py-4 rounded-lg text-xl font-bold">GAME REQUEST FORM</a>
         </div>
       </div>
     </div >

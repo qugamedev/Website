@@ -24,15 +24,15 @@ export default function CommunityForm({ isOpen, onClose }) {
   }
 
   // Connecting with database logic
-  const handleTransmission = (event) => {
-    event.preventDefault(); //Prevents page reload.
-    // Database Logic
-    axios.post('http://localhost:4000', { values })
-      .then(res => console.log("Form submitted successfully"))
-      .catch(err => console.log(err));
-    console.log(event);
+  const handleTransmission = (e) => {
+    e.preventDefault(); //Prevents page reload.
     reset() // resets form
     onClose()
+     // Database Logic
+    /*     axios.post('http://localhost:4000', { values })
+      .then(res => console.log("Form submitted successfully"))
+      .catch(err => console.log(err));
+    console.log(e); */
   };
 
   //Used to prevent the screen from scrolling when the form pop-up is open.
@@ -66,7 +66,7 @@ export default function CommunityForm({ isOpen, onClose }) {
         method="get"
         className="w-4/5 h-3/4 lg:w-1/2 md:h-2/3 overflow-y-auto [scrollbar-width:none] rounded-2xl" //w-152 h-80
         onClick={(e) => e.stopPropagation()}
-        onSubmit={(event) => handleSubmit(handleTransmission(event))}
+        onSubmit={(e) => handleSubmit(handleTransmission(e))}
       >
 
         <div className="grid grid-flow-row grid-rows-5  items-center justify-items-center  w-full h-66 bg-purple-600 pt-10 relative">
