@@ -2,7 +2,7 @@
 import React from "react";
 
 //import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import Header from "./components/Header.jsx";
@@ -17,9 +17,8 @@ import Footer from "./components/Footer.jsx";
 // Assets
 import logo from "./assets/images/qgdc_logo.png";
 
-
 // import `ChakraProvider` component
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react';
 
 // AOS Animations
 import { useEffect } from 'react';
@@ -29,7 +28,7 @@ import "aos/dist/aos.css";
 function App() {
   var singlePage = true;
   useEffect(() => {
-    AOS.init({once: true}); // plays all animations only the first time you are on the page
+    AOS.init({ once: true }); // plays all animations only the first time you are on the page
     AOS.refresh();
   }, []);
   return (
@@ -61,6 +60,7 @@ function App() {
         <Footer></Footer>
       </Router>
     </ChakraProvider>
+
   );
 }
 

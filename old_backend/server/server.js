@@ -1,22 +1,35 @@
-const db = require('./db.js');
+
+// all previous code used for a currently non-usable blog page
+/*
 const express = require('express');
 const cors = require('cors');
-const multer = require('multer');
-const fs = require('fs');
+const path = require('path');
+const multer = require('multer'); // used for uploading files
+//const fs = require('fs');
 
-const PORT = 3002;
+//const bcrypt = require('bcrypt');
+//const saltRounds = 7;
 const app = express();
-
-const bcrypt = require('bcrypt');
-const saltRounds = 7;
-
 app.use(cors())
 app.use(express.json());
 app.use(multer().any());
+const PORT = 5000;
 
-app.get("/api/blogs/get", (req, res)=> {
-    db.query("SELECT * FROM blogs", (err,result)=> {
-        if(err) {
+const db = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "projectsdb"
+})
+
+app.listen(PORT, () => {
+    console.log('working')
+})
+
+
+app.get("/api/blogs/get", (req, res) => {
+    db.query("SELECT * FROM blogs", (err, result) => {
+        if (err) {
             console.log(err);
         }
         res.send(result);
@@ -43,7 +56,7 @@ app.put("/api/blogs/create", (req, res) => {
 // Update Existing
 app.put("/api/blogs/put/:id", (req, res) => {
     const id = req.params.id;
-    
+
     const author = req.body.author;
     const title = req.body.title;
     const image = req.body.image;
@@ -54,7 +67,7 @@ app.put("/api/blogs/put/:id", (req, res) => {
             console.log(err);
             res.status(500).send('Error updating blog post');
         }
-        
+
         res.send(result);
     })
 })
@@ -65,24 +78,24 @@ app.post("/api/blogs/create", (req, res) => {
     const image = req.body.image;
     const body = req.body.body;
 
-    db.query("INSERT INTO blogs (author, title, image, body) VALUES (?,?,?,?)",[author, title, image, body], (err,result)=>{
+    db.query("INSERT INTO blogs (author, title, image, body) VALUES (?,?,?,?)", [author, title, image, body], (err, result) => {
         if (err) {
             console.error(err)
             res.status(500).send('Internal server error')
             return
         }
         res.status(200).send('Created succesfully')
-    }) 
+    })
 })
 
 app.delete("/api/blogs/delete/:id", (req, res) => {
     const id = req.params.id;
-    db.query("DELETE FROM blogs WHERE id = ?", id, (err, result)=> {
+    db.query("DELETE FROM blogs WHERE id = ?", id, (err, result) => {
         if (err) {
             console.log(err);
             res.status(500).send("Internal server error: Could not delete.")
         }
-            res.send(result);
+        res.send(result);
     })
 })
 
@@ -106,12 +119,12 @@ app.put('/api/admins/create', (req, res) => {
 //DELETE ADMIN
 app.delete("/api/admins/delete/:id", (req, res) => {
     const id = req.params.id;
-    db.query("DELETE FROM admin WHERE id = ?", id, (err, result)=> {
+    db.query("DELETE FROM admin WHERE id = ?", id, (err, result) => {
         if (err) {
             console.log(err);
             res.status(500).send("Internal server error: Could not delete.")
         }
-            res.send(result);
+        res.send(result);
     })
 })
 
@@ -124,12 +137,12 @@ app.put('/api/admins/put/:id', (req, res) => {
     const password = bcrypt.hashSync(req.body.password, saltRounds)
     const display_name = req.body.display_name;
 
-    db.query("UPDATE admin SET username = ?, password = ?, display_name = ? WHERE id = ?", [username, password, display_name, id], (err, result)=>{
-        if(err) {
+    db.query("UPDATE admin SET username = ?, password = ?, display_name = ? WHERE id = ?", [username, password, display_name, id], (err, result) => {
+        if (err) {
             console.log(err)
             res.status(500).send('Internal server error.')
         }
-            res.send(result)
+        res.send(result)
     })
 })
 
@@ -137,7 +150,7 @@ app.put('/api/admins/put/:id', (req, res) => {
 app.post('/api/admins/post', (req, res) => {
     const username = req.body.username
     const password = req.body.password
-    
+
 
     db.query('SELECT * FROM admin WHERE username = ?', [username], async (err, results) => {
         if (err) {
@@ -145,15 +158,15 @@ app.post('/api/admins/post', (req, res) => {
             res.status(500).send('Internal server error')
             return
         }
-      
+
         if (results.length > 0) {
             const user = results[0];
             const isPasswordMatch = await bcrypt.compare(password, user.password)
-            
+
             if (isPasswordMatch) {
-              res.status(200).send('Login successful')
+                res.status(200).send('Login successful')
             } else {
-              res.status(401).send('Invalid username or password')
+                res.status(401).send('Invalid username or password')
             }
         } else {
             res.status(401).send('Invalid username or password')
@@ -161,18 +174,19 @@ app.post('/api/admins/post', (req, res) => {
     })
 })
 
-app.get("/api/admins/get", (req, res) =>{
+app.get("/api/admins/get", (req, res) => {
     db.query("SELECT id, username, password, display_name FROM admin", (err, result) => {
-        if(err) {
+        if (err) {
             console.log(err)
         }
         res.send(result)
     })
 })
 
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
     console.log("Up and running.");
-});
+}); 
 
 
-app.get("/a")
+app.get("/a") */
+
